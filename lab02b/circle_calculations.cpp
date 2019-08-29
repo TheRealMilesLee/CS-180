@@ -8,6 +8,7 @@ using  namespace std;
 
 int main()
 {
+  const double PI = 3.1415
   cout << "this program calculate and display on screen the correct diameter, circumference, and area of a circle " << endl;
 
   float radius;
@@ -17,9 +18,9 @@ int main()
   cout << "For a circle with radius " << radius << endl;
 
   float diameter;
-  diameter = radius * 2
+  diameter = radius * 2.0
   cout << "The diameter is " << diameter << endl;
-  cout << "The circumference is " << diameter * 3.1415 << endl;
-  cout << "The area is " << (radius * radius) * 3.1415 << endl;
+  cout << "The circumference is " << diameter * PI << endl;
+  cout << "The area is " << (radius * radius) * PI << endl;
   return 0;
 }

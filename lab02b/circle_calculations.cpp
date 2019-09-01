@@ -4,7 +4,7 @@
 //This code done by Hengyi Li at 11:07 PM 29th Aug, 2019
 //Copyright Hengyi Li
 #include <iostream>
-using  namespace std;
+using namespace std;
 
 int main()
 {

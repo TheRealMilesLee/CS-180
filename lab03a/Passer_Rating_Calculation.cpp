@@ -3,12 +3,13 @@
 //This Program finished by Hengyi Li on 12:11 PM, 3 Sep, 2019
 //Copyright © 2019 Hengyi Li. All rights reserved.
 
-
 #include <iostream>
 using namespace std;
 
 int  main()
 {
+  cout << "This Program is to calculate the passer rate in American NFL";
+
   float completions;
   cout << "Please enter the number of completions: ";
   cin >> completions;

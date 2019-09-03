@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab03a.dir/Passer_Rating_Calculation.cpp.obj"
+  "CMakeFiles/lab03a.dir/Passer_Rating_Calculation.cpp.o"
   "lab03a.pdb"
-  "lab03a.exe"
-  "lab03a.exe.manifest"
-  "liblab03a.dll.a"
+  "lab03a"
 )
 
 # Per-language clean rules from dependency scanning.

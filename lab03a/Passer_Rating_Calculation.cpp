@@ -44,7 +44,7 @@ int  main()
 
   float rating;
   rating = ((C + Y + T + I) / 6.0) * 100.0;
-  cout << " The player's rating is: " << rating << endl;
+  cout << "The player's rating is: " << rating << endl;
 
   return 0;
 

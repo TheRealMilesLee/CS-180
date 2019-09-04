@@ -8,8 +8,6 @@ using namespace std;
 
 int  main()
 {
-  cout << "This Program is to calculate the passer rate in American NFL" << endl;
-
   float completions;
   cout << "Please enter the number of completions: ";
   cin >> completions;

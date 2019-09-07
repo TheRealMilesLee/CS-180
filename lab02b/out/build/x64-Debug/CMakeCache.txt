@@ -14,8 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:UNINITIALIZED=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //No help, variable specified on the command line.
 CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files/Visual Studio/VC/Tools/MSVC/14.22.27905/bin/HostX64/x64/cl.exe

@@ -2,18 +2,31 @@
     "configurations": [
         {
             "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}",
+                "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
+                "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/opt/include",
+                "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/opt/lib/libffi-3.2.1/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "_UNICODE"
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
             ],
-            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/include",
+                    "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/opt/include",
+                    "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/opt/lib/libffi-3.2.1/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "cppStandard": "c++11"
         }
     ],
     "version": 4

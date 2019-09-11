@@ -57,27 +57,27 @@ include CMakeFiles/lab03b.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab03b.dir/flags.make
 
-CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o: CMakeFiles/lab03b.dir/flags.make
-CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o: ../typecasting_random_and_formatting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/typecasting_random_and_formatting.cpp
+CMakeFiles/lab03b.dir/Java_Joe.cpp.o: CMakeFiles/lab03b.dir/flags.make
+CMakeFiles/lab03b.dir/Java_Joe.cpp.o: ../Java_Joe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab03b.dir/Java_Joe.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab03b.dir/Java_Joe.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/Java_Joe.cpp
 
-CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/typecasting_random_and_formatting.cpp > CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.i
+CMakeFiles/lab03b.dir/Java_Joe.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab03b.dir/Java_Joe.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/Java_Joe.cpp > CMakeFiles/lab03b.dir/Java_Joe.cpp.i
 
-CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/typecasting_random_and_formatting.cpp -o CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.s
+CMakeFiles/lab03b.dir/Java_Joe.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab03b.dir/Java_Joe.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/Java_Joe.cpp -o CMakeFiles/lab03b.dir/Java_Joe.cpp.s
 
 # Object files for target lab03b
 lab03b_OBJECTS = \
-"CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o"
+"CMakeFiles/lab03b.dir/Java_Joe.cpp.o"
 
 # External object files for target lab03b
 lab03b_EXTERNAL_OBJECTS =
 
-lab03b: CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o
+lab03b: CMakeFiles/lab03b.dir/Java_Joe.cpp.o
 lab03b: CMakeFiles/lab03b.dir/build.make
 lab03b: CMakeFiles/lab03b.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab03b"

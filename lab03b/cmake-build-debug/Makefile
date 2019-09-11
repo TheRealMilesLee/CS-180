@@ -123,32 +123,32 @@ lab03b/fast:
 	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/build
 .PHONY : lab03b/fast
 
-typecasting_random_and_formatting.o: typecasting_random_and_formatting.cpp.o
+Java_Joe.o: Java_Joe.cpp.o
 
-.PHONY : typecasting_random_and_formatting.o
+.PHONY : Java_Joe.o
 
 # target to build an object file
-typecasting_random_and_formatting.cpp.o:
-	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o
-.PHONY : typecasting_random_and_formatting.cpp.o
+Java_Joe.cpp.o:
+	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/Java_Joe.cpp.o
+.PHONY : Java_Joe.cpp.o
 
-typecasting_random_and_formatting.i: typecasting_random_and_formatting.cpp.i
+Java_Joe.i: Java_Joe.cpp.i
 
-.PHONY : typecasting_random_and_formatting.i
+.PHONY : Java_Joe.i
 
 # target to preprocess a source file
-typecasting_random_and_formatting.cpp.i:
-	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.i
-.PHONY : typecasting_random_and_formatting.cpp.i
+Java_Joe.cpp.i:
+	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/Java_Joe.cpp.i
+.PHONY : Java_Joe.cpp.i
 
-typecasting_random_and_formatting.s: typecasting_random_and_formatting.cpp.s
+Java_Joe.s: Java_Joe.cpp.s
 
-.PHONY : typecasting_random_and_formatting.s
+.PHONY : Java_Joe.s
 
 # target to generate assembly for a file
-typecasting_random_and_formatting.cpp.s:
-	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.s
-.PHONY : typecasting_random_and_formatting.cpp.s
+Java_Joe.cpp.s:
+	$(MAKE) -f CMakeFiles/lab03b.dir/build.make CMakeFiles/lab03b.dir/Java_Joe.cpp.s
+.PHONY : Java_Joe.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab03b"
-	@echo "... typecasting_random_and_formatting.o"
-	@echo "... typecasting_random_and_formatting.i"
-	@echo "... typecasting_random_and_formatting.s"
+	@echo "... Java_Joe.o"
+	@echo "... Java_Joe.i"
+	@echo "... Java_Joe.s"
 .PHONY : help
 
 

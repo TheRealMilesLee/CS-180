@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab03b.dir/typecasting_random_and_formatting.cpp.o"
+  "CMakeFiles/lab03b.dir/Java_Joe.cpp.o"
   "lab03b.pdb"
   "lab03b"
 )

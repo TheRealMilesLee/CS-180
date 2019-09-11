@@ -3,4 +3,4 @@ project(lab03b)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab03b typecasting_random_and_formatting.cpp)
+add_executable(lab03b Java_Joe.cpp)

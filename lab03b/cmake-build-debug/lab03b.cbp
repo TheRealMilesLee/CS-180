@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/typecasting_random_and_formatting.cpp">
+		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/Java_Joe.cpp">
 			<Option target="lab03b"/>
 		</Unit>
 		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab03b/CMakeLists.txt">

@@ -1,6 +1,6 @@
 //Hengyi Li
 //This Program is to calculate the price of the order
-//This Program finished by Hengyi Li on 12:11 PM, 3 Sep, 2019
+//This Program finished by Hengyi Li on 5：17 PM, 11 Sep, 2019
 //Copyright © 2019 Hengyi Li. All rights reserved.
 
 #include <iostream>
@@ -13,7 +13,7 @@ int main() {
   const double UNIT_PRICE_COLOMBIAN= 0.35;
   const double UNIT_PRICE_DECAF = 0.85;
   const double UNIT_PRICE_CHAI= 1.10;
-  const unsigned LABEL_WIDTH_COLOM = 13;
+  const unsigned LABEL_WIDTH_COLOM = 14;
   const unsigned LABEL_WIDTH_ORGAN = 12;
   const unsigned LABEL_WIDTH_HEAVEN = 12;
   const unsigned PRECISION = 2;
@@ -43,27 +43,35 @@ int main() {
 
   cout << "                  Colom Supr  Organ Gold  Heavn Chai" << endl;
   cout << "                  ----------  ----------  ----------" << endl;
-  cout << "Quantity (oz)  " << setw(LABEL_WIDTH_COLOM)
+  cout << "Quantity (oz) "<< setw(LABEL_WIDTH_COLOM)
        << setprecision(PRECISION) << fixed << colombian_quantity
-       << setprecision(PRECISION) << setw(LABEL_WIDTH_ORGAN)
-       << setprecision(PRECISION) << deca_quantity << setw(LABEL_WIDTH_HEAVEN)
-       << setprecision(PRECISION) << chai_quantity << endl;
-  cout << "Unit Price     " << setw(LABEL_WIDTH_COLOM)
-       << setprecision(PRECISION) << fixed << UNIT_PRICE_COLOMBIAN
-       << setprecision(PRECISION) << setw(LABEL_WIDTH_ORGAN)
-       << setprecision(PRECISION) << UNIT_PRICE_DECAF
-       << setw(LABEL_WIDTH_HEAVEN)<< setprecision(PRECISION)
+       << setw(LABEL_WIDTH_ORGAN)
+       << deca_quantity << setw(LABEL_WIDTH_HEAVEN)
+       << chai_quantity << endl;
+  cout << "Unit Price    " << setw(LABEL_WIDTH_COLOM)
+       << UNIT_PRICE_COLOMBIAN
+       << setw(LABEL_WIDTH_ORGAN)
+       << UNIT_PRICE_DECAF
+       << setw(LABEL_WIDTH_ORGAN)
        << UNIT_PRICE_CHAI << endl;
-  cout << "Amount         " << setw(LABEL_WIDTH_COLOM)
-       << setprecision(PRECISION) << fixed << amount_colom_supr
-       << setw(LABEL_WIDTH_ORGAN) << setprecision(PRECISION)
+  cout << "Amount        "  << setw(LABEL_WIDTH_COLOM)
+       << amount_colom_supr
+       << setw(LABEL_WIDTH_ORGAN)
        << amount_organ_gold << setw(LABEL_WIDTH_HEAVEN)
-       << setprecision(PRECISION) << amount_heavn_chai << endl;
-  cout << endl << "Total: " << setprecision(PRECISION) << total << endl;
+       << amount_heavn_chai << endl;
+  cout << endl << "Total:        " << setw(LABEL_WIDTH_COLOM)
+       << total << endl;
 
-  double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
-  cout << "Bonus Discount: " << setprecision(PRECISION) << -bonus_discount << endl;
-  cout << "Grand Total: " << setprecision(PRECISION) << total - bonus_discount << endl;
+
+  unsigned seed = static_cast<unsigned int>(time(nullptr));
+  srand(seed);
+  double bonus_discount
+       = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1)
+       + MIN_VALUE);
+  cout << "Bonus Discount" << setw(LABEL_WIDTH_COLOM)
+       << bonus_discount << endl;
+  cout << "Grand Total   " << setw(LABEL_WIDTH_COLOM)
+       << total - bonus_discount << endl;
   cout << endl << "Thank you for your ordering !" << endl;
 
   return 0; 

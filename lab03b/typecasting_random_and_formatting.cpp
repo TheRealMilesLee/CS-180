@@ -4,40 +4,66 @@
 //Copyright © 2019 Hengyi Li. All rights reserved.
 
 #include <iostream>
+#include <ctime>
+#include <iomanip>
+#include <cstdlib>
 using namespace std;
 
 int main() {
+  const double UNIT_PRICE_COLOMBIAN= 0.35;
+  const double UNIT_PRICE_DECAF = 0.85;
+  const double UNIT_PRICE_CHAI= 1.10;
+  const unsigned LABEL_WIDTH_COLOM = 13;
+  const unsigned LABEL_WIDTH_ORGAN = 12;
+  const unsigned LABEL_WIDTH_HEAVEN = 12;
+  const unsigned PRECISION = 2;
+  const unsigned MAX_VALUE = 5;
+  const unsigned MIN_VALUE = 1;
+  unsigned colombian_quantity;
+  unsigned deca_quantity;
+  unsigned chai_quantity;
+
   cout << "Welcome to Java Joe's!" << endl;
-  cout << "Enter your name";
+  cout << "Enter your name: ";
   string name;
   getline (cin,name);
-  cout << "How many ounces of Colombian, Decaf, and Chai?";
-  double colombian_quantity;
-  double decaf_quantity;
-  double chai_quantity;
-  cin >> colombian_quantity >> decaf_quantity >> chai_quantity;
+
+  cout << "How many ounces of Colombian, Decaf, and Chai?: ";
+  cin >> colombian_quantity >> deca_quantity >> chai_quantity;
   cout << endl << "Invoice for Fred Flintstone" << endl;
-  const double unit_price_colombian = 0.35;
-  const double unit_price_decaf = 0.85;
-  const double unit_price_chai = 1.10;
+
   double amount_colom_supr;
-  amount_colom_supr =  colombian_quantity * unit_price_colombian;
+  amount_colom_supr =  colombian_quantity * UNIT_PRICE_COLOMBIAN;
   double amount_organ_gold;
-  amount_organ_gold =  decaf_quantity * unit_price_decaf;
+  amount_organ_gold =  deca_quantity * UNIT_PRICE_DECAF;
   double amount_heavn_chai;
-  amount_heavn_chai =  chai_quantity * unit_price_chai;
+  amount_heavn_chai =  chai_quantity * UNIT_PRICE_CHAI;
   double total;
   total =  amount_colom_supr + amount_organ_gold + amount_heavn_chai;
+
   cout << "                  Colom Supr  Organ Gold  Heavn Chai" << endl;
   cout << "                  ----------  ----------  ----------" << endl;
-  cout << "Quantity (oz)  " << "     " << colombian_quantity << "         " << decaf_quantity << "         " << chai_quantity << endl;
-  cout << "Unit Price  " << "         " << unit_price_colombian <<"             " <<  unit_price_decaf <<"             "  << unit_price_chai << endl;
-  cout << "Amount  " << amount_colom_supr << amount_organ_gold << amount_heavn_chai << endl;
-  cout << endl << "Total" << total << endl;
-  unsigned int  bonus_discount;
-  srand(bonus_discount);
-  cout << "Bonus Discount  " << bonus_discount << endl;
-  cout << "Grand Total  " << total + bonus_discount << endl;
+  cout << "Quantity (oz)  " << setw(LABEL_WIDTH_COLOM)
+       << setprecision(PRECISION) << fixed << colombian_quantity
+       << setprecision(PRECISION) << setw(LABEL_WIDTH_ORGAN)
+       << setprecision(PRECISION) << deca_quantity << setw(LABEL_WIDTH_HEAVEN)
+       << setprecision(PRECISION) << chai_quantity << endl;
+  cout << "Unit Price     " << setw(LABEL_WIDTH_COLOM)
+       << setprecision(PRECISION) << fixed << UNIT_PRICE_COLOMBIAN
+       << setprecision(PRECISION) << setw(LABEL_WIDTH_ORGAN)
+       << setprecision(PRECISION) << UNIT_PRICE_DECAF
+       << setw(LABEL_WIDTH_HEAVEN)<< setprecision(PRECISION)
+       << UNIT_PRICE_CHAI << endl;
+  cout << "Amount         " << setw(LABEL_WIDTH_COLOM)
+       << setprecision(PRECISION) << fixed << amount_colom_supr
+       << setw(LABEL_WIDTH_ORGAN) << setprecision(PRECISION)
+       << amount_organ_gold << setw(LABEL_WIDTH_HEAVEN)
+       << setprecision(PRECISION) << amount_heavn_chai << endl;
+  cout << endl << "Total: " << setprecision(PRECISION) << total << endl;
+
+  double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
+  cout << "Bonus Discount: " << setprecision(PRECISION) << -bonus_discount << endl;
+  cout << "Grand Total: " << setprecision(PRECISION) << total - bonus_discount << endl;
   cout << endl << "Thank you for your ordering !" << endl;
 
   return 0; 

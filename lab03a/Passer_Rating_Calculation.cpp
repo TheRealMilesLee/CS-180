@@ -41,8 +41,9 @@ int  main()
   scaled_interceptions = 2.375 - 25.0 * (interceptions / attempts);
 
   double rating;
-  rating = ((scaled_completions + scaled_yards + scaled_touchdowns + scaled_interceptions) / 6.0) * 100.0;
-  cout << "The player's rating is: " << rating << endl;
+  rating = ((scaled_completions + scaled_yards + scaled_touchdowns
+            + scaled_interceptions) / 6.0) * 100.0;
+  cout << endl << "The player's rating is: " << rating << endl;
 
   return 0;
 

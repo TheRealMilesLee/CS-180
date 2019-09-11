@@ -30,8 +30,8 @@ int main() {
   total =  amount_colom_supr + amount_organ_gold + amount_heavn_chai;
   cout << "                  Colom Supr  Organ Gold  Heavn Chai" << endl;
   cout << "                  ----------  ----------  ----------" << endl;
-  cout << "Quantity (oz)  " << "     " << colombian_quantity << "     " << decaf_quantity << "     " << chai_quantity << endl;
-  cout << "Unit Price  " << unit_price_colombian << unit_price_decaf << unit_price_chai << endl;
+  cout << "Quantity (oz)  " << "     " << colombian_quantity << "         " << decaf_quantity << "         " << chai_quantity << endl;
+  cout << "Unit Price  " << "         " << unit_price_colombian <<"             " <<  unit_price_decaf <<"             "  << unit_price_chai << endl;
   cout << "Amount  " << amount_colom_supr << amount_organ_gold << amount_heavn_chai << endl;
   cout << endl << "Total" << total << endl;
   unsigned int  bonus_discount;
@@ -40,5 +40,5 @@ int main() {
   cout << "Grand Total  " << total + bonus_discount << endl;
   cout << endl << "Thank you for your ordering !" << endl;
 
-  return 0;
+  return 0; 
 }

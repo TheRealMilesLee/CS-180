@@ -74,5 +74,6 @@ int main() {
        << total - bonus_discount << endl;
   cout << endl << "Thank you for your ordering !" << endl;
 
-  return 0; 
+  return 0;
+
 }

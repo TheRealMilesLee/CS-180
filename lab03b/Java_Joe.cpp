@@ -1,6 +1,6 @@
 //Hengyi Li
 //This Program is to calculate the price of the order
-//This Program finished by Hengyi Li on 5ï¼š17 PM, 11 Sep, 2019
+//This Program finished by Hengyi Li on 5£º17 PM, 11 Sep, 2019
 //Copyright Â© 2019 Hengyi Li. All rights reserved.
 
 #include <iostream>

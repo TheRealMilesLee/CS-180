@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab03b.dir/Java_Joe.cpp.obj"
+  "CMakeFiles/lab03b.dir/Java_Joe.cpp.o"
   "lab03b.pdb"
-  "lab03b.exe"
-  "lab03b.exe.manifest"
-  "liblab03b.dll.a"
+  "lab03b"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,3 +1,1 @@
-"D:\CLion\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\lab03b.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\lab03b.dir/objects.a @CMakeFiles\lab03b.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\lab03b.dir/objects.a -Wl,--no-whole-archive  -o lab03b.exe -Wl,--out-implib,liblab03b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lab03b.dir\linklibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/lab03b.dir/Java_Joe.cpp.o  -o lab03b 

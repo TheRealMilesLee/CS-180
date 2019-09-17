@@ -82,7 +82,6 @@ int main()
   {
     cout << "How many gigs of data did you use? " << endl;
     cin >> data_usage;
-    double plan_c;
     double invoice_total_c;
     invoice_total_c = base_cost_c;
     cout << "Base Cost    " << setw(LABEL_WIDTH) << setprecision(PRECISION) << fixed << base_cost_c << endl;

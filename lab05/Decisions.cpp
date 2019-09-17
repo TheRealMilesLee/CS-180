@@ -5,53 +5,61 @@
 
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
-int main()
-{
-  double user_choice;
-  double A;
-  double B;
-  double C;
+int main() {
+  string A;
+  string B;
+  string C;
   double data_usage;
   double base_cost = 39.99;
-  double data_cost_a;
-  double data_cost_b;
-  double data_cost_c;
-  double invoice_total_a;
-  double invoice_total_b;
-  double invoice_total_c;
-  const unsigned LABEL_WIDTH = 24;
-  const unsigned PRECISION = 2;
-  cout << "Choose the plan (A, B ,OR C): ";
-  cin >> user_choice;
-  cout << "Houw many gigs of data did you use? ";
-  cin >> data_usage;
+  const unsigned LABEL_WIDTH = 20.0;
+  const unsigned PRECISION = 2.0;
+  unsigned input_choice;
 
-  if (user_choice = A)
+  cout << "Choose the plan (A, B ,Or C): " << endl;
+  cin >> input_choice;
+
+  if (input_choice = 'A')
   {
-    data_cost_a = (data_usage - 4) * 9.99;
-    invoice_total_a = base_cost + data_cost_a;
+    cout << "How many gigs of data did you use? " << endl;
+    cin >> data_usage;
+    unsigned plan_a;
+    double invoice_total_a;
+    plan_a = (data_usage - 4) * 9.99;
+    invoice_total_a = base_cost + plan_a;
     cout << "Base Cost" << setw(LABEL_WIDTH) << setprecision(PRECISION) << fixed << base_cost << endl;
-    cout << "Data Cost" << setw(LABEL_WIDTH) << data_cost_a << endl;
+    cout << "Data Cost" << setw(LABEL_WIDTH) << plan_a << endl;
     cout << "Invoice Total" << setw(LABEL_WIDTH) << invoice_total_a << endl;
+    return 0;
   }
 
-  if (user_choice = B)
+  if (input_choice = 'B')
   {
-    data_cost_b = (data_usage - 8) * 4.99;
-    invoice_total_b = base_cost + data_cost_b;;
+    cout << "How many gigs of data did you use? " << endl;
+    cin >> data_usage;
+    double plan_b;
+    double invoice_total_b;
+    plan_b = (data_usage - 8) * 4.99;
+    invoice_total_b = base_cost + plan_b;;
     cout << "Base Cost" << setw(LABEL_WIDTH) << base_cost << endl;
-    cout << "Data Cost" << setw(LABEL_WIDTH) << data_cost_b << endl;
+    cout << "Data Cost" << setw(LABEL_WIDTH) << plan_b << endl;
     cout << "Invoice Data" << setw(LABEL_WIDTH) << invoice_total_b << endl;
   }
 
-  if (user_choice = C)
+  if (input_choice = 'C')
   {
-    data_cost_c = 0;
-    invoice_total_c = base_cost + data_cost_c + 30;
+    cout << "How many gigs of data did you use? " << endl;
+    cin >> data_usage;
+    double plan_c;
+    double invoice_total_c;
+    plan_c = 0;
+    invoice_total_c = base_cost + plan_c + 30;
     cout << "Base Cost" << setw(LABEL_WIDTH) << base_cost << endl;
-    cout << "Data Cost" << setw(LABEL_WIDTH) << data_cost_c << endl;
+    cout << "Data Cost" << setw(LABEL_WIDTH) << plan_c << endl;
     cout << "Invoice Data" << setw(LABEL_WIDTH) << invoice_total_c << endl;
+    return 0;
   }
+  return 0;
 }

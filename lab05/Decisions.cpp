@@ -9,9 +9,6 @@
 using namespace std;
 
 int main() {
-  string A;
-  string B;
-  string C;
   double data_usage;
   double base_cost = 39.99;
   const unsigned LABEL_WIDTH = 20.0;

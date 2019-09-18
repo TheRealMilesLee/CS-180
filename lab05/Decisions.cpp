@@ -40,14 +40,16 @@ int main()
       cout << "Data Cost     " << setw(LABEL_WIDTH)
            << setprecision(PRECISION) << fixed << plan_a << endl;
       invoice_total_a = base_cost_a + plan_a;
-      cout << "Invoice Total " << setw(LABEL_WIDTH) << invoice_total_a << endl;
+      cout << "Invoice Total " << setw(LABEL_WIDTH)
+           << invoice_total_a << endl;
     }
     else
     {
       cout << "Data Cost     " << setw(LABEL_WIDTH)
            << setprecision(PRECISION) << fixed << "0.00" << endl;
       invoice_total_a = base_cost_a;
-      cout << "Invoice Total " << setw(LABEL_WIDTH) << invoice_total_a << endl;
+      cout << "Invoice Total " << setw(LABEL_WIDTH)
+           << invoice_total_a << endl;
     }
     
     return 0;
@@ -68,7 +70,8 @@ int main()
       cout << "Base Cost    " << setw(LABEL_WIDTH) << setprecision(PRECISION)
            << fixed << base_cost_b << endl;
       cout << "Data Cost    " << setw(LABEL_WIDTH) << plan_b << endl;
-      cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_b << endl;
+      cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_b
+           << endl;
     }
     else
     {
@@ -77,7 +80,8 @@ int main()
       cout << "Base Cost    " << setw(LABEL_WIDTH) << setprecision(PRECISION)
            << fixed << base_cost_b << endl;
       cout << "Data Cost    " << setw(LABEL_WIDTH) << "0.00" << endl;
-      cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_b << endl;
+      cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_b
+           << endl;
 
     }
 
@@ -94,7 +98,8 @@ int main()
     cout << "Base Cost    " << setw(LABEL_WIDTH) << setprecision(PRECISION)
          << fixed << base_cost_c << endl;
     cout << "Data Cost    " << setw(LABEL_WIDTH) << "0.00" << endl;
-    cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_c << endl;
+    cout << "Invoice Data " << setw(LABEL_WIDTH) << invoice_total_c
+         << endl;
 
     return 0;
 

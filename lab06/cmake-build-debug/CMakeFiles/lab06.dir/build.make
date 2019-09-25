@@ -56,27 +56,27 @@ include CMakeFiles/lab06.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab06.dir/flags.make
 
-CMakeFiles/lab06.dir/main.cpp.obj: CMakeFiles/lab06.dir/flags.make
-CMakeFiles/lab06.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\lab06\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab06.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab06.dir\main.cpp.obj -c D:\Truman-CS180-Course\lab06\main.cpp
+CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj: CMakeFiles/lab06.dir/flags.make
+CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj: ../More_Phone_Plan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\lab06\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab06.dir\More_Phone_Plan.cpp.obj -c D:\Truman-CS180-Course\lab06\More_Phone_Plan.cpp
 
-CMakeFiles/lab06.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab06\main.cpp > CMakeFiles\lab06.dir\main.cpp.i
+CMakeFiles/lab06.dir/More_Phone_Plan.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/More_Phone_Plan.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab06\More_Phone_Plan.cpp > CMakeFiles\lab06.dir\More_Phone_Plan.cpp.i
 
-CMakeFiles/lab06.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab06\main.cpp -o CMakeFiles\lab06.dir\main.cpp.s
+CMakeFiles/lab06.dir/More_Phone_Plan.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/More_Phone_Plan.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab06\More_Phone_Plan.cpp -o CMakeFiles\lab06.dir\More_Phone_Plan.cpp.s
 
 # Object files for target lab06
 lab06_OBJECTS = \
-"CMakeFiles/lab06.dir/main.cpp.obj"
+"CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj"
 
 # External object files for target lab06
 lab06_EXTERNAL_OBJECTS =
 
-lab06.exe: CMakeFiles/lab06.dir/main.cpp.obj
+lab06.exe: CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj
 lab06.exe: CMakeFiles/lab06.dir/build.make
 lab06.exe: CMakeFiles/lab06.dir/linklibs.rsp
 lab06.exe: CMakeFiles/lab06.dir/objects1.rsp

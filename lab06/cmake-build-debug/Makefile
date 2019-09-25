@@ -122,32 +122,32 @@ lab06/fast:
 	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/build
 .PHONY : lab06/fast
 
-main.obj: main.cpp.obj
+More_Phone_Plan.obj: More_Phone_Plan.cpp.obj
 
-.PHONY : main.obj
+.PHONY : More_Phone_Plan.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+More_Phone_Plan.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj
+.PHONY : More_Phone_Plan.cpp.obj
 
-main.i: main.cpp.i
+More_Phone_Plan.i: More_Phone_Plan.cpp.i
 
-.PHONY : main.i
+.PHONY : More_Phone_Plan.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/main.cpp.i
-.PHONY : main.cpp.i
+More_Phone_Plan.cpp.i:
+	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/More_Phone_Plan.cpp.i
+.PHONY : More_Phone_Plan.cpp.i
 
-main.s: main.cpp.s
+More_Phone_Plan.s: More_Phone_Plan.cpp.s
 
-.PHONY : main.s
+.PHONY : More_Phone_Plan.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/main.cpp.s
-.PHONY : main.cpp.s
+More_Phone_Plan.cpp.s:
+	$(MAKE) -f CMakeFiles\lab06.dir\build.make CMakeFiles/lab06.dir/More_Phone_Plan.cpp.s
+.PHONY : More_Phone_Plan.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... lab06
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... More_Phone_Plan.obj
+	@echo ... More_Phone_Plan.i
+	@echo ... More_Phone_Plan.s
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab06.dir/main.cpp.obj"
+  "CMakeFiles/lab06.dir/More_Phone_Plan.cpp.obj"
   "lab06.pdb"
   "lab06.exe"
   "lab06.exe.manifest"

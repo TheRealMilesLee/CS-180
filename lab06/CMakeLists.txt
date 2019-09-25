@@ -3,4 +3,4 @@ project(lab06)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab06 main.cpp)
+add_executable(lab06 More_Phone_Plan.cpp)

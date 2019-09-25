@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Truman-CS180-Course/lab06/main.cpp">
+		<Unit filename="D:/Truman-CS180-Course/lab06/More_Phone_Plan.cpp">
 			<Option target="lab06"/>
 		</Unit>
 		<Unit filename="D:/Truman-CS180-Course/lab06/CMakeLists.txt">

@@ -1,6 +1,6 @@
 //Hengyi Li
 //This Program is to decide the phone plan
-//This Program finished by Hengyi Li on 1：25 AM, 25 Sep, 2019
+//This Program finished by Hengyi Li on 12：41 PM, 25 Sep, 2019
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <iostream>

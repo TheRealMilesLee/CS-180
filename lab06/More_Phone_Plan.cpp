@@ -14,7 +14,8 @@ int main()
   const double ADDITIONAL_DATA_COSTS_B = 4.99;
   const double MAX_DATA_IN_PLAN_A = 4.0;
   const double MAX_DATA_IN_PLAN_B = 8.0;
-  for (string input_choice; input_choice != "Q";)
+  bool judge;
+  for (string input_choice; input_choice != "Q"; judge = false)
     {
       cout << "Choose the plan (A, B ,Or C) or Q to quit: ";
       cin >> input_choice;
@@ -79,7 +80,7 @@ int main()
         }
         else if (input_choice == "Q")
         {
-          break;
+          judge = true;
         }
         else
         {

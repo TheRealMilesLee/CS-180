@@ -14,6 +14,7 @@ int main()
   const double ADDITIONAL_DATA_COSTS_B = 4.99;
   const double MAX_DATA_IN_PLAN_A = 4.0;
   const double MAX_DATA_IN_PLAN_B = 8.0;
+  const unsigned PRECISION = 2;
   bool judge;
   for (string input_choice; input_choice != "Q"; judge = false)
     {
@@ -38,12 +39,12 @@ int main()
           {
             plan_a = (data_usage - MAX_DATA_IN_PLAN_A) * ADDITIONAL_DATA_COSTS_A;
             invoice_total_a = base_cost_a + plan_a;
-            cout << "Invoice Total " << invoice_total_a << endl;
+            cout << "Invoice Total " << setprecision(PRECISION) << fixed << invoice_total_a << endl;
           }
           else
           {
             invoice_total_a = base_cost_a;
-            cout << "Invoice Total " << invoice_total_a << endl;
+            cout << "Invoice Total " << setprecision(PRECISION) << fixed << invoice_total_a << endl;
           }
         }
         else if (input_choice == "B")
@@ -63,12 +64,12 @@ int main()
           {
             plan_b = (data_usage - MAX_DATA_IN_PLAN_B) * ADDITIONAL_DATA_COSTS_B;
             invoice_total_b = base_cost_b + plan_b;
-            cout << "Invoice total " << invoice_total_b << endl;
+            cout << "Invoice total " << setprecision(PRECISION) << fixed << invoice_total_b << endl;
           }
           else
           {
             invoice_total_b = base_cost_b;
-            cout << "Invoice total " << invoice_total_b << endl;
+            cout << "Invoice total " << setprecision(PRECISION) << fixed << invoice_total_b << endl;
           }
         }
         else if (input_choice == "C")
@@ -76,7 +77,7 @@ int main()
           double base_cost_c = 69.99;
           double invoice_total_c;
           invoice_total_c = base_cost_c;
-          cout << "Invoice total " << invoice_total_c << endl;
+          cout << "Invoice total " << setprecision(PRECISION) << fixed << invoice_total_c << endl;
         }
         else if (input_choice == "Q")
         {

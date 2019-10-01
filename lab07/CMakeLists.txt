@@ -3,4 +3,4 @@ project(lab07)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab07 main.cpp)
+add_executable(lab07 scores.cpp)

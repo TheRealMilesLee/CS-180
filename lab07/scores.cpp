@@ -39,23 +39,27 @@ int main()
 
     double lowest_score;
 
-    double letter_grades;
     if (average_score >= 90)
     {
-      cout << name_of_user << average_score << highest_score  << lowest_score << "A" << endl;
+      cout << name_of_user << average_score << highest_score << lowest_score
+           << "A" << endl;
     }
-    else if (average_score >=80 && average_score < 90)
+    else if (average_score >= 80 && average_score < 90)
     {
-      cout << name_of_user << average_score << highest_score  << lowest_score << "B" << endl;
+      cout << name_of_user << average_score << highest_score << lowest_score
+           << "B" << endl;
     }
-    else if (average_score >=70 && average_score < 80)
+    else if (average_score >= 70 && average_score < 80)
     {
-      cout << name_of_user << average_score << highest_score  << lowest_score << "C" << endl;
-      else
-      {
-        cout << name_of_user << average_score << highest_score  << lowest_score << "D" << endl;
-      }
-
-      in_file.close();
-      return 0;
+      cout << name_of_user << average_score << highest_score << lowest_score
+           << "C" << endl;
     }
+    else
+    {
+      cout << name_of_user << average_score << highest_score << lowest_score
+           << "D" << endl;
+    }
+    in_file.close();
+  }
+  return 0;
+}

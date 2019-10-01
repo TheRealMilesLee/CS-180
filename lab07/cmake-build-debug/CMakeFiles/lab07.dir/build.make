@@ -56,27 +56,27 @@ include CMakeFiles/lab07.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab07.dir/flags.make
 
-CMakeFiles/lab07.dir/main.cpp.obj: CMakeFiles/lab07.dir/flags.make
-CMakeFiles/lab07.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\lab07\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab07.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab07.dir\main.cpp.obj -c D:\Truman-CS180-Course\lab07\main.cpp
+CMakeFiles/lab07.dir/scores.cpp.obj: CMakeFiles/lab07.dir/flags.make
+CMakeFiles/lab07.dir/scores.cpp.obj: ../scores.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\lab07\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab07.dir/scores.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab07.dir\scores.cpp.obj -c D:\Truman-CS180-Course\lab07\scores.cpp
 
-CMakeFiles/lab07.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab07.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab07\main.cpp > CMakeFiles\lab07.dir\main.cpp.i
+CMakeFiles/lab07.dir/scores.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab07.dir/scores.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab07\scores.cpp > CMakeFiles\lab07.dir\scores.cpp.i
 
-CMakeFiles/lab07.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab07.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab07\main.cpp -o CMakeFiles\lab07.dir\main.cpp.s
+CMakeFiles/lab07.dir/scores.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab07.dir/scores.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab07\scores.cpp -o CMakeFiles\lab07.dir\scores.cpp.s
 
 # Object files for target lab07
 lab07_OBJECTS = \
-"CMakeFiles/lab07.dir/main.cpp.obj"
+"CMakeFiles/lab07.dir/scores.cpp.obj"
 
 # External object files for target lab07
 lab07_EXTERNAL_OBJECTS =
 
-lab07.exe: CMakeFiles/lab07.dir/main.cpp.obj
+lab07.exe: CMakeFiles/lab07.dir/scores.cpp.obj
 lab07.exe: CMakeFiles/lab07.dir/build.make
 lab07.exe: CMakeFiles/lab07.dir/linklibs.rsp
 lab07.exe: CMakeFiles/lab07.dir/objects1.rsp

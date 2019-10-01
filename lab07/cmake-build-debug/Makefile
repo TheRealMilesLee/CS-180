@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leemiles/Desktop/lab07
+CMAKE_SOURCE_DIR = /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leemiles/Desktop/lab07/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Desktop/lab07/cmake-build-debug/CMakeFiles /Users/leemiles/Desktop/lab07/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07/cmake-build-debug/CMakeFiles /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Desktop/lab07/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ lab07/fast:
 	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/build
 .PHONY : lab07/fast
 
-main.o: main.cpp.o
+scores.o: scores.cpp.o
 
-.PHONY : main.o
+.PHONY : scores.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/main.cpp.o
-.PHONY : main.cpp.o
+scores.cpp.o:
+	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/scores.cpp.o
+.PHONY : scores.cpp.o
 
-main.i: main.cpp.i
+scores.i: scores.cpp.i
 
-.PHONY : main.i
+.PHONY : scores.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/main.cpp.i
-.PHONY : main.cpp.i
+scores.cpp.i:
+	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/scores.cpp.i
+.PHONY : scores.cpp.i
 
-main.s: main.cpp.s
+scores.s: scores.cpp.s
 
-.PHONY : main.s
+.PHONY : scores.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/main.cpp.s
-.PHONY : main.cpp.s
+scores.cpp.s:
+	$(MAKE) -f CMakeFiles/lab07.dir/build.make CMakeFiles/lab07.dir/scores.cpp.s
+.PHONY : scores.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab07"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... scores.o"
+	@echo "... scores.i"
+	@echo "... scores.s"
 .PHONY : help
 
 

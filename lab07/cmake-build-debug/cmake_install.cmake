@@ -1,4 +1,4 @@
-# Install script for directory: /Users/leemiles/Desktop/lab07
+# Install script for directory: /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/leemiles/Desktop/lab07/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab07/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

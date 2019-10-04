@@ -64,7 +64,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -99,7 +102,7 @@
       <updated>1569958522546</updated>
       <workItem from="1569958523971" duration="73000" />
       <workItem from="1570221959809" duration="31000" />
-      <workItem from="1570223191337" duration="1481000" />
+      <workItem from="1570223191337" duration="4120000" />
     </task>
     <servers />
   </component>

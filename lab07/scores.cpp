@@ -12,6 +12,8 @@ using namespace std;
 
 int main()
 {
+  const unsigned PRECISION = 2;
+
   ifstream in_file;
   in_file.open("scores.txt");
 
@@ -22,12 +24,22 @@ int main()
   string dummy;
   getline(in_file, dummy);
 
+  //loop here
   string line;
-  getline (in_file, line);
-  cout << line << endl;
-  in_file >> line;
-  
+  getline(in_file, line);
+  //loop here
+  in_file >> line 
+  //loop stop
+  getline(in_file, dummy);
+  //loop comtinue
 
-  in_file.close();
+  ofstream output_file;
+  output_file.open("grade_report.txt");
+
+  cout << "Now writing data to the file" << endl;
+
+  output_file << setprecision(PRECISION) <<  << endl;
+  output_file.close();
+  cout << "Done." << endl;
   return 0;
 }

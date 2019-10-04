@@ -23,10 +23,11 @@ int main()
   getline(in_file, dummy);
 
   string line;
-  while (getline (in_file,line))
-  {
-    cout << line << endl;
-  }
+  getline (in_file, line);
+  cout << line << endl;
+  in_file >> line;
+  
+
   in_file.close();
   return 0;
 }

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab07.dir/scores.cpp.o"
+  "CMakeFiles/lab07.dir/scores.cpp.obj"
+  "lab07.exe"
+  "lab07.exe.manifest"
   "lab07.pdb"
-  "lab07"
+  "liblab07.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

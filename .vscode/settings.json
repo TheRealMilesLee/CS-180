@@ -7,5 +7,10 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
+    },
+    "files.associations": {
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp"
     }
 }

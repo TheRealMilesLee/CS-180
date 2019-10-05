@@ -13,33 +13,58 @@ using namespace std;
 int main()
 {
   const unsigned PRECISION = 2;
-
+  unsigned max_score = 0;
+  unsigned min_score =100;
+  
+  //Open File
   ifstream in_file;
   in_file.open("scores.txt");
 
+  //Header Of the number of scores
   unsigned number_of_scores;
   in_file >> number_of_scores;
   cout << "The number of scores is: " << number_of_scores << endl;
-
+  
+  //Change the cursor place
+  string line;
   string dummy;
   getline(in_file, dummy);
-
-  //loop here
-  string line;
-  getline(in_file, line);
-  //loop here
-  in_file >> line 
-  //loop stop
-  getline(in_file, dummy);
-  //loop comtinue
-
+  
+  //Main Loop of the Names, Average score, Max score, Min score
+  for (unsigned loop_times = 0; loop_times < number_of_scores; loop_times++)
+  {
+    //get the name of the user
+    double average;
+    getline(in_file, line);
+    cout << line << endl;
+    //get the number
+    in_file >> line;
+    cout << line;
+    
+    //average
+    unsigned numbers_read_from_the_text;
+    double total_scores;
+    total_scores += numbers_read_from_the_text;
+    average = (total_scores / number_of_scores);
+    //Min and max number
+    if (numbers_read_from_the_text <= min_score )
+    {
+      min_score = numbers_read_from_the_text;
+    }
+    else if (numbers_read_from_the_text >= max_score)
+    {
+      max_score = numbers_read_from_the_text;
+    }
+    //output everything
+  }
   ofstream output_file;
-  output_file.open("grade_report.txt");
+  output_file.open("demofile.txt");
 
   cout << "Now writing data to the file" << endl;
 
-  output_file << setprecision(PRECISION) <<  << endl;
+  output_file << min_score << " " << max_score << " " << average << endl; 
   output_file.close();
   cout << "Done." << endl;
+  in_file.close();
   return 0;
 }

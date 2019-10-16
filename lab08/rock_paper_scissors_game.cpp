@@ -23,9 +23,9 @@ string get_human_choice();
 string get_computer_choice();
 /**
  * This function is used to calculate the winner
- * @param computer_win
- * @param human_win
- * @param winner
+ * @param computer_win a variable for computer win
+ * @param human_win a variable for human win
+ * @param winner a vairable for the final winner
  */
 void calculate_winner(string computer_win, string human_win, string& winner);
 /**
@@ -46,11 +46,15 @@ bool play_again();
  * @param MIN
  * @return
  */
-unsigned int get_rand_in_range();
+unsigned int get_rand_in_range(unsigned choice_of_computer);
 
 int main()
 {
-  
+  get_human_choice();
+  get_computer_choice();
+  calculate_winner();
+  create_report();
+  play_again();
   return 0;
 }
 
@@ -101,13 +105,13 @@ bool play_again()
   }
 
 }
-unsigned get_rand_in_range()
+unsigned get_rand_in_range(unsigned choice_of_computer)
 {
   const unsigned MIN = 1;
   const unsigned MAX = 3;
 
   unsigned seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
-  double choice_of_computer = rand() % ((MAX - MIN + 1)+ MIN);
+  choice_of_computer = rand() % ((MAX - MIN + 1)+ MIN);
   return choice_of_computer;
 }

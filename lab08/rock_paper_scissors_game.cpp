@@ -50,13 +50,27 @@ unsigned int get_rand_in_range(unsigned low, unsigned high);
 
 int main()
 {
+  cout << "Welcome to RPS";
+  
+  
   bool done = false;
   while (!done)
   {
+    cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
     get_human_choice();
-    calculate_winner();
-    create_report();
-    play_again();
+    string human_choice = get_human_choice();
+    if (human_choice == "r" || "p" || "s")
+    {
+      calculate_winner();
+      create_report();
+      play_again();
+    }
+    else
+    {
+      cout << "Invalid choice" ;
+    }
+    
+    
   }
   return 0;
 }
@@ -90,8 +104,8 @@ void calculate_winner(string human_move, string computer_move, string& result)
     unsigned rock = 2;
     unsigned scissors = 3;
     get_rand_in_range(1,3);
-    get_human_choice();
-    if(get_human_choice == "s" && get_computer_choice = "scissors")
+    string human_choice = get_human_choice();
+    if(human_choice == "s" && get_computer_choice = "scissors")
     {  
       result =  "Computer won. Better luck next time."; 
     }
@@ -103,9 +117,47 @@ void calculate_winner(string human_move, string computer_move, string& result)
     {
     
     }
-  
-  
 
+
+
+
+    if (human_choice = scissors && computer_choice = scissors)
+    {
+      result = "draw";
+    }
+    else if (human_choice = scissors && computer_choice = paper)
+    {
+      result = human_won;
+    }
+    else if (human_choice = scissors && computer_choice = rock)
+    {
+      result = computer_won;
+    }
+    else if (human_choice = paper && computer_choice = scissors)
+    {
+      result = computer_won;
+    }
+    else if (human_choice = rock && computer_choice = scissors)
+    {
+      result = human_won;
+    }
+    else if (human_choice = paper && computer_choice = rock)
+    {
+      result = computer_won;
+    }
+    else if (human_choice = rock && computer_choice = paper)
+    {
+      result = human_won;
+    }
+    else if (human_choice = paper && computer_choice = paper)
+    {
+      result = draw;
+    }
+    else
+    {
+      result = draw;
+    }
+    
 }
 
 void create_report(unsigned human, unsigned computer, unsigned draws)

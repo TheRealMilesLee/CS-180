@@ -30,8 +30,7 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(string human_move, string computer_move, string
-&result);
+void calculate_winner(string human_move, string computer_move);
 
 /**
  * This function is used to create the report
@@ -62,29 +61,15 @@ int main()
 {
   //欢迎界面
   cout << "Welcome to RPS" << endl;
-
-
-
+  bool done = false;
   //主循环体
-  while (play_again())
+  do
   {
-    cout << "Choose (r)ock, (p)aper, or (s)cissors: " << endl;
-    get_human_choice();
-    string human_choice = get_human_choice();
-    cout << "Human choose " << human_choice << endl;
-    if (human_choice == "r" || "p" || "s")
-    {
-      //calculate_winner(get_human_choice(), get_computer_choice(),
-          //create_report());
-      //create_report();
-
-    }
-    else
-    {
-      cout << "Invalid choice";
-    }
-  }
-  return 0;
+    cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
+    calculate_winner(get_human_choice(), get_computer_choice());
+  } while (!done);
+  
+return 0;
 }
 
 //获取输入选择
@@ -92,6 +77,7 @@ string get_human_choice()
 {
   string human_choice;
   cin >> human_choice;
+  cout << "Computer Choose" << get_computer_choice() << endl;
   if (human_choice == "s")
   {
     return "scissors";
@@ -100,10 +86,15 @@ string get_human_choice()
   {
     return "paper";
   }
-  else
+  else if (human_choice == "r")
   {
     return "rock";
   }
+  else
+  {
+    return "Invalid Choice";
+  }
+  
 }
 
 //获取电脑选择
@@ -126,35 +117,35 @@ string get_computer_choice()
 
 //计算赢家
 void
-calculate_winner(string human_move, string computer_move, string &result)
+calculate_winner(string human_move, string computer_move)
 {
   if (human_move == computer_move)
   {
-    result = "draw";
+    cout << "draw" << endl;
   }
   else if (human_move == "scissors" && computer_move == "paper")
   {
-    result = "human_won";
+    cout << "human_won" << endl;
   }
   else if (human_move == "scissors" && computer_move == "rock")
   {
-    result = "computer_won";
+    cout <<  "computer_won" << endl;
   }
   else if (human_move == "paper" && computer_move == "scissors")
   {
-    result = "computer_won";
+    cout << "computer_won" << endl;
   }
   else if (human_move == "rock" && computer_move == "scissors")
   {
-    result = "human_won";
+    cout << "human_won" << endl;
   }
   else if (human_move == "paper" && computer_move == "rock")
   {
-    result = "computer_won";
+    cout << "computer_won" << endl;
   }
   else
   {
-    result = "human_won";
+    cout <<  "something goes wrong" << endl;;
   }
 }
 

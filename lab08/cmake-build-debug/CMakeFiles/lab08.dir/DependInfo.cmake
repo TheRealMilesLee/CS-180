@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Truman-CS180-Course/lab08/rock_paper_scissors_game.cpp" "D:/Truman-CS180-Course/lab08/cmake-build-debug/CMakeFiles/lab08.dir/rock_paper_scissors_game.cpp.obj"
+  "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab08/rock_paper_scissors_game.cpp" "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab08/cmake-build-debug/CMakeFiles/lab08.dir/rock_paper_scissors_game.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

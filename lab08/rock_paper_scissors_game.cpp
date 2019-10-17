@@ -27,7 +27,7 @@ string get_computer_choice();
  * @param human_win a variable for human win
  * @param winner a vairable for the final winner
  */
-void calculate_winner(string computer_win, string human_win, string& winner);
+void calculate_winner(string human, string computer, string& draws);
 /**
  * This function is used to create the report
  * @param human
@@ -51,13 +51,13 @@ unsigned int get_rand_in_range(unsigned low, unsigned high);
 int main()
 {
   get_human_choice();
+  string choice =  get_computer_choice();
   do
   {
-    get_computer_choice();
     calculate_winner();
     create_report();
     play_again();
-  }while(get_human_choice() = );
+  }while(choice == "r" || "p" || "s" );
   return 0;
 }
 
@@ -83,18 +83,22 @@ string get_computer_choice()
    return "rock";
  }
 }
-void calculate_winner(string computer_win, string human_win, string& winner)
+/**
+void calculate_winner(string human_win, string draws, string& computer_win)
 {
   unsigned s = 1;
   unsigned r = 2;
   unsigned p = 3;
   get_human_choice();
-  if (s < get_rand_in_range() && r < get_rand_in_range())
+  if (p < get_rand_in_range() && r < get_rand_in_range())
   {
-    return 
+
   }
+  
 
 }
+ */
+
 void create_report(unsigned human, unsigned computer, unsigned draws)
 {
   ofstream output_file;
@@ -120,7 +124,7 @@ bool play_again()
 
 unsigned get_rand_in_range(unsigned low, unsigned high)
 {
-  unsigned seed = static_cast<unsigned int>(time(nullptr));
+  auto seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
   unsigned value = static_cast<unsigned>(rand()) % (high - low + 1) + low;
   return value;

@@ -23,9 +23,9 @@ string get_human_choice();
 string get_computer_choice();
 /**
  * This function is used to calculate the winner
- * @param computer_win a variable for computer win
- * @param human_win a variable for human win
- * @param winner a vairable for the final winner
+ * @param human_move a variable for computer win
+ * @param computer_move variable for human win
+ * @param result a vairable for the final winner
  */
 void calculate_winner(string human_move, string computer_move, string& result);
 /**
@@ -55,10 +55,13 @@ unsigned int get_rand_in_range(unsigned low, unsigned high);
 //主程序
 int main()
 {
+  //欢迎界面
   cout << "Welcome to RPS";
   
-  
+  //设置一个布尔旗判断循环是否退出
   bool done = false;
+  
+  //主循环体
   while (!done)
   {
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
@@ -66,8 +69,8 @@ int main()
     string human_choice = get_human_choice();
     if (human_choice == "r" || "p" || "s")
     {
-      calculate_winner();
-      create_report(human, computer, draws);
+      calculate_winner(get_human_choice(),get_computer_choice(),create_report());
+      create_report();
       play_again();
     }
     else
@@ -83,7 +86,19 @@ string get_human_choice()
 {
   string human_choice;
   cin >> human_choice;
-  return human_choice;
+  if (human_choice == "s")
+  {
+    return "scissors";
+  }
+  else if (human_choice == "p")
+  {
+    return "paper";
+  }
+  else
+  {
+    return "rock";
+  }
+  
 }
 //获取电脑选择
 string get_computer_choice()
@@ -106,64 +121,35 @@ string get_computer_choice()
 //计算赢家
 void calculate_winner(string human_move, string computer_move, string& result)
 {
-    unsigned computer_choice = get_rand_in_range(1,3);
-    string human_choice = get_human_choice();
-
-    if(human_choice == "s" && get_computer_choice = "scissors")
-    {  
-      result =  "Computer won. Better luck next time."; 
-    }
-    else if (get_human_choice() == "p")
+    if (human_move == computer_move)
     {
-
+      result = "draw";
+    }
+    else if (human_move == "scissors" && computer_move == "paper")
+    {
+      result = "human_won";
+    }
+    else if (human_move == "scissors" && computer_move == "rock")
+    {
+      result = "computer_won";
+    }
+    else if (human_move == "paper" && computer_move == "scissors")
+    {
+      result = "computer_won";
+    }
+    else if (human_move == "rock" && computer_move == "scissors")
+    {
+      result = "human_won";
+    }
+    else if (human_move == "paper" && computer_move == "rock")
+    {
+      result = "computer_won";
     }
     else
     {
-    
-    }
-
-    unsigned scissors = 1;
-    unsigned paper = 2;
-    unsigned rock = 3;
-
-
-    if (human_choice = scissors && computer_choice = scissors)
-    {
-      result = "draw";
-    }
-    else if (human_choice = scissors && computer_choice = paper)
-    {
       result = "human_won";
     }
-    else if (human_choice = scissors && computer_choice = rock)
-    {
-      result = "computer_won";
-    }
-    else if (human_choice = paper && computer_choice = scissors)
-    {
-      result = "computer_won";
-    }
-    else if (human_choice = rock && computer_choice = scissors)
-    {
-      result = "human_won";
-    }
-    else if (human_choice = paper && computer_choice = rock)
-    {
-      result = "computer_won";
-    }
-    else if (human_choice = rock && computer_choice = paper)
-    {
-      result = "human_won";
-    }
-    else if (human_choice = paper && computer_choice = paper)
-    {
-      result = "draw";
-    }
-    else
-    {
-      result = "draw";
-    }
-}
+
 
 //输出到文件
 void create_report(unsigned human, unsigned computer, unsigned draws)

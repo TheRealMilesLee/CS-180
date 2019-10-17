@@ -89,7 +89,7 @@ void calculate_winner(string computer_win, string human_win, string& winner)
   unsigned r = 2;
   unsigned p = 3;
   get_human_choice();
-  if (s < get_rand_in_range)
+  if (s < get_rand_in_range() && r < get_rand_in_range())
   {
     return 
   }

@@ -46,15 +46,18 @@ bool play_again();
  * @param MIN
  * @return
  */
-unsigned int get_rand_in_range(unsigned choice_of_computer);
+unsigned int get_rand_in_range(unsigned low, unsigned high);
 
 int main()
 {
   get_human_choice();
-  get_computer_choice();
-  calculate_winner();
-  create_report();
-  play_again();
+  do
+  {
+    get_computer_choice();
+    calculate_winner();
+    create_report();
+    play_again();
+  }while(get_human_choice() = );
   return 0;
 }
 
@@ -66,7 +69,7 @@ string get_human_choice()
 }
 string get_computer_choice()
 {
- unsigned computer_choice = get_rand_in_range();
+ unsigned computer_choice = get_rand_in_range(1,3);
  if (computer_choice == 3)
  {
    return "scissors";
@@ -82,6 +85,14 @@ string get_computer_choice()
 }
 void calculate_winner(string computer_win, string human_win, string& winner)
 {
+  unsigned s = 1;
+  unsigned r = 2;
+  unsigned p = 3;
+  get_human_choice();
+  if (s < get_rand_in_range)
+  {
+    return 
+  }
 
 }
 void create_report(unsigned human, unsigned computer, unsigned draws)
@@ -91,11 +102,12 @@ void create_report(unsigned human, unsigned computer, unsigned draws)
   output_file << "Human" << "  " << human << endl << "Computer" << computer
   << endl << "Draws" << "  "  << draws << endl;
 }
+
 bool play_again()
 {
-  get_human_choice();
+  string decision = get_human_choice();
 
-  if ( )
+  if (decision == "Y")
   {
     return false;
   }
@@ -105,13 +117,11 @@ bool play_again()
   }
 
 }
-unsigned get_rand_in_range(unsigned choice_of_computer)
-{
-  const unsigned MIN = 1;
-  const unsigned MAX = 3;
 
+unsigned get_rand_in_range(unsigned low, unsigned high)
+{
   unsigned seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
-  choice_of_computer = rand() % ((MAX - MIN + 1)+ MIN);
-  return choice_of_computer;
+  unsigned value = static_cast<unsigned>(rand()) % (high - low + 1) + low;
+  return value;
 }

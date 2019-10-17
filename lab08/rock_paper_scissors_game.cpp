@@ -83,21 +83,64 @@ string get_computer_choice()
    return "rock";
  }
 }
-/**
-void calculate_winner(string human_win, string draws, string& computer_win)
-{
-  unsigned s = 1;
-  unsigned r = 2;
-  unsigned p = 3;
-  get_human_choice();
-  if (p < get_rand_in_range() && r < get_rand_in_range())
-  {
 
+void calculate_winner(string human_win, string computer_win, string& decide_who_win)
+{
+  unsigned computer_choice = get_rand_in_range(1,3);
+  get_human_choice();
+  if ( get_human_choice() == "s")
+  {
+    unsigned human_choice = 1;
+    if (human_choice < computer_choice)
+    {
+      cout << "Computer won. Better luck next time.";
+    }
+    else if (human_choice == computer_choice)
+    {
+      cout << "No winner; it was a draw.";
+    }
+    else
+    {
+      cout << "Human won. Congratulations!";
+    }
+    
   }
+  else if (get_human_choice() == "p")
+  {
+    unsigned human_choice = 2;
+    if (human_choice < computer_choice)
+    {
+      cout << "Computer won. Better luck next time.";
+    }
+    else if (human_choice == computer_choice)
+    {
+      cout << "No winner; it was a draw.";
+    }
+    else
+    {
+      cout << "Human won. Congratulations!";
+    }
+  }
+  else
+  {
+    unsigned human_choice = 3;
+    if (human_choice < computer_choice)
+    {
+      cout << "Computer won. Better luck next time.";
+    }
+    else if (human_choice == computer_choice)
+    {
+      cout << "No winner; it was a draw.";
+    }
+    else
+    {
+      cout << "Human won. Congratulations!";
+    }
+  }
+  
   
 
 }
- */
 
 void create_report(unsigned human, unsigned computer, unsigned draws)
 {

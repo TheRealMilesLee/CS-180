@@ -27,7 +27,7 @@ string get_computer_choice();
  * @param human_win a variable for human win
  * @param winner a vairable for the final winner
  */
-void calculate_winner(string human, string computer, string& draws);
+void calculate_winner(string human_move, string computer_move, string& result);
 /**
  * This function is used to create the report
  * @param human
@@ -50,14 +50,14 @@ unsigned int get_rand_in_range(unsigned low, unsigned high);
 
 int main()
 {
-  get_human_choice();
-  string choice =  get_computer_choice();
-  do
+  bool done = false;
+  while (!done)
   {
+    get_human_choice();
     calculate_winner();
     create_report();
     play_again();
-  }while(choice == "r" || "p" || "s" );
+  }
   return 0;
 }
 
@@ -84,59 +84,25 @@ string get_computer_choice()
  }
 }
 
-void calculate_winner(string human_win, string computer_win, string& decide_who_win)
+void calculate_winner(string human_move, string computer_move, string& result)
 {
-  unsigned computer_choice = get_rand_in_range(1,3);
-  get_human_choice();
-  if ( get_human_choice() == "s")
-  {
-    unsigned human_choice = 1;
-    if (human_choice < computer_choice)
-    {
-      cout << "Computer won. Better luck next time.";
+    unsigned paper = 1;
+    unsigned rock = 2;
+    unsigned scissors = 3;
+    get_rand_in_range(1,3);
+    get_human_choice();
+    if(get_human_choice == "s" && get_computer_choice = "scissors")
+    {  
+      result =  "Computer won. Better luck next time."; 
     }
-    else if (human_choice == computer_choice)
+    else if (get_human_choice() == "p")
     {
-      cout << "No winner; it was a draw.";
+
     }
     else
     {
-      cout << "Human won. Congratulations!";
-    }
     
-  }
-  else if (get_human_choice() == "p")
-  {
-    unsigned human_choice = 2;
-    if (human_choice < computer_choice)
-    {
-      cout << "Computer won. Better luck next time.";
     }
-    else if (human_choice == computer_choice)
-    {
-      cout << "No winner; it was a draw.";
-    }
-    else
-    {
-      cout << "Human won. Congratulations!";
-    }
-  }
-  else
-  {
-    unsigned human_choice = 3;
-    if (human_choice < computer_choice)
-    {
-      cout << "Computer won. Better luck next time.";
-    }
-    else if (human_choice == computer_choice)
-    {
-      cout << "No winner; it was a draw.";
-    }
-    else
-    {
-      cout << "Human won. Congratulations!";
-    }
-  }
   
   
 

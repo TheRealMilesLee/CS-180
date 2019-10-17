@@ -48,6 +48,11 @@ bool play_again();
  */
 unsigned int get_rand_in_range(unsigned low, unsigned high);
 
+
+
+
+
+//主程序
 int main()
 {
   cout << "Welcome to RPS";
@@ -62,25 +67,25 @@ int main()
     if (human_choice == "r" || "p" || "s")
     {
       calculate_winner();
-      create_report();
+      create_report(human, computer, draws);
       play_again();
     }
     else
     {
       cout << "Invalid choice" ;
     }
-    
-    
   }
   return 0;
 }
 
+//获取输入选择
 string get_human_choice()
 {
   string human_choice;
   cin >> human_choice;
   return human_choice;
 }
+//获取电脑选择
 string get_computer_choice()
 {
  unsigned computer_choice = get_rand_in_range(1,3);
@@ -98,13 +103,12 @@ string get_computer_choice()
  }
 }
 
+//计算赢家
 void calculate_winner(string human_move, string computer_move, string& result)
 {
-    unsigned paper = 1;
-    unsigned rock = 2;
-    unsigned scissors = 3;
-    get_rand_in_range(1,3);
+    unsigned computer_choice = get_rand_in_range(1,3);
     string human_choice = get_human_choice();
+
     if(human_choice == "s" && get_computer_choice = "scissors")
     {  
       result =  "Computer won. Better luck next time."; 
@@ -118,7 +122,9 @@ void calculate_winner(string human_move, string computer_move, string& result)
     
     }
 
-
+    unsigned scissors = 1;
+    unsigned paper = 2;
+    unsigned rock = 3;
 
 
     if (human_choice = scissors && computer_choice = scissors)
@@ -127,39 +133,39 @@ void calculate_winner(string human_move, string computer_move, string& result)
     }
     else if (human_choice = scissors && computer_choice = paper)
     {
-      result = human_won;
+      result = "human_won";
     }
     else if (human_choice = scissors && computer_choice = rock)
     {
-      result = computer_won;
+      result = "computer_won";
     }
     else if (human_choice = paper && computer_choice = scissors)
     {
-      result = computer_won;
+      result = "computer_won";
     }
     else if (human_choice = rock && computer_choice = scissors)
     {
-      result = human_won;
+      result = "human_won";
     }
     else if (human_choice = paper && computer_choice = rock)
     {
-      result = computer_won;
+      result = "computer_won";
     }
     else if (human_choice = rock && computer_choice = paper)
     {
-      result = human_won;
+      result = "human_won";
     }
     else if (human_choice = paper && computer_choice = paper)
     {
-      result = draw;
+      result = "draw";
     }
     else
     {
-      result = draw;
+      result = "draw";
     }
-    
 }
 
+//输出到文件
 void create_report(unsigned human, unsigned computer, unsigned draws)
 {
   ofstream output_file;
@@ -168,6 +174,7 @@ void create_report(unsigned human, unsigned computer, unsigned draws)
   << endl << "Draws" << "  "  << draws << endl;
 }
 
+//决定要不要再来一到
 bool play_again()
 {
   string decision = get_human_choice();
@@ -183,6 +190,7 @@ bool play_again()
 
 }
 
+//设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)
 {
   auto seed = static_cast<unsigned int>(time(nullptr));

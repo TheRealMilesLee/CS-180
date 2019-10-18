@@ -118,6 +118,7 @@ string get_computer_choice()
 void
 calculate_winner(string human_move, string computer_move)
 {
+  cout << " In  calculate winner " << human_move << " " << computer_move << endl;
   if (human_move == computer_move)
   {
     cout << "draw" << endl;
@@ -141,6 +142,10 @@ calculate_winner(string human_move, string computer_move)
   else if (human_move == "rock" && computer_move == "scissors")
   {
     cout << "human_won" << endl;
+  }
+  else if (human_move == "rock" && computer_move == "paper")
+  {
+    cout << "human win " << endl;
   }
   else
   {

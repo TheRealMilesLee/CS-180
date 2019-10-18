@@ -68,8 +68,7 @@ int main()
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
     calculate_winner(get_human_choice(), get_computer_choice());
   } while (!done);
-  
-return 0;
+  return 0;
 }
 
 //获取输入选择
@@ -166,14 +165,14 @@ number_of_times_human_player_won, unsigned draw_games)
 bool play_again()
 {
   cout << "Wanna Play Again? " ;
-  return get_human_choice() != "y";
 }
 
 //设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)
 {
-  auto seed = static_cast<unsigned int>(time(nullptr));
+  unsigned seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
   unsigned value = rand() % (high - low + 1) + low;
   return value;
 }
+

@@ -77,7 +77,7 @@ string get_human_choice()
 {
   string human_choice;
   cin >> human_choice;
-  cout << "Computer Choose" << get_computer_choice() << endl;
+  cout << "Computer Choose " << get_computer_choice() << endl;
   if (human_choice == "s")
   {
     return "scissors";
@@ -92,7 +92,7 @@ string get_human_choice()
   }
   else
   {
-    return "Invalid Choice";
+    cout << "Invalid Choice" << endl;
   }
   
 }
@@ -135,13 +135,13 @@ calculate_winner(string human_move, string computer_move)
   {
     cout << "computer_won" << endl;
   }
-  else if (human_move == "rock" && computer_move == "scissors")
-  {
-    cout << "human_won" << endl;
-  }
   else if (human_move == "paper" && computer_move == "rock")
   {
     cout << "computer_won" << endl;
+  }
+  else if (human_move == "rock" && computer_move == "scissors")
+  {
+    cout << "human_won" << endl;
   }
   else
   {

@@ -1,6 +1,6 @@
 //Hengyi Li
 //This Program is to play the rock scissors and papaer game
-//This Program finished by Hengyi Li on 11：20 AM, 5 Oct, 2019
+//This Program finished by Hengyi Li on 04：56 PM, 19 Oct, 2019
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <iostream>
@@ -58,6 +58,10 @@ bool play_again();
 //主程序
 int main()
 {
+  unsigned total = 0;
+  unsigned human_won = 0;
+  unsigned computer_won = 0;
+  unsigned draw = 0;
   //欢迎界面
   cout << "Welcome to RPS" << endl;
   bool done = false;
@@ -68,10 +72,6 @@ int main()
     }
     else
     {
-      unsigned total = 0;
-      unsigned human_won = 0;
-      unsigned computer_won = 0;
-      unsigned draw = 0;
       string result;
       string human_move = get_human_choice();
       string computer_move = get_computer_choice();
@@ -90,8 +90,8 @@ int main()
         draw++;
       }
       total++;
-      create_report(total, human_won, draw);
     }
+  create_report(total, human_won, draw);
   return 0;
 }
 //获取输入选择
@@ -191,13 +191,20 @@ void calculate_winner(string human_move, string computer_move, string& result)
 void create_report(unsigned total, unsigned human_won, unsigned draw)
 {
   const unsigned WIDTH = 4;
+  const unsigned PRECISION = 4;
+  const unsigned WIDTH_OF_PCT = 4;
+  const unsigned PERCENTAGE = 100;
   ofstream output_file;
   output_file.open("../result.txt");
   output_file << left <<"Total games:   " << setw(WIDTH) << right << total <<
   endl << "           #   Pct" << endl << left << "Human   " << setw(WIDTH) <<
- right << human_won << endl << left <<"Computer"  <<setw(WIDTH) << right <<
- total - human_won - draw << endl << left << "Draws   " <<setw(WIDTH) << right
- << draw << endl;
+ right << human_won << setw(WIDTH_OF_PCT) << setprecision(PRECISION) <<
+ fixed << (human_won / total) * PERCENTAGE << "%"<< endl << left <<"Computer"
+ <<setw(WIDTH) << right << total - human_won - draw << setw(WIDTH_OF_PCT)
+ << setprecision (PRECISION) << fixed << ((total-human_won-draw) / total) *
+ PERCENTAGE << "%" << endl << left << "Draws   " <<setw(WIDTH) << right <<
+ draw << setw (WIDTH_OF_PCT) << setprecision(PRECISION) << fixed <<(draw /
+ total) * PERCENTAGE << "%" << endl;
   output_file.close();
 }
 

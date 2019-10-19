@@ -1,5 +1,5 @@
-Total games:      1
+Total games:      8
            #   Pct
-Human      0
-Computer   1
-Draws      0
+Human      1   0%
+Computer   5   0%
+Draws      2   0%

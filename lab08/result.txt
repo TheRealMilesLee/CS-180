@@ -1,0 +1,3 @@
+Human         0
+Computer         3
+Draws         0

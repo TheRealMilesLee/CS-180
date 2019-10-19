@@ -30,8 +30,7 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(const string& human_move, const string& computer_move, string
-&result);
+void calculate_winner(string human_move, string computer_move);
 
 /**
  * This Function is used to create the report
@@ -41,12 +40,6 @@ void calculate_winner(const string& human_move, const string& computer_move, str
  */
 void create_report(unsigned total_games, unsigned human_win_total,
                    unsigned draw_games);
-
-/**
- * This function is used to decided this game will go on or not
- * @return
- */
-bool play_again();
 
 /**
  * This function is to get random choice for the computer choice
@@ -62,20 +55,29 @@ int main()
 {
   //欢迎界面
   cout << "Welcome to RPS" << endl;
-  bool done = false;
   unsigned total = 0;
   unsigned human_won = 0;
   unsigned draw = 0;
+  bool done = false;
   //主循环体
   while (!done)
   {
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
     string human_move = get_human_choice();
     string computer_move = get_computer_choice();
-    calculate_winner(human_move, computer_move,
-                     create_report(total, human_won, draw));
-    play_again();
+    calculate_winner(human_move, computer_move);
     total++;
+    string choose;
+    cout << "Play again? (y or n): ";
+    cin >> choose;
+    if (choose == "n")
+    {
+      done = true;
+    }
+    else
+    {
+      done = false;
+    }
   }
   create_report(total, human_won, draw);
   return 0;
@@ -101,7 +103,7 @@ string get_human_choice()
   }
   else
   {
-    cout << "Invalid Choice" << endl;
+    return "Invalid Choice";
   }
 }
 //获取电脑选择
@@ -124,44 +126,43 @@ string get_computer_choice()
   }
 }
 //计算赢家
-void calculate_winner(const string& human_move, const string& computer_move, string
-&result)
+void calculate_winner(string human_move, string computer_move)
 {
-  cout << " In  calculate winner " << human_move << "  " << computer_move
+  cout << "In  calculate winner: " << human_move << "  " << computer_move
        << endl;
   if (human_move == computer_move)
   {
-    result = "draw";
+    cout << "draw" << endl;
     //draw++;
   }
   else if (human_move == "scissors" && computer_move == "paper")
   {
-    result = "human_won";
+    cout << "human_won" << endl;
     //human_won++;
   }
   else if (human_move == "scissors" && computer_move == "rock")
   {
-    result = "computer_won";
+    cout << "computer_won" << endl;
   }
   else if (human_move == "paper" && computer_move == "scissors")
   {
-    result = "computer_won";
+    cout << "computer_won" << endl;
   }
   else if (human_move == "paper" && computer_move == "rock")
   {
-    result = "computer_won";
+    cout << "computer_won" << endl;
   }
   else if (human_move == "rock" && computer_move == "scissors")
   {
-    result = "human_won";
+    cout <<"human_won" << endl;
   }
   else if (human_move == "rock" && computer_move == "paper")
   {
-    result = "human win ";
+    cout << "human win " << endl;
   }
   else
   {
-    result = "something goes wrong";
+    cout << "Invalid Choice" << endl;
   }
 }
 //输出到文件
@@ -173,26 +174,13 @@ human_win_total, unsigned draw_games)
   total_games = total;
   draw_games = draw;
   */
+  const unsigned WIDTH = 10;
   ofstream output_file;
-  output_file.open("result.txt");
-  output_file << "Human" << "  " << human_win_total << endl << "Computer"
-              << total_games - human_win_total << endl << "Draws" << "  "
-              << draw_games << endl;
+  output_file.open("../result.txt");
+  output_file << "Human" << setw(WIDTH) << human_win_total << endl <<
+  "Computer" <<setw(WIDTH) << total_games - human_win_total << endl <<
+  "Draws" <<setw(WIDTH) << draw_games << endl;
   output_file.close();
-}
-
-//决定要不要再来一到
-bool play_again()
-{
-  cout << "Play again? (y or n): ";
-  if (get_human_choice() == "y")
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
 }
 //设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)
@@ -202,3 +190,4 @@ unsigned get_rand_in_range(unsigned low, unsigned high)
   unsigned value = rand() % (high - low + 1) + low;
   return value;
 }
+

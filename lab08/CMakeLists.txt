@@ -3,4 +3,4 @@ project(lab08)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab08 rock_paper_scissors_game.cpp)
+add_executable(lab08 game.cpp)

@@ -30,7 +30,8 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(string human_move, string computer_move, string& result);
+void calculate_winner(const string& human_move, const string& computer_move, string
+&result);
 
 /**
  * This Function is used to create the report
@@ -38,7 +39,8 @@ void calculate_winner(string human_move, string computer_move, string& result);
  * @param number_of_times_human_player_won use to get the times that human won
  * @param draw_games use to get the draw games
  */
-void create_report(unsigned total_games , unsigned human_win_total, unsigned draw_games);
+void create_report(unsigned total_games, unsigned human_win_total,
+                   unsigned draw_games);
 
 /**
  * This function is used to decided this game will go on or not
@@ -61,16 +63,17 @@ int main()
   //欢迎界面
   cout << "Welcome to RPS" << endl;
   bool done = false;
-  unsigned total;
-  unsigned human_won;
-  unsigned draw;
+  unsigned total = 0;
+  unsigned human_won = 0;
+  unsigned draw = 0;
   //主循环体
   while (!done)
   {
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
     string human_move = get_human_choice();
     string computer_move = get_computer_choice();
-    calculate_winner(human_move, computer_move, create_report(total,human_won, draw));
+    calculate_winner(human_move, computer_move,
+                     create_report(total, human_won, draw));
     play_again();
     total++;
   }
@@ -101,7 +104,6 @@ string get_human_choice()
     cout << "Invalid Choice" << endl;
   }
 }
-
 //获取电脑选择
 string get_computer_choice()
 {
@@ -121,48 +123,47 @@ string get_computer_choice()
     return "paper";
   }
 }
-
 //计算赢家
-void
-calculate_winner(string human_move, string computer_move, string& result)
+void calculate_winner(const string& human_move, const string& computer_move, string
+&result)
 {
-  cout << " In  calculate winner " << human_move << "  " << computer_move << endl;
+  cout << " In  calculate winner " << human_move << "  " << computer_move
+       << endl;
   if (human_move == computer_move)
   {
-    result ==  "draw" ;
+    result = "draw";
     //draw++;
   }
   else if (human_move == "scissors" && computer_move == "paper")
   {
-    result == "human_won";
+    result = "human_won";
     //human_won++;
   }
   else if (human_move == "scissors" && computer_move == "rock")
   {
-    result == "computer_won";
+    result = "computer_won";
   }
   else if (human_move == "paper" && computer_move == "scissors")
   {
-    result == "computer_won" ;
+    result = "computer_won";
   }
   else if (human_move == "paper" && computer_move == "rock")
   {
-    result == "computer_won" ;
+    result = "computer_won";
   }
   else if (human_move == "rock" && computer_move == "scissors")
   {
-    result == "human_won" ;
+    result = "human_won";
   }
   else if (human_move == "rock" && computer_move == "paper")
   {
-    result == "human win ";
+    result = "human win ";
   }
   else
   {
-    result ==  "something goes wrong" ;
+    result = "something goes wrong";
   }
 }
-
 //输出到文件
 void create_report(unsigned total_games, unsigned
 human_win_total, unsigned draw_games)
@@ -174,8 +175,9 @@ human_win_total, unsigned draw_games)
   */
   ofstream output_file;
   output_file.open("result.txt");
-  output_file << "Human" << "  " << human_win_total << endl << "Computer" 
-              << total_games - human_win_total << endl << "Draws" << "  " << draw_games << endl;
+  output_file << "Human" << "  " << human_win_total << endl << "Computer"
+              << total_games - human_win_total << endl << "Draws" << "  "
+              << draw_games << endl;
   output_file.close();
 }
 
@@ -192,13 +194,11 @@ bool play_again()
     return false;
   }
 }
-
 //设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)
 {
-  unsigned seed = static_cast<unsigned int>(time(nullptr));
+  auto seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
   unsigned value = rand() % (high - low + 1) + low;
   return value;
 }
-

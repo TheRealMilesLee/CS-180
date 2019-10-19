@@ -30,7 +30,7 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(string human_move, string computer_move, string&
+void calculate_winner(string human_move, string computer_move, string &
 result);
 
 /**
@@ -55,6 +55,7 @@ unsigned int get_rand_in_range(unsigned low, unsigned high);
  * @return return a boolean flag to decide the program will go or not
  */
 bool play_again();
+
 //主程序
 int main()
 {
@@ -65,8 +66,9 @@ int main()
   //欢迎界面
   cout << "Welcome to RPS" << endl;
   bool done = false;
-  while(!done)
-    if(play_again())
+  while (!done)
+  {
+    if (play_again())
     {
       done = true;
     }
@@ -81,7 +83,7 @@ int main()
       {
         human_won++;
       }
-      else if(result == "computer_won")
+      else if (result == "computer_won")
       {
         computer_won++;
       }
@@ -91,9 +93,11 @@ int main()
       }
       total++;
     }
+  }
   create_report(total, human_won, draw);
   return 0;
 }
+
 //获取输入选择
 string get_human_choice()
 {
@@ -122,11 +126,12 @@ string get_human_choice()
   }
   else
   {
-    cout <<"Invalid Choice"<< endl;
+    cout << "Invalid Choice" << endl;
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
     cin >> human_choice;
   }
 }
+
 //获取电脑选择
 string get_computer_choice()
 {
@@ -146,8 +151,10 @@ string get_computer_choice()
     return "paper";
   }
 }
+
 //计算赢家
-void calculate_winner(string human_move, string computer_move, string& result)
+void calculate_winner(string human_move, string computer_move, string
+&result)
 {
   if (human_move == computer_move)
   {
@@ -176,7 +183,7 @@ void calculate_winner(string human_move, string computer_move, string& result)
   }
   else if (human_move == "rock" && computer_move == "scissors")
   {
-    cout <<"Human won. Congratulations!" << endl;
+    cout << "Human won. Congratulations!" << endl;
     result = "human_won";
   }
   else if (human_move == "rock" && computer_move == "paper")
@@ -184,9 +191,8 @@ void calculate_winner(string human_move, string computer_move, string& result)
     cout << "Human won. Congratulations! " << endl;
     result = "human_won";
   }
-
-
 }
+
 //输出到文件
 void create_report(unsigned total, unsigned human_won, unsigned draw)
 {
@@ -196,15 +202,22 @@ void create_report(unsigned total, unsigned human_won, unsigned draw)
   const unsigned PERCENTAGE = 100;
   ofstream output_file;
   output_file.open("../result.txt");
-  output_file << left <<"Total games:   " << setw(WIDTH) << right << total <<
-  endl << "           #   Pct" << endl << left << "Human   " << setw(WIDTH) <<
- right << human_won << setw(WIDTH_OF_PCT) << setprecision(PRECISION) <<
- fixed << (human_won / total) * PERCENTAGE << "%"<< endl << left <<"Computer"
- <<setw(WIDTH) << right << total - human_won - draw << setw(WIDTH_OF_PCT)
- << setprecision (PRECISION) << fixed << ((total-human_won-draw) / total) *
- PERCENTAGE << "%" << endl << left << "Draws   " <<setw(WIDTH) << right <<
- draw << setw (WIDTH_OF_PCT) << setprecision(PRECISION) << fixed <<(draw /
- total) * PERCENTAGE << "%" << endl;
+  output_file << left << "Total games:   " << setw(WIDTH) << right << total <<
+              endl << "           #   Pct" << endl << left << "Human   "
+              << setw(WIDTH) <<
+              right << human_won << setw(WIDTH_OF_PCT)
+              << setprecision(PRECISION) <<
+              fixed << (human_won / total) * PERCENTAGE << "%" << endl << left
+              << "Computer"
+              << setw(WIDTH) << right << total - human_won - draw
+              << setw(WIDTH_OF_PCT)
+              << setprecision(PRECISION) << fixed
+              << ((total - human_won - draw) / total) *
+                 PERCENTAGE << "%" << endl << left << "Draws   "
+              << setw(WIDTH) << right <<
+              draw << setw(WIDTH_OF_PCT) << setprecision(PRECISION) << fixed
+              << (draw /
+                  total) * PERCENTAGE << "%" << endl;
   output_file.close();
 }
 
@@ -219,6 +232,7 @@ bool play_again()
     return true;
   }
 }
+
 //设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)
 {

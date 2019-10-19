@@ -14,13 +14,13 @@ using namespace std;
 
 /**
  * This function is used to get the human's choice
- * @return
+ * @return return the human choice
  */
 string get_human_choice();
 
 /**
  * This function is used to get the computer choice
- * @return
+ * @return return the computer choice
  */
 string get_computer_choice();
 
@@ -46,13 +46,13 @@ void create_report(unsigned total, unsigned human_won,
  * This function is to get random choice for the computer choice
  * @param low to get the lowest number
  * @param high to get the hightest number
- * @return
+ * @return return the random number
  */
 unsigned int get_rand_in_range(unsigned low, unsigned high);
 
 /**
  * This function is used to decided the program will go on or not
- * @return
+ * @return return a boolean flag to decide the program will go or not
  */
 bool play_again();
 //主程序
@@ -73,7 +73,6 @@ int main()
       unsigned computer_won = 0;
       unsigned draw = 0;
       string result;
-      cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
       string human_move = get_human_choice();
       string computer_move = get_computer_choice();
       calculate_winner(human_move, computer_move, result);
@@ -99,24 +98,34 @@ int main()
 //获取输入选择
 string get_human_choice()
 {
+  cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
   string human_choice;
   cin >> human_choice;
-  cout << "Computer Choose " << get_computer_choice() << endl;
-  if (human_choice == "s")
+  if (human_choice == "r" || human_choice == "p" || human_choice == "s")
   {
-    return "scissors";
-  }
-  else if (human_choice == "p")
-  {
-    return "paper";
-  }
-  else if (human_choice == "r")
-  {
-    return "rock";
+    cout << "Computer Choose " << get_computer_choice() << endl;
+    if (human_choice == "s")
+    {
+      return "scissors";
+    }
+    else if (human_choice == "p")
+    {
+      return "paper";
+    }
+    else if (human_choice == "r")
+    {
+      return "rock";
+    }
+    else
+    {
+      return "Invalid Choice";
+    }
   }
   else
   {
-    return "Invalid Choice";
+    cout <<"Invalid Choice"<< endl;
+    cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
+    cin >> human_choice;
   }
 }
 //获取电脑选择

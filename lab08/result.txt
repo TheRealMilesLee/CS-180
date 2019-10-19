@@ -1,4 +1,5 @@
-Total games:                         1
-Human                        0
-Computer                        0
-Draws                        1
+Total games:         1
+
+           #   PctHuman        1
+Computer        0
+Draws        0

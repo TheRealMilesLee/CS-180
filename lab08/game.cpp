@@ -30,7 +30,8 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(string human_move, string computer_move);
+void calculate_winner(string human_move, string computer_move, string&
+result);
 
 /**
  * This Function is used to create the report
@@ -38,8 +39,8 @@ void calculate_winner(string human_move, string computer_move);
  * @param number_of_times_human_player_won use to get the times that human won
  * @param draw_games use to get the draw games
  */
-void create_report(unsigned total_games, unsigned human_win_total,
-                   unsigned draw_games);
+void create_report(unsigned total, unsigned human_won,
+                   unsigned draw);
 
 /**
  * This function is to get random choice for the computer choice
@@ -49,40 +50,52 @@ void create_report(unsigned total_games, unsigned human_win_total,
  */
 unsigned int get_rand_in_range(unsigned low, unsigned high);
 
-
+/**
+ * This function is used to decided the program will go on or not
+ * @return
+ */
+bool play_again();
 //主程序
 int main()
 {
   //欢迎界面
   cout << "Welcome to RPS" << endl;
-  unsigned total = 0;
-  unsigned human_won = 0;
-  unsigned draw = 0;
   bool done = false;
-  //主循环体
-  while (!done)
-  {
-    cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
-    string human_move = get_human_choice();
-    string computer_move = get_computer_choice();
-    calculate_winner(human_move, computer_move);
-    total++;
-    string choose;
-    cout << "Play again? (y or n): ";
-    cin >> choose;
-    if (choose == "n")
+  while(!done)
+    if(play_again())
     {
       done = true;
     }
     else
     {
-      done = false;
+      unsigned total = 0;
+      unsigned human_won = 0;
+      unsigned computer_won = 0;
+      unsigned draw = 0;
+      string result;
+      cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
+      string human_move = get_human_choice();
+      string computer_move = get_computer_choice();
+      calculate_winner(human_move, computer_move, result);
+
+      if (result == "human_won")
+      {
+        human_won++;
+      }
+      else if(result == "computer_won")
+      {
+        computer_won++;
+      }
+      else
+      {
+        draw++;
+      }
+      total++;
+      create_report(total, human_won, draw);
     }
-  }
-  create_report(total, human_won, draw);
+
   return 0;
 }
-
 //获取输入选择
 string get_human_choice()
 {
@@ -126,61 +139,69 @@ string get_computer_choice()
   }
 }
 //计算赢家
-void calculate_winner(string human_move, string computer_move)
+void calculate_winner(string human_move, string computer_move, string& result)
 {
-  cout << "In  calculate winner: " << human_move << "  " << computer_move
-       << endl;
   if (human_move == computer_move)
   {
-    cout << "draw" << endl;
-    //draw++;
+    cout << "No winner; it was a draw." << endl;
+    result = "draw";
   }
   else if (human_move == "scissors" && computer_move == "paper")
   {
-    cout << "human_won" << endl;
-    //human_won++;
+    cout << "Human won. Congratulations!" << endl;
+    result = "human_won";
   }
   else if (human_move == "scissors" && computer_move == "rock")
   {
-    cout << "computer_won" << endl;
+    cout << "Computer won. Better luck next time." << endl;
+    result = "computer_won";
   }
   else if (human_move == "paper" && computer_move == "scissors")
   {
-    cout << "computer_won" << endl;
+    cout << "Computer won. Better luck next time." << endl;
+    result = "computer_won";
   }
   else if (human_move == "paper" && computer_move == "rock")
   {
-    cout << "computer_won" << endl;
+    cout << "Computer won. Better luck next time." << endl;
+    result = "computer_won";
   }
   else if (human_move == "rock" && computer_move == "scissors")
   {
-    cout <<"human_won" << endl;
+    cout <<"Human won. Congratulations!" << endl;
+    result = "human_won";
   }
   else if (human_move == "rock" && computer_move == "paper")
   {
-    cout << "human win " << endl;
+    cout << "Human won. Congratulations! " << endl;
+    result = "human_won";
   }
-  else
-  {
-    cout << "Invalid Choice" << endl;
-  }
+
+
 }
 //输出到文件
-void create_report(unsigned total_games, unsigned
-human_win_total, unsigned draw_games)
+void create_report(unsigned total, unsigned human_won, unsigned draw)
 {
-  /**
-  human_win_total = human_won;
-  total_games = total;
-  draw_games = draw;
-  */
-  const unsigned WIDTH = 10;
+  const unsigned WIDTH = 9;
   ofstream output_file;
   output_file.open("../result.txt");
-  output_file << "Human" << setw(WIDTH) << human_win_total << endl <<
-  "Computer" <<setw(WIDTH) << total_games - human_win_total << endl <<
-  "Draws" <<setw(WIDTH) << draw_games << endl;
+  output_file <<"Total games: " << setw(WIDTH) << total << endl << endl <<
+  "           #   Pct" << "Human" << setw(WIDTH) << human_won << endl
+  <<"Computer"  <<setw(WIDTH) << total - human_won - draw << endl <<
+  "Draws" <<setw(WIDTH) << draw << endl;
   output_file.close();
+}
+
+//判断是否继续程序
+bool play_again()
+{
+  string choose;
+  cout << "Play again? (y or n): ";
+  cin >> choose;
+  if (choose == "n")
+  {
+    return true;
+  }
 }
 //设置随机数
 unsigned get_rand_in_range(unsigned low, unsigned high)

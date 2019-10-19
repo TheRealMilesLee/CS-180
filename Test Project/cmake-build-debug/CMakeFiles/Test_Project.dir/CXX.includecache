@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Truman-CS180-Course/Test Project/main.cpp
+iostream
+-
+iomanip
+-
+istream
+-
+fstream
+-
+cstdlib
+-
+ctime
+-
+

@@ -1,4 +1,4 @@
-Total games:                         1
+Total                        1
 Human                        0
 Computer                        0
 Draws                        1

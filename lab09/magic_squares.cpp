@@ -16,11 +16,12 @@ const unsigned SIZE = 3;
  */
 bool validate_square();
 /**
- * This function is used to get the input file from the disk
- * @param in_file  is used for get the file from the disk
- * @return the data that reads from the the file
+ * The function prompts the user for a filename.
+ * @param ifstream is for input the file from the disk
+ * @param in_file if for reference the get the input file form the disk
+ * @return the number that in the file
  */
-ifstream get_input_file(string& in_file);
+string get_input_file(ifstream, string& in_file);
 
 /**
  * This function is used for print out the square
@@ -36,11 +37,10 @@ void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file);
 
 int main()
 {
-  ifstream in_file;
-  string file;
-  get_input_file();
+  unsigned square;
+  ifstream in_file; 
+  get_input_file(in_file);
   
-  unsigned square[SIZE][SIZE];
   read_square_from_file(square, in_file);
   print_square();
 
@@ -57,7 +57,17 @@ int main()
 
 bool validate_square()
 {
-  
+  unsigned 
+  string square;
+  int total = 0;
+  for (unsigned row = 0; row < SIZE; row++)
+  {
+    for (unsigned col = 0; col < SIZE; col++)
+    {
+      total += square[row][col];
+      if ()
+    }
+  }
 }
 
 ifstream get_input_file(string& in_file)
@@ -67,11 +77,7 @@ ifstream get_input_file(string& in_file)
 
 void print_square()
 {
-  cout <<  "    +---+---+---+" << endl << "    | "  << square << "    | "
-       << square << "    | " << square << "    | " << endl << "    | " <<
-       square << "    | " << square << "    | " << square << "    | " <<
-       endl << "    | "  << square << "    | " << square << "    | " <<
-       square << "    | " << endl;
+  
 }
 
 void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file)

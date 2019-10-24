@@ -5,10 +5,10 @@
 
 #include <iostream>
 #include <iomanip>
-#include <istream>
 #include <fstream>
 
 using namespace std;
+const unsigned SIZE = 3;
 
 /**
  * This function is used to validate the square
@@ -36,15 +36,13 @@ void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file);
 
 int main()
 {
-  const int colum = 3;
-  const int row = 3;
   ifstream in_file;
   string file;
-  get_input_file( file);
+  get_input_file();
   
-  unsigned square[row][colum];
+  unsigned square[SIZE][SIZE];
   read_square_from_file(square, in_file);
-  print_square(square);
+  print_square();
 
   if (validate_square(square))
   {
@@ -59,16 +57,12 @@ int main()
 
 bool validate_square()
 {
-  for (unsigned index = 0; index < get_input_file(); index++)
-  {
-    
-  }
+  
 }
 
 ifstream get_input_file(string& in_file)
 {
-  string file;
-  file.open(getline(cin, file))
+
 }
 
 void print_square()

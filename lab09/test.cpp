@@ -19,7 +19,7 @@ int main()
 
     for (count = 0; count < SIZE; count++)
     {
-        output_file << numbers[count] << endl;
+        output_file << numbers[count] << " | "  << endl;
     }
 
     output_file.close();

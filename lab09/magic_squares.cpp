@@ -56,15 +56,57 @@ int main()
   return 0;
 }
 
-bool validate_square(unsigned square[SIZE][SIZE], ifstream& file)
+bool validate_square()
 {
-  string square;
-  int total = 0;
-  for (unsigned row = 0; row < SIZE; row++)
+  read_square_from_file();
+  unsigned square_row1;
+  unsigned square_column1;
+  unsigned square_row2;
+  unsigned square_column2;
+  unsigned square_row3;
+  unsigned square_column3;
+  const unsigned NUMBER_OF_ROW_AND_COLUMNS = 3;
+  for (unsigned count = 0; count < NUMBER_OF_ROW_AND_COLUMNS; count++)
   {
-    for (unsigned col = 0; col < SIZE; col++)
+    if(square_row1 == square_column1)
     {
-      total += square[row][col];
+      return "This is a magic square";
+    }
+    else if (square_row2 == square_column2)
+    {
+      return "This is a magic square";
+    }
+    else if (square_row3 == square_column3)
+    {
+      return "This is a magic square";
+    }
+    else if(square_row1 == square_row2)
+    {
+      return "This is a magic square";
+    }
+    else if (square_row1 == square_row3)
+    {
+      return "This is a magic square";
+    }
+    else if(square_row2 == square_row3)
+    {
+      return "This is a magic square";
+    }
+    else if(square_column1 == square_column2)
+    {
+      return "This is a magic square";
+    }
+    else if (square_column1 == square_column3)
+    {
+      return "This is a magic square";
+    }
+    else if (square_column2 == square_column3)
+    {
+      return "This is a magic square";
+    }
+    else 
+    {
+      return "This is not a magic square";
     }
   }
 }

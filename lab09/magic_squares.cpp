@@ -39,8 +39,8 @@ int main()
 {
   unsigned square;
   ifstream in_file; 
-  string file_name;
-  get_input_file(file_name);
+  string filename;
+  get_input_file(filename);
   
   read_square_from_file(square, file_name);
   print_square();

@@ -39,9 +39,10 @@ int main()
 {
   unsigned square;
   ifstream in_file; 
-  get_input_file(in_file);
+  string file_name;
+  get_input_file(file_name);
   
-  read_square_from_file(square, in_file);
+  read_square_from_file(square, file_name);
   print_square();
 
   if (validate_square(square))
@@ -64,7 +65,8 @@ bool validate_square()
   unsigned square_column2;
   unsigned square_row3;
   unsigned square_column3;
-  read_square_from_file(square, in_file);
+  string filename;
+  get_input_file(filename);
   for (unsigned count = 0; count < NUMBER_OF_ROW_AND_COLUMNS; count++)
   {
     if(square_row1 == square_column1)
@@ -128,7 +130,8 @@ string get_input_file(string& in_file)
     }
     else
     {
-      
+      filename = in_file;
+      return in_file;
     }
   }
 }

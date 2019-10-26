@@ -14,7 +14,7 @@ const unsigned SIZE = 3;
  * This function is used to validate the square
  * @return an boolean value that can decide is the square or not
  */
-bool validate_square(unsigned square[SIZE][SIZE], ifstream& file);
+bool validate_square();
 /**
  * The function prompts the user for a filename.
  * @param ifstream is for input the file from the disk
@@ -39,8 +39,7 @@ int main()
 {
   unsigned square;
   ifstream in_file; 
-  string file_name;
-  get_input_file(file_name);
+  get_input_file(in_file);
   
   read_square_from_file(square, in_file);
   print_square();
@@ -58,14 +57,14 @@ int main()
 
 bool validate_square()
 {
-  read_square_from_file();
+  const unsigned NUMBER_OF_ROW_AND_COLUMNS = 3;
   unsigned square_row1;
   unsigned square_column1;
   unsigned square_row2;
   unsigned square_column2;
   unsigned square_row3;
   unsigned square_column3;
-  const unsigned NUMBER_OF_ROW_AND_COLUMNS = 3;
+  read_square_from_file(square, in_file);
   for (unsigned count = 0; count < NUMBER_OF_ROW_AND_COLUMNS; count++)
   {
     if(square_row1 == square_column1)

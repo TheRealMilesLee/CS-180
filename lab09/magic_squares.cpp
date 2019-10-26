@@ -34,7 +34,7 @@ void print_square();
  * @param square is for the file that can puts in a array
  * @param file   get the input file
  */
-void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file);
+void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file);
 
 int main()
 {

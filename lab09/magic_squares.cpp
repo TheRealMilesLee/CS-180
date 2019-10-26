@@ -134,8 +134,6 @@ bool validate_square()
   }
 }
 
-
-
 void print_square()
 {
   bool done = false;

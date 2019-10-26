@@ -11,7 +11,9 @@ void read_square_from_file(unsigned square[COLO_SIZE][ROW_SIZE], ifstream& file)
 
 int main()
 {
+    ifstream file;
     string filename;
+    unsigned square[COLO_SIZE][ROW_SIZE]{read_square_from_file(file)};
     get_input_file(filename);
     print_square();
     return 0;
@@ -34,22 +36,21 @@ string get_input_file(string& in_file)
     }
     else
     {
-      return read_square_from_file(square,filename);
+      done = true;
     }
+    file.close();
   }
 }
 void print_square()
 {
-  bool done = false;
-  while (!done)
-  {
-    string filename;
+    ofstream output_file;
+    output_file.open("2.txt");
 
-    for (unsigned count = 0; count < 3; count++)
+    for (unsigned index = 0; index < COLO_SIZE && index < ROW_SIZE; index++)
     {
-        cout << "+---+---+---+" << endl << "|" << read_square_from_file(square, filename) << "|" << endl;
+        output_file << square[COLO_SIZE][ROW_SIZE] << ' ';
     }
-  }
+    output_file.close();
 }
 void read_square_from_file(unsigned square[COLO_SIZE][ROW_SIZE], ifstream& file)
 {

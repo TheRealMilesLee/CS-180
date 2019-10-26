@@ -37,13 +37,12 @@ void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file);
 
 int main()
 {
-  unsigned square;
   ifstream in_file; 
   string filename;
   get_input_file(filename);
   
-  read_square_from_file(square, filename);
-  print_square();
+  read_square_from_file(square, in_file);
+  print_square(square);
 
   if (validate_square(square))
   {

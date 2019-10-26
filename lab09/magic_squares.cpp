@@ -8,7 +8,8 @@
 #include <fstream>
 
 using namespace std;
-const unsigned SIZE = 3;
+const unsigned COLO_SIZE = 3;
+const unsigned ROW_SIZE = 3;
 
 /**
  * This function is used to validate the square
@@ -72,8 +73,8 @@ string get_input_file(string& in_file)
     }
     else
     {
-      filename = in_file;
-      return in_file;
+      string square[ROW_SIZE][COLO_SIZE]{read_square_from_file()};
+      return square;
     }
   }
 }
@@ -144,11 +145,11 @@ void print_square()
   }
 }
 
-void read_square_from_file(unsigned square[SIZE][SIZE], ifstream& file)
+void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
 {
-  for (unsigned row = 0; row < SIZE; row++)
+  for (unsigned row = 0; row < ROW_SIZE; row++)
   {
-    for (unsigned col = 0; col < SIZE; col++)
+    for (unsigned col = 0; col < COLO_SIZE; col++)
     {
       file >> square[row][col];
     }

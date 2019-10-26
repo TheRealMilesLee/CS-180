@@ -13,9 +13,10 @@ void print_square();
 
 int main()
 {
-  ifstream file;
+  ifstream in_file;
   string filename;
   get_input_file(filename);
+  read_square_from_file(square, in_file);
   validate_square();
   print_square();
   return 0;
@@ -39,9 +40,7 @@ string get_input_file(string& in_file)
     }
     else
     {
-      unsigned square;
-      read_square_from_file(square, in_file);
-      return square;
+      done = true;
     }
   }
 }
@@ -70,6 +69,5 @@ void print_square()
   {
     string filename;
     cout << "+---+---+---+" << endl << "|" << get_input_file(filename) << "|" << endl;
-    
   }
 }

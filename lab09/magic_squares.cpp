@@ -21,7 +21,7 @@ bool validate_square();
  * @param in_file if for reference the get the input file form the disk
  * @return the number that in the file
  */
-string get_input_file(ifstream, string& in_file);
+string get_input_file(string& in_file);
 
 /**
  * This function is used for print out the square
@@ -42,7 +42,7 @@ int main()
   string filename;
   get_input_file(filename);
   
-  read_square_from_file(square, file_name);
+  read_square_from_file(square, filename);
   print_square();
 
   if (validate_square(square))
@@ -55,7 +55,29 @@ int main()
   }
   return 0;
 }
-
+string get_input_file(string& in_file)
+{
+  ifstream file;
+  string filename;
+  cout << "Enter a filename for processing: ";
+  cin >> filename;
+  bool done = false;
+  while (!done)
+  {
+    file.open(filename);
+    if (file.fail())
+    {
+      cout << "Could not open foobar.txt. Please try again. " << endl;
+      cout << "Enter a filename for processing: ";
+      cin >> filename;
+    }
+    else
+    {
+      filename = in_file;
+      return in_file;
+    }
+  }
+}
 bool validate_square()
 {
   const unsigned NUMBER_OF_ROW_AND_COLUMNS = 3;
@@ -112,37 +134,15 @@ bool validate_square()
   }
 }
 
-string get_input_file(string& in_file)
-{
-  ifstream file;
-  string filename;
-  cout << "Enter a filename for processing: ";
-  cin >> filename;
-  bool done = false;
-  while (!done)
-  {
-    file.open(filename);
-    if (file.fail())
-    {
-      cout << "Could not open foobar.txt. Please try again. " << endl;
-      cout << "Enter a filename for processing: ";
-      cin >> filename;
-    }
-    else
-    {
-      filename = in_file;
-      return in_file;
-    }
-  }
-}
+
 
 void print_square()
 {
   bool done = false;
   while (!done)
   {
-    string file_name;
-    cout << "+---+---+---+" << endl << "|" << get_input_file(file_name) << "|" << endl;
+    string filename;
+    cout << "+---+---+---+" << endl << "|" << get_input_file(filename) << "|" << endl;
     
   }
 }

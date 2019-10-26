@@ -128,11 +128,7 @@ string get_input_file(string& in_file)
     }
     else
     {
-      string array1;
-      while (!done)
-      {
-        file >> array1;
-      }
+      
     }
   }
 }

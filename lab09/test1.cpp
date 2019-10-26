@@ -47,6 +47,7 @@ string get_input_file(string& in_file)
 
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
 {
+  
   for (unsigned row = 0; row < ROW_SIZE; row++)
   {
     for (unsigned col = 0; col < COLO_SIZE; col++)

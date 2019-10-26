@@ -39,9 +39,9 @@ void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
 int main()
 {
   ifstream in_file; 
-  string filename;
-  get_input_file(filename);
+  get_input_file(in_file);
   
+  unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
   print_square(square);
 
@@ -54,95 +54,6 @@ int main()
     cout << "This is not a valid magic square." << endl;
   }
   return 0;
-}
-string get_input_file(string& in_file)
-{
-  ifstream file;
-  string filename;
-  cout << "Enter a filename for processing: ";
-  cin >> filename;
-  bool done = false;
-  while (!done)
-  {
-    file.open(filename);
-    if (file.fail())
-    {
-      cout << "Could not open foobar.txt. Please try again. " << endl;
-      cout << "Enter a filename for processing: ";
-      cin >> filename;
-    }
-    else
-    {
-      string square[ROW_SIZE][COLO_SIZE]{read_square_from_file()};
-      return square;
-    }
-  }
-}
-bool validate_square()
-{
-  const unsigned NUMBER_OF_ROW_AND_COLUMNS = 3;
-  unsigned square_row1;
-  unsigned square_column1;
-  unsigned square_row2;
-  unsigned square_column2;
-  unsigned square_row3;
-  unsigned square_column3;
-  string filename;
-  get_input_file(filename);
-  for (unsigned count = 0; count < NUMBER_OF_ROW_AND_COLUMNS; count++)
-  {
-    if(square_row1 == square_column1)
-    {
-      return "This is a magic square";
-    }
-    else if (square_row2 == square_column2)
-    {
-      return "This is a magic square";
-    }
-    else if (square_row3 == square_column3)
-    {
-      return "This is a magic square";
-    }
-    else if(square_row1 == square_row2)
-    {
-      return "This is a magic square";
-    }
-    else if (square_row1 == square_row3)
-    {
-      return "This is a magic square";
-    }
-    else if(square_row2 == square_row3)
-    {
-      return "This is a magic square";
-    }
-    else if(square_column1 == square_column2)
-    {
-      return "This is a magic square";
-    }
-    else if (square_column1 == square_column3)
-    {
-      return "This is a magic square";
-    }
-    else if (square_column2 == square_column3)
-    {
-      return "This is a magic square";
-    }
-    else 
-    {
-      return "This is not a magic square";
-    }
-  }
-}
-
-void print_square()
-{
-  bool done = false;
-  while (!done)
-  {
-    string filename;
-    cout << "+---+---+---+" << endl << "|" << get_input_file(filename) << "|" << endl;
-    
-  }
 }
 
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)

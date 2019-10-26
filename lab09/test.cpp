@@ -34,7 +34,6 @@ string get_input_file(string& in_file)
     }
     else
     {
-        
       return read_square_from_file(square,filename);
     }
   }

@@ -27,7 +27,7 @@ void get_input_file(ifstream &in_file);
 /**
  * This function is used for print out the square
  */
-void print_square();
+void print_square(unsigned square[ROW_SIZE][COLO_SIZE]);
 
 /**
  * This fuction is used to read the square from the file.
@@ -45,7 +45,7 @@ int main()
 
   unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
-  print_square();
+  print_square(square);
 
   if (validate_square())
   {
@@ -84,9 +84,9 @@ void get_input_file(ifstream &in_file)
 
 bool validate_square()
 {
+  unsigned square[ROW_SIZE][COLO_SIZE];
   unsigned total_row = 0;
   unsigned total_col = 0;
-  unsigned square[ROW_SIZE][COLO_SIZE];
 
   //total_row calculation
   for (auto & row : square)
@@ -117,14 +117,13 @@ bool validate_square()
   }
 }
 
-void print_square()
+void print_square(unsigned square[ROW_SIZE][COLO_SIZE])
 {
-  unsigned square[ROW_SIZE][COLO_SIZE];
   cout << "+---+---+---+" << endl;
-  for (auto & row : square)
+  for (unsigned row = 0; row < ROW_SIZE; row++)
   {
      cout << "| " ;
-    for (unsigned col : row)
+    for (unsigned col = 0; col < COLO_SIZE; col++)
     {
       cout << col << " | " ;
     }

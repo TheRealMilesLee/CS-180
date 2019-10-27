@@ -45,7 +45,6 @@ int main()
 
   unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
-  print_square();
 
   if (validate_square())
   {
@@ -55,6 +54,9 @@ int main()
   {
     cout << "This is not a valid magic square." << endl;
   }
+
+  print_square();
+
   return 0;
 }
 
@@ -146,13 +148,14 @@ void print_square()
   unsigned square[ROW_SIZE][COLO_SIZE];
   for (auto & row : square)
   {
-    cout << "+---+---+---+" << endl;
+    cout << "+---+---+---+" << endl << " | " ;
     for (unsigned col : row)
     {
-      cout << col << " | ";
+      cout << col << " | " ;
     }
   cout << endl;
   }
+  cout << "+---+---+---+" << endl;
 }
 
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream

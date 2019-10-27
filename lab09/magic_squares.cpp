@@ -91,68 +91,67 @@ bool validate_square()
   unsigned square[ROW_SIZE][COLO_SIZE];
 
   //total_row calculation
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (auto & row : square)
   {
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned int col : row)
     {
-      total_row += square[row][col];
+      total_row += col;
     }
   }
 
   //total_colum claculation
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (auto & row : square)
   {
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned int col : row)
     {
-      total_col += square[row][col];
+      total_col += col;
     }
   }
 
   //total_diagonal_left calculation
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (auto & row : square)
   {
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned int col : row)
     {
-      total_diagonal_left += square[row][col];
+      total_diagonal_left += col;
     }
   }
 
   //total_diagonal_right calculation
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (auto & row : square)
   {
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned col : row)
     {
-      total_diagonal_right += square[row][col];
+      total_diagonal_right += col;
     }
   }
 
   //validate the result.
-  if (total_col == total_row || total_diagonal_left == total_diagonal_right
-  || total_col == total_col || total_row == total_row)
+  if (total_col != total_row)
   {
-    return true;
+    return false;
+  }
+  else if (total_diagonal_left != total_diagonal_right)
+  {
+    return false;
   }
   else
   {
-    return false;
+    return true;
   }
 }
 
 void print_square()
 {
   unsigned square[ROW_SIZE][COLO_SIZE];
-  bool done = false;
-  while (!done)
+  for (auto & row : square)
   {
-    for (unsigned row = 0; row < ROW_SIZE; row++)
+    cout << "+---+---+---+" << endl;
+    for (unsigned col : row)
     {
-      cout << "+---+---+---+" << endl;
-      for (unsigned col = 0; col < COLO_SIZE; col++)
-      {
-        cout << square[row][col] << " | ";
-      }
-      cout << endl;
+      cout << col << " | ";
     }
+  cout << endl;
   }
 }
 

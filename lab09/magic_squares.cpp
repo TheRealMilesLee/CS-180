@@ -45,6 +45,7 @@ int main()
 
   unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
+  print_square();
 
   if (validate_square())
   {
@@ -55,7 +56,7 @@ int main()
     cout << "This is not a valid magic square." << endl;
   }
 
-  print_square();
+
 
   return 0;
 }
@@ -88,8 +89,6 @@ bool validate_square()
 {
   unsigned total_row = 0;
   unsigned total_col = 0;
-  unsigned total_diagonal_left = 0;
-  unsigned total_diagonal_right = 0;
   unsigned square[ROW_SIZE][COLO_SIZE];
 
   //total_row calculation
@@ -110,34 +109,12 @@ bool validate_square()
     }
   }
 
-  //total_diagonal_left calculation
-  for (auto & row : square)
-  {
-    for (unsigned int col : row)
-    {
-      total_diagonal_left += col;
-    }
-  }
-
-  //total_diagonal_right calculation
-  for (auto & row : square)
-  {
-    for (unsigned col : row)
-    {
-      total_diagonal_right += col;
-    }
-  }
-
   //validate the result.
   if (total_col != total_row)
   {
     return false;
   }
-  else if (total_diagonal_left != total_diagonal_right)
-  {
-    return false;
-  }
-  else
+  else if (square[1] + square[3])
   {
     return true;
   }
@@ -146,16 +123,17 @@ bool validate_square()
 void print_square()
 {
   unsigned square[ROW_SIZE][COLO_SIZE];
+  cout << "+---+---+---+" << endl;
   for (auto & row : square)
   {
-    cout << "+---+---+---+" << endl << " | " ;
+     cout << "| " ;
     for (unsigned col : row)
     {
       cout << col << " | " ;
     }
-  cout << endl;
+    cout << endl << "+---+---+---+" << endl;
   }
-  cout << "+---+---+---+" << endl;
+
 }
 
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream

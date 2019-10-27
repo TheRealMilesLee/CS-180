@@ -16,13 +16,13 @@ const unsigned ROW_SIZE = 3;
  * @return an boolean value that can decide is the square or not
  */
 bool validate_square();
+
 /**
  * The function prompts the user for a filename.
- * @param ifstream is for input the file from the disk
  * @param in_file if for reference the get the input file form the disk
  * @return the number that in the file
  */
-string get_input_file(string& in_file);
+void get_input_file(ifstream &in_file);
 
 /**
  * This function is used for print out the square
@@ -30,23 +30,24 @@ string get_input_file(string& in_file);
 void print_square();
 
 /**
- * This function is used to read the square from the file
- * @param square is for the file that can puts in a array
- * @param file   get the input file
+ * This fuction is used to read teh square from the file.
+ * @param square
+ * @param file
  */
-void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file);
+void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+&file);
 
 int main()
 {
-  ifstream in_file; 
+  ifstream in_file;
   string filename;
-  get_input_file(filename);
-  
+  get_input_file(in_file);
+
   unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
-  print_square(square);
+  print_square();
 
-  if (validate_square(square))
+  if (validate_square())
   {
     cout << "This is a valid magic square." << endl;
   }
@@ -57,21 +58,22 @@ int main()
   return 0;
 }
 
-string get_input_file(string& in_file)
+void get_input_file(ifstream &in_file)
 {
   ifstream file;
   string filename;
   cout << "Enter a filename for processing: ";
-  cin >> filename;
+  getline(cin, filename);
   bool done = false;
   while (!done)
   {
     file.open(filename);
     if (file.fail())
     {
-      cout << "Could not open foobar.txt. Please try again. " << endl;
+      cout << "Could not open" << "  " << filename << "  "
+           <<"Please try again. "<< endl;
       cout << "Enter a filename for processing: ";
-      cin >> filename;
+      getline(cin, filename);
     }
     else
     {
@@ -80,7 +82,82 @@ string get_input_file(string& in_file)
   }
 }
 
-void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
+bool validate_square()
+{
+  unsigned total_row = 0;
+  unsigned total_col = 0;
+  unsigned total_diagonal_left = 0;
+  unsigned total_diagonal_right = 0;
+  unsigned square[ROW_SIZE][COLO_SIZE];
+
+  //total_row calculation
+  for (unsigned row = 0; row < ROW_SIZE; row++)
+  {
+    for (unsigned col = 0; col < COLO_SIZE; col++)
+    {
+      total_row += square[row][col];
+    }
+  }
+
+  //total_colum claculation
+  for (unsigned row = 0; row < ROW_SIZE; row++)
+  {
+    for (unsigned col = 0; col < COLO_SIZE; col++)
+    {
+      total_col += square[row][col];
+    }
+  }
+
+  //total_diagonal_left calculation
+  for (unsigned row = 0; row < ROW_SIZE; row++)
+  {
+    for (unsigned col = 0; col < COLO_SIZE; col++)
+    {
+      total_diagonal_left += square[row][col];
+    }
+  }
+
+  //total_diagonal_right calculation
+  for (unsigned row = 0; row < ROW_SIZE; row++)
+  {
+    for (unsigned col = 0; col < COLO_SIZE; col++)
+    {
+      total_diagonal_right += square[row][col];
+    }
+  }
+
+  //validate the result.
+  if (total_col == total_row || total_diagonal_left == total_diagonal_right
+  || total_col == total_col || total_row == total_row)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+void print_square()
+{
+  unsigned square[ROW_SIZE][COLO_SIZE];
+  bool done = false;
+  while (!done)
+  {
+    for (unsigned row = 0; row < ROW_SIZE; row++)
+    {
+      cout << "+---+---+---+" << endl;
+      for (unsigned col = 0; col < COLO_SIZE; col++)
+      {
+        cout << square[row][col] << " | ";
+      }
+      cout << endl;
+    }
+  }
+}
+
+void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+&file)
 {
   for (unsigned row = 0; row < ROW_SIZE; row++)
   {
@@ -90,19 +167,4 @@ void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
     }
   }
   file.close();
-}
-
-bool validate_square()
-{
-  
-}
-
-void print_square()
-{
-  bool done = false;
-  while (!done)
-  {
-    string filename;
-    cout << "+---+---+---+" << endl << "|" << get_input_file(filename) << "|" << endl;
-  }
 }

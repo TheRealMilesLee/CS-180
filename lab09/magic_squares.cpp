@@ -30,7 +30,7 @@ void get_input_file(ifstream &in_file);
 void print_square();
 
 /**
- * This fuction is used to read teh square from the file.
+ * This fuction is used to read the square from the file.
  * @param square
  * @param file
  */
@@ -55,9 +55,6 @@ int main()
   {
     cout << "This is not a valid magic square." << endl;
   }
-
-
-
   return 0;
 }
 
@@ -114,7 +111,7 @@ bool validate_square()
   {
     return false;
   }
-  else if (square[1] + square[3])
+  else
   {
     return true;
   }

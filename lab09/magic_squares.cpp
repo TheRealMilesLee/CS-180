@@ -39,7 +39,8 @@ void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
 int main()
 {
   ifstream in_file; 
-  get_input_file(in_file);
+  string filename;
+  get_input_file(filename);
   
   unsigned square[ROW_SIZE][COLO_SIZE];
   read_square_from_file(square, in_file);
@@ -56,6 +57,29 @@ int main()
   return 0;
 }
 
+string get_input_file(string& in_file)
+{
+  ifstream file;
+  string filename;
+  cout << "Enter a filename for processing: ";
+  cin >> filename;
+  bool done = false;
+  while (!done)
+  {
+    file.open(filename);
+    if (file.fail())
+    {
+      cout << "Could not open foobar.txt. Please try again. " << endl;
+      cout << "Enter a filename for processing: ";
+      cin >> filename;
+    }
+    else
+    {
+      done = true;
+    }
+  }
+}
+
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
 {
   for (unsigned row = 0; row < ROW_SIZE; row++)
@@ -66,4 +90,19 @@ void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream& file)
     }
   }
   file.close();
+}
+
+bool validate_square()
+{
+  
+}
+
+void print_square()
+{
+  bool done = false;
+  while (!done)
+  {
+    string filename;
+    cout << "+---+---+---+" << endl << "|" << get_input_file(filename) << "|" << endl;
+  }
 }

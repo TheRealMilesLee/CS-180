@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Truman-CS180-Course/lab09/magic_squares.cpp" "D:/Truman-CS180-Course/lab09/cmake-build-debug/CMakeFiles/lab09.dir/magic_squares.cpp.obj"
+  "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab09/magic_squares.cpp" "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab09/cmake-build-debug/CMakeFiles/lab09.dir/magic_squares.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -15,7 +15,8 @@ const unsigned ROW_SIZE = 3;
  * This function is used to validate the square
  * @return an boolean value that can decide is the square or not
  */
-bool validate_square();
+bool validate_square(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+&file);
 
 /**
  * The function prompts the user for a filename.
@@ -31,8 +32,8 @@ void print_square(unsigned square[ROW_SIZE][COLO_SIZE]);
 
 /**
  * This fuction is used to read the square from the file.
- * @param square
- * @param file
+ * @param square this is an 2-d array
+ * @param file  get the filre from the disk.
  */
 void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
 &file);
@@ -47,7 +48,7 @@ int main()
   read_square_from_file(square, in_file);
   print_square(square);
 
-  if (validate_square())
+  if (validate_square(square, in_file))
   {
     cout << "This is a valid magic square." << endl;
   }
@@ -82,38 +83,38 @@ void get_input_file(ifstream &in_file)
   }
 }
 
-bool validate_square()
+bool validate_square(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+&file)
 {
-  unsigned square[ROW_SIZE][COLO_SIZE];
   unsigned total_row = 0;
   unsigned total_col = 0;
 
   //total_row calculation
-  for (auto & row : square)
+  for (unsigned row = 0; row < ROW_SIZE; row++)
   {
-    for (unsigned int col : row)
+    for (unsigned col = 0; col < COLO_SIZE; col++)
     {
       total_row += col;
     }
   }
 
   //total_colum claculation
-  for (auto & row : square)
+  for (unsigned row = 0; row < ROW_SIZE; row++)
   {
-    for (unsigned int col : row)
+    for (unsigned col = 0; col < COLO_SIZE; col++)
     {
       total_col += col;
     }
   }
 
   //validate the result.
-  if (total_col != total_row)
+  if (total_col == total_row)
   {
-    return false;
+    return true;
   }
   else
   {
-    return true;
+    return false;
   }
 }
 

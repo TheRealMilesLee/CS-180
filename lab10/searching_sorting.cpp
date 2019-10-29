@@ -14,7 +14,7 @@ const size_t ARRAY_SIZE = 100;
  * This is used for sorted the array.
  * @param array
  */
-void sort_array(int *values_array, size_t i);
+void sort_array(vector<int> & ARRAY_SIZE, size_t value_count);
 
 /**
    This function is used for the linear search
@@ -23,7 +23,8 @@ void sort_array(int *values_array, size_t i);
    @return the position of value if found, or the size of the vector
    if not
 */
-size_t linear_search_array(const vector<int> &arr, int value, int i);
+size_t linear_search_array(const vector<int> &ARRAY_SIZE, unsigned value,
+    unsigned value_count);
 
 /**
    This function is used for the iterative binary search
@@ -32,7 +33,7 @@ size_t linear_search_array(const vector<int> &arr, int value, int i);
    @return the position of value if found, or the size of the vector
    if not
 */
-size_t binary_search_vector(const vector<int>& array, unsigned value);
+size_t binary_search_vector(const vector<int>& ARRAY_SIZE, unsigned value);
 
 /**
  * This function is used to copy the array to the vector.
@@ -41,8 +42,8 @@ size_t binary_search_vector(const vector<int>& array, unsigned value);
  * @param value_count
  * @return
  */
-string copy_array_to_vector(unsigned values_array[ARRAY_SIZE],
-    vector<int>& arr, unsigned value_count);
+string copy_array_to_vector(vector<int> values_array,
+                            vector<int>& ARRAY_SIZE, unsigned value_count);
 
 
 int main()
@@ -63,7 +64,7 @@ int main()
   data_file.close();
   cout << "Read " << value_count << " values from data.txt" << endl;
 
-  sort_array(values_array, value_count);
+  sort_array(reinterpret_cast<vector<int> &>(values_array), value_count);
   copy_array_to_vector(values_array, values_vector, value_count);
 
   bool done = false;
@@ -99,35 +100,35 @@ int main()
     }
   } // while !done
 
-
   return 0;
 }
 
 // function definitions here
-void sort_array(int *array, size_t i)
+void sort_array(vector<int> & ARRAY_SIZE, size_t value_count)
 {
-  for (size_t pass_indx = array.size() - 1; pass_indx > 0; pass_indx--)
+  for (size_t pass_indx = ARRAY_SIZE.size() - 1; pass_indx > 0; pass_indx--)
   {
     for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
-      if (array.at(compare_indx) > array.at(compare_indx + 1))
+      if (ARRAY_SIZE.at(compare_indx) > ARRAY_SIZE.at(compare_indx + 1))
       {
-        swap(array.at(compare_indx), array.at(compare_indx + 1));
+        swap(ARRAY_SIZE.at(compare_indx), ARRAY_SIZE.at(compare_indx + 1));
       }
     }
   }
 }
 
-size_t linear_search_array(const vector<int> &arr, int value, int i)
+size_t linear_search_array(const vector<int> &ARRAY_SIZE, unsigned value,
+    unsigned value_count)
 {
   size_t index = 0;
-  size_t size = arr.size();
+  size_t size = ARRAY_SIZE.size();
   size_t position = size;
   bool found = false;
 
   while (index < size && !found)
   {
-    if (arr.at(index) == value)
+    if (ARRAY_SIZE.at(index) == value)
     {
       found = true;
       position = index;
@@ -137,22 +138,23 @@ size_t linear_search_array(const vector<int> &arr, int value, int i)
   return position;
 }
 
-size_t binary_search_vector(const vector<unsigned>& array, unsigned value)
+size_t binary_search_vector(const vector<unsigned>& ARRAY_SIZE, unsigned
+value)
 {
   size_t first = 0;
-  size_t last = array.size() - 1;
-  size_t position = array.size();
+  size_t last = ARRAY_SIZE.size() - 1;
+  size_t position = ARRAY_SIZE.size();
   bool found = false;
 
-  while (!found && first <= last && last < array.size())
+  while (!found && first <= last && last < ARRAY_SIZE.size())
   {
     size_t middle = (first + last) / 2;
-    if (array.at(middle) == value)
+    if (ARRAY_SIZE.at(middle) == value)
     {
       found = true;
       position = middle;
     }
-    else if (array.at(middle) > value)
+    else if (ARRAY_SIZE.at(middle) > value)
     {
       last = middle - 1;
     }
@@ -162,4 +164,10 @@ size_t binary_search_vector(const vector<unsigned>& array, unsigned value)
     }
   }
   return position;
+}
+
+string copy_array_to_vector(vector<int> values_array, vector<int>&
+    ARRAY_SIZE, unsigned value_count)
+{
+
 }

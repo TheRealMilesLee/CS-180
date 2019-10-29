@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leemiles/Desktop/lab10
+CMAKE_SOURCE_DIR = /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leemiles/Desktop/lab10/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab10/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Desktop/lab10/cmake-build-debug/CMakeFiles /Users/leemiles/Desktop/lab10/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab10/cmake-build-debug/CMakeFiles /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab10/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Desktop/lab10/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab10/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ lab10/fast:
 	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/build
 .PHONY : lab10/fast
 
-main.o: main.cpp.o
+searching_sorting.o: searching_sorting.cpp.o
 
-.PHONY : main.o
+.PHONY : searching_sorting.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/main.cpp.o
-.PHONY : main.cpp.o
+searching_sorting.cpp.o:
+	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/searching_sorting.cpp.o
+.PHONY : searching_sorting.cpp.o
 
-main.i: main.cpp.i
+searching_sorting.i: searching_sorting.cpp.i
 
-.PHONY : main.i
+.PHONY : searching_sorting.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/main.cpp.i
-.PHONY : main.cpp.i
+searching_sorting.cpp.i:
+	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/searching_sorting.cpp.i
+.PHONY : searching_sorting.cpp.i
 
-main.s: main.cpp.s
+searching_sorting.s: searching_sorting.cpp.s
 
-.PHONY : main.s
+.PHONY : searching_sorting.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/main.cpp.s
-.PHONY : main.cpp.s
+searching_sorting.cpp.s:
+	$(MAKE) -f CMakeFiles/lab10.dir/build.make CMakeFiles/lab10.dir/searching_sorting.cpp.s
+.PHONY : searching_sorting.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab10"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... searching_sorting.o"
+	@echo "... searching_sorting.i"
+	@echo "... searching_sorting.s"
 .PHONY : help
 
 

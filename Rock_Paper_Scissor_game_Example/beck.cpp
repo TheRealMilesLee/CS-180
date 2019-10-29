@@ -60,7 +60,7 @@ int main()
     bool done = false;
     while (!done)
     {
-
+        string 
     }
 }
 
@@ -157,6 +157,9 @@ void create_report(unsigned total_game, unsigned human_wins, unsigned draws)
 
     game_results << "Total games: " << total_game << endl;
     game_results << left << setw(LABEL_WIDTH) << " " << right << setw(NUMBERS_WIDTH) << "#" << setw(PCT_WIDTH) << "Pct" << endl;
-    game_results << left << setw(LABEL_WIDTH) << "Human" << right << setw(NUMBERS_WIDTH) << human_wins<< setw(PCT_WIDTH) << "Pct" << endl;
-    game_results << left << setw(LABEL_WIDTH) << " " << right << setw(NUMBERS_WIDTH) << "#" << setw(PCT_WIDTH) << "Pct" << endl; 
+    game_results << left << setw(LABEL_WIDTH) << "Human" << right << setw(NUMBERS_WIDTH) << human_wins<< setw(PCT_WIDTH) << human_pct << endl;
+    game_results << left << setw(LABEL_WIDTH) << "Computer" << right << setw(NUMBERS_WIDTH) << computer_wins << setw(PCT_WIDTH) << computer_pct << endl; 
+    game_results << left << setw(LABEL_WIDTH) << "Draws" << right << setw(NUMBERS_WIDTH) << draws << setw(PCT_WIDTH) << draw_pct << endl; 
+
+    game_results.close();
 }

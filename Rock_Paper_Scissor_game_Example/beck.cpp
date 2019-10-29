@@ -50,5 +50,62 @@ unsigned get_rand_in_range(unsigned low, unsigned high);
 
 int main()
 {
+    cout << "Welcome to the RPS" << endl;
+    srand(static_cast<unsigned>(time(nullptr)));
 
+    unsigned total_game = 0;
+    unsigned human_wins = 0;
+    unsigned draws = 0;
+
+    bool done = false;
+    while (!done)
+    {
+
+    }
 }
+
+string get_human_choice()
+{
+    bool valid_choice;
+    string choice;
+    do
+    {
+        cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
+        getline(cin, choice);
+
+        valid_choice = choice == "r" || "p" || "s";
+        if(!valid_choice)
+        {
+            cout << "Invalid choice" << endl;
+        }
+    } while (!valid_choice);
+    if (choice == "r")
+    {
+        return "rock";
+    }
+    else if(choice == "p")
+    {
+        return "paper";
+    }
+    else
+    {
+        return "scissors";
+    }
+}
+
+string get_computer_choice()
+{
+    const unsigned LOW_CODE = 1;
+    const unsigned HIGH_CODE = 3;
+    unsigned code = get_rand_in_range(LOW_CODE, HIGH_CODE);
+    if (code == LOW_CODE)
+    {
+        return "rock";
+    }
+    if (code == HIGH_CODE)
+    {
+        return "paper";
+    }
+    return "scissors";
+}
+

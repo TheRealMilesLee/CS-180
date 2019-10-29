@@ -110,16 +110,12 @@ string get_computer_choice() {
     return "rock";
   }
   if (code == HIGH_CODE) {
-    ( return "paper";
+    return "paper";
   }
   return "scissors";
 }
 
-void c
-)
-alculate_winner(string
-human_choice,
-string computer_choice, string
+void calculate_winner(string human_choice, string computer_choice, string
 & winner)
 {
 if (human_choice == computer_choice)

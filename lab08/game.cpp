@@ -34,10 +34,10 @@ void calculate_winner(string human_move, string computer_move, string &
 result);
 
 /**
- * This Function is used to create the report
- * @param number_of_total_games use to get the numbers of total games  
- * @param number_of_times_human_player_won use to get the times that human won
- * @param draw_games use to get the draw games
+ * This function is used to create the report
+ * @param total used to get the numbers of the total games.
+ * @param human_won used to get the times that human won
+ * @param draw use to get the draw games.
  */
 void create_report(unsigned total, unsigned human_won,
                    unsigned draw);
@@ -46,13 +46,13 @@ void create_report(unsigned total, unsigned human_won,
  * This function is to get random choice for the computer choice
  * @param low to get the lowest number
  * @param high to get the hightest number
- * @return return the random number
+ * @return  the random number
  */
 unsigned int get_rand_in_range(unsigned low, unsigned high);
 
 /**
  * This function is used to decided the program will go on or not
- * @return return a boolean flag to decide the program will go or not
+ * @return  a boolean flag to decide the program will go or not
  */
 bool play_again();
 
@@ -65,20 +65,12 @@ int main()
   unsigned draw = 0;
   //欢迎界面
   cout << "Welcome to RPS" << endl;
-  bool done = false;
-  while (!done)
+  do
   {
-    if (play_again())
-    {
-      done = true;
-    }
-    else
-    {
       string result;
       string human_move = get_human_choice();
       string computer_move = get_computer_choice();
       calculate_winner(human_move, computer_move, result);
-
       if (result == "human_won")
       {
         human_won++;
@@ -92,8 +84,7 @@ int main()
         draw++;
       }
       total++;
-    }
-  }
+    }while(play_again());
   create_report(total, human_won, draw);
   return 0;
 }
@@ -103,7 +94,7 @@ string get_human_choice()
 {
   cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
   string human_choice;
-  cin >> human_choice;
+  getline(cin, human_choice);
   if (human_choice == "r" || human_choice == "p" || human_choice == "s")
   {
     cout << "Computer Choose " << get_computer_choice() << endl;
@@ -128,7 +119,7 @@ string get_human_choice()
   {
     cout << "Invalid Choice" << endl;
     cout << "Choose (r)ock, (p)aper, or (s)cissors: ";
-    cin >> human_choice;
+    getline(cin,human_choice);
   }
 }
 
@@ -226,7 +217,7 @@ bool play_again()
 {
   string choose;
   cout << "Play again? (y or n): ";
-  cin >> choose;
+  getline(cin,choose);
   if (choose == "n")
   {
     return true;

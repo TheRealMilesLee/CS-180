@@ -109,3 +109,54 @@ string get_computer_choice()
     return "scissors";
 }
 
+void calculate_winner(string human_choice, string computer_choice, string& winner)
+{
+    if (human_choice == computer_choice)
+    {
+        winner = "draw";
+    }
+    else if (human_choice == "rock" && computer_choice == "scissors" || human_choice == "scissors" && computer_choice == "paper" || human_choice == "paper" && computer_choice == "rock")
+    {
+        winner = "human win";
+    }
+    else
+    {
+        winner = "computer win";
+    }
+}
+
+bool play_again()
+{
+    string choice;
+    cout  << "Play again? (y or n): ";
+    getline (cin, choice);
+    return choice == "y" || choice == "Y";
+}
+
+unsigned get_rand_in_range(unsigned low, unsigned high)
+{
+    return static_cast<unsigned>(rand()) % (high - low + 1) + low;
+}
+
+void create_report(unsigned total_game, unsigned human_wins, unsigned draws)
+{
+    const unsigned LABEL_WIDTH = 9;
+    const unsigned NUMBERS_WIDTH = 3;
+    const unsigned PCT_WIDTH = 6;
+    const unsigned PRECISION = 1;
+
+    ofstream game_results;
+
+    game_results.open("game_results.txt");
+    game_results << fixed << setprecision(PRECISION);
+
+    double human_pct = 100.0 * human_wins / total_game;
+    unsigned computer_wins = total_game - draws - human_wins;
+    double computer_pct = 100.0 * computer_wins / total_game;
+    double draw_pct = 100.0 * draws / total_game;
+
+    game_results << "Total games: " << total_game << endl;
+    game_results << left << setw(LABEL_WIDTH) << " " << right << setw(NUMBERS_WIDTH) << "#" << setw(PCT_WIDTH) << "Pct" << endl;
+    game_results << left << setw(LABEL_WIDTH) << "Human" << right << setw(NUMBERS_WIDTH) << human_wins<< setw(PCT_WIDTH) << "Pct" << endl;
+    game_results << left << setw(LABEL_WIDTH) << " " << right << setw(NUMBERS_WIDTH) << "#" << setw(PCT_WIDTH) << "Pct" << endl; 
+}

@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/main.cpp">
+		<Unit filename="D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/beck.cpp">
 			<Option target="Rock_Paper_Scissor_game_Example"/>
 		</Unit>
 		<Unit filename="D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/CMakeLists.txt">

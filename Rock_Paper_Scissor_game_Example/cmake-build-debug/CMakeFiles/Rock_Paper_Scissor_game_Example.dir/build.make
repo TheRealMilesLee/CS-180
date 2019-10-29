@@ -56,27 +56,27 @@ include CMakeFiles/Rock_Paper_Scissor_game_Example.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Rock_Paper_Scissor_game_Example.dir/flags.make
 
-CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/flags.make
-CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Rock_Paper_Scissor_game_Example.dir\main.cpp.obj -c D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\main.cpp
+CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/flags.make
+CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj: ../beck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Rock_Paper_Scissor_game_Example.dir\beck.cpp.obj -c D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\beck.cpp
 
-CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\main.cpp > CMakeFiles\Rock_Paper_Scissor_game_Example.dir\main.cpp.i
+CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\beck.cpp > CMakeFiles\Rock_Paper_Scissor_game_Example.dir\beck.cpp.i
 
-CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\main.cpp -o CMakeFiles\Rock_Paper_Scissor_game_Example.dir\main.cpp.s
+CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\Rock_Paper_Scissor_game_Example\beck.cpp -o CMakeFiles\Rock_Paper_Scissor_game_Example.dir\beck.cpp.s
 
 # Object files for target Rock_Paper_Scissor_game_Example
 Rock_Paper_Scissor_game_Example_OBJECTS = \
-"CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj"
+"CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj"
 
 # External object files for target Rock_Paper_Scissor_game_Example
 Rock_Paper_Scissor_game_Example_EXTERNAL_OBJECTS =
 
-Rock_Paper_Scissor_game_Example.exe: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj
+Rock_Paper_Scissor_game_Example.exe: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj
 Rock_Paper_Scissor_game_Example.exe: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/build.make
 Rock_Paper_Scissor_game_Example.exe: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/linklibs.rsp
 Rock_Paper_Scissor_game_Example.exe: CMakeFiles/Rock_Paper_Scissor_game_Example.dir/objects1.rsp

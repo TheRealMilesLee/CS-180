@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj"
+  "CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj"
   "Rock_Paper_Scissor_game_Example.exe"
   "Rock_Paper_Scissor_game_Example.exe.manifest"
   "Rock_Paper_Scissor_game_Example.pdb"

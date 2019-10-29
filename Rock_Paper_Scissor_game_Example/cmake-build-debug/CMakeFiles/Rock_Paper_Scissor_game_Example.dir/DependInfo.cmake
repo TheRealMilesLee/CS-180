@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/main.cpp" "D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/cmake-build-debug/CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj"
+  "D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/beck.cpp" "D:/Truman-CS180-Course/Rock_Paper_Scissor_game_Example/cmake-build-debug/CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

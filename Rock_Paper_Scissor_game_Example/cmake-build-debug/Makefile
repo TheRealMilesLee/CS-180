@@ -122,32 +122,32 @@ Rock_Paper_Scissor_game_Example/fast:
 	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/build
 .PHONY : Rock_Paper_Scissor_game_Example/fast
 
-main.obj: main.cpp.obj
+beck.obj: beck.cpp.obj
 
-.PHONY : main.obj
+.PHONY : beck.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+beck.cpp.obj:
+	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.obj
+.PHONY : beck.cpp.obj
 
-main.i: main.cpp.i
+beck.i: beck.cpp.i
 
-.PHONY : main.i
+.PHONY : beck.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.i
-.PHONY : main.cpp.i
+beck.cpp.i:
+	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.i
+.PHONY : beck.cpp.i
 
-main.s: main.cpp.s
+beck.s: beck.cpp.s
 
-.PHONY : main.s
+.PHONY : beck.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/main.cpp.s
-.PHONY : main.cpp.s
+beck.cpp.s:
+	$(MAKE) -f CMakeFiles\Rock_Paper_Scissor_game_Example.dir\build.make CMakeFiles/Rock_Paper_Scissor_game_Example.dir/beck.cpp.s
+.PHONY : beck.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... Rock_Paper_Scissor_game_Example
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... beck.obj
+	@echo ... beck.i
+	@echo ... beck.s
 .PHONY : help
 
 

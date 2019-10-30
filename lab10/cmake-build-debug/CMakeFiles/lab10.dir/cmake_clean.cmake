@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab10.dir/searching_sorting.cpp.o"
-  "lab10"
+  "CMakeFiles/lab10.dir/searching_sorting.cpp.obj"
+  "lab10.exe"
+  "lab10.exe.manifest"
   "lab10.pdb"
+  "liblab10.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

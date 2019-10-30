@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
 const size_t ARRAY_SIZE = 100;
 
@@ -42,14 +43,14 @@ size_t binary_search_vector(const vector<int>& array_size, unsigned value);
  * @param value_count
  * @return
  */
-string copy_array_to_vector(const vector<int>& values_vector,
-    const vector<int>& values_array, unsigned value_count);
+void copy_array_to_vector(const vector<int>& values_vector,
+    const vector<int>& values_array, unsigned vetcor_loop);
 
 
 int main()
 {
   ifstream data_file;
-  data_file.open("data.txt");
+  data_file.open("../data.txt");
 
   vector<int> values_vector; // a vector of values
   vector<int> values_array; // an array of values
@@ -64,7 +65,7 @@ int main()
   data_file.close();
   cout << "Read " << value_count << " values from data.txt" << endl;
 
-  sort_array(reinterpret_cast<vector<int> &>(values_array), value_count);
+  sort_array(values_array, value_count);
   copy_array_to_vector(values_vector, values_array, value_count);
 
   bool done = false;
@@ -104,7 +105,7 @@ int main()
 }
 
 // function definitions here
-void sort_array(vector<int> & array_size, size_t value_count)
+void sort_array(vector<int> & array_size, size_t& value_count)
 {
   for (size_t pass_indx = array_size.size() - 1; pass_indx > 0; pass_indx--)
   {
@@ -119,7 +120,7 @@ void sort_array(vector<int> & array_size, size_t value_count)
 }
 
 size_t linear_search_array(const vector<int> &array_size, unsigned value,
-                           unsigned value_count)
+                           unsigned& value_count)
 {
   size_t index = 0;
   size_t size = array_size.size();
@@ -138,8 +139,7 @@ size_t linear_search_array(const vector<int> &array_size, unsigned value,
   return position;
 }
 
-size_t binary_search_vector(const vector<unsigned>& array_size, unsigned
-value)
+size_t binary_search_vector(const vector<int>& array_size, unsigned value)
 {
   size_t first = 0;
   size_t last = array_size.size() - 1;
@@ -166,11 +166,12 @@ value)
   return position;
 }
 
-string copy_array_to_vector(const vector<int>& values_vector,
-    const vector<int>& values_array, unsigned value_count)
+void copy_array_to_vector(const vector<int>& values_vector,
+    const vector<int>& values_array, unsigned vector_loop = 0)
 {
   for (unsigned looptimes = 0; looptimes < ARRAY_SIZE; looptimes++)
   {
-    value_count++;
+    values_vector = values_array;
+    vector_loop++;
   }
 }

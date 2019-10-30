@@ -34,8 +34,7 @@ void print_square(unsigned square[SIZE][SIZE]);
  * @param square this is an 2-d array
  * @param file  get the filre from the disk.
  */
-void read_square_from_file(unsigned square[SIZE][SIZE], ifstream
-&file);
+void read_square_from_file(unsigned square[SIZE][SIZE], ifstream &file);
 
 int main()
 {
@@ -154,8 +153,7 @@ void print_square(unsigned square[SIZE][SIZE])
 
 }
 
-void read_square_from_file(unsigned square[SIZE][SIZE], ifstream
-&file)
+void read_square_from_file(unsigned square[SIZE][SIZE], ifstream &file)
 {
   for (unsigned row = 0; row < SIZE; row++)
   {

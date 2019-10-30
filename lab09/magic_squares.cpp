@@ -8,14 +8,14 @@
 #include <fstream>
 
 using namespace std;
-const unsigned COLO_SIZE = 3;
-const unsigned ROW_SIZE = 3;
+const unsigned SIZE = 3;
+
 
 /**
  * This function is used to validate the square
  * @return an boolean value that can decide is the square or not
  */
-bool validate_square();
+bool validate_square(unsigned square[SIZE][SIZE]);
 
 /**
  * The function prompts the user for a filename.
@@ -27,14 +27,14 @@ void get_input_file(ifstream &in_file);
 /**
  * This function is used for print out the square
  */
-void print_square(unsigned square[ROW_SIZE][COLO_SIZE]);
+void print_square(unsigned square[SIZE][SIZE]);
 
 /**
  * This fuction is used to read the square from the file.
  * @param square this is an 2-d array
  * @param file  get the filre from the disk.
  */
-void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+void read_square_from_file(unsigned square[SIZE][SIZE], ifstream
 &file);
 
 int main()
@@ -43,11 +43,11 @@ int main()
   string filename;
   get_input_file(in_file);
 
-  unsigned square[ROW_SIZE][COLO_SIZE];
+  unsigned square[SIZE][SIZE];
   read_square_from_file(square, in_file);
   print_square(square);
 
-  if (validate_square())
+  if (validate_square(square))
   {
     cout << "This is a valid magic square." << endl;
   }
@@ -82,66 +82,70 @@ void get_input_file(ifstream &in_file)
   }
 }
 
-bool validate_square()
-{
-  unsigned square[ROW_SIZE][COLO_SIZE];
-  unsigned total_col_first = 0;
-  unsigned total_col_second = 0;
-  unsigned total_col_third = 0;
-  unsigned total_row_first = 0;
-  unsigned total_row_second = 0;
-  unsigned total_row_third = 0;
-  unsigned total_diagonal_left = 0;
-  unsigned total_diagonal_right = 0;
-  for (auto & row : square)
+bool validate_square(unsigned square[SIZE][SIZE])
   {
-    total_row_first += row[0];
-  }
-  for (auto & row : square)
-  {
-    total_row_second += row[1];
-  }
-  for (auto & row : square)
-  {
-    total_row_third += row[2];
-  }
-  for (auto & col : square)
-  {
-    total_col_first += col[0];
-  }
-  for (auto & col : square)
-  {
-    total_col_second += col[1];
-  }
-  for (auto & col : square)
-  {
-    total_col_third += col[2];
-  }
-  for (unsigned col = 0; col < COLO_SIZE; col++)
-  {
-    total_diagonal_left += square[COLO_SIZE - col][col];
-  }
-  for (unsigned row = 0; row < ROW_SIZE; row++)
-  {
-    total_diagonal_right += square[ROW_SIZE - row -1][row];
+    unsigned first_row = 0;
+    unsigned second_row = 0;
+    unsigned third_row = 0;
+    unsigned first_col = 0;
+    unsigned second_col = 0;
+    unsigned third_col = 0;
+    unsigned first_diagonal = 0;
+    unsigned second_diagonal = 0;
+
+    for (unsigned row = 0; row < SIZE; row++)
+    {
+      first_col += square[row][0];
+    }
+
+    for (unsigned row = 0; row < SIZE; row++)
+    {
+      second_col += square[row][1];
+    }
+
+    for (unsigned row = 0; row < SIZE; row++)
+    {
+      third_col += square[row][2];
+    }
+
+    for (unsigned col = 0; col < SIZE; col++)
+    {
+      first_row += square[0][col];
+    }
+
+    for (unsigned col = 0; col < SIZE; col++)
+    {
+      second_row += square[1][col];
+    }
+
+    for (unsigned col = 0; col < SIZE; col++)
+    {
+      third_row += square[2][col];
+    }
+
+    for (unsigned row = 0; row < SIZE; row++)
+    {
+      first_diagonal += square[row][row];
+    }
+
+    for (unsigned row = 0; row < SIZE; row++)
+    {
+      second_diagonal += square[SIZE - row - 1][row];
+    }
+
+    return (first_col == second_col && first_col == third_col &&
+            first_col == first_row && first_col == second_row &&
+            first_col == third_row && first_col == first_diagonal &&
+            first_col == second_diagonal);
   }
 
-  //validate the result.
-  return total_col_first == total_row_first && total_diagonal_left ==
-  total_diagonal_right && total_col_second == total_row_second &&
-  total_col_third == total_row_third && total_col_first == total_col_second
-  && total_col_first == total_col_third && total_col_second ==
-  total_col_third && total_row_first == total_row_second && total_row_first
-  == total_row_third && total_row_second == total_row_third;
-}
-
-void print_square(unsigned square[ROW_SIZE][COLO_SIZE])
+void print_square(unsigned square[SIZE][SIZE])
 {
   cout << "+---+---+---+" << endl;
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (unsigned row = 0; row < SIZE; row++)
   {
      cout << "| " ;
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned col = 0; col < SIZE; col++)
     {
       cout << square[row][col] << " | " ;
     }
@@ -150,12 +154,12 @@ void print_square(unsigned square[ROW_SIZE][COLO_SIZE])
 
 }
 
-void read_square_from_file(unsigned square[ROW_SIZE][COLO_SIZE], ifstream
+void read_square_from_file(unsigned square[SIZE][SIZE], ifstream
 &file)
 {
-  for (unsigned row = 0; row < ROW_SIZE; row++)
+  for (unsigned row = 0; row < SIZE; row++)
   {
-    for (unsigned col = 0; col < COLO_SIZE; col++)
+    for (unsigned col = 0; col < SIZE; col++)
     {
       file >> square[row][col];
     }

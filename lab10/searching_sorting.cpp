@@ -15,17 +15,17 @@ const size_t ARRAY_SIZE = 100;
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 
 void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
-&values_vector, unsigned value_count);
+values_vector, unsigned value_count);
 
-size_t linear_search_array(int &values_array[ARRAY_SIZE], vector<int>
-    &values_vector, unsigned values_count, int &value);
- 
+size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
+values_count, int value);
+
 size_t binary_search_vector(vector<int> &values_vector, unsigned value);
 
 int main()
 {
   ifstream data_file;
-  data_file.open("data.txt");
+  data_file.open("../data.txt");
 
   vector<int> values_vector; // a vector of values
   int values_array[ARRAY_SIZE]; // an array of values
@@ -84,7 +84,8 @@ int main()
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
 {
   vector<int> array(values_array[ARRAY_SIZE]);
-  for (size_t pass_indx = array.size() - 1; pass_indx > 0; pass_indx--)
+  for (size_t pass_indx = array.size(); pass_indx < value_count;
+  pass_indx--)
   {
     for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
@@ -97,7 +98,7 @@ void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
 }
 
 void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
-&values_vector, unsigned value_count)
+values_vector, unsigned value_count)
 {
   for (size_t index = 0; index < value_count; index++)
   {
@@ -105,17 +106,18 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
   }
 }
 
-size_t linear_search_array(int &values_array[ARRAY_SIZE], const vector <int>
-&values_vector, unsigned values_count)
+size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
+values_count, int value)
 {
-  size_t index = 0;
-  size_t size = values_vector.size();
-  size_t position = values_array;
-  bool found = false;
+  vector<int> array(values_array[ARRAY_SIZE]);
+  size_t index = values_count;
+  size_t size = array.size();
+  size_t position = size;
 
+  bool found = false;
   while (index < size && !found)
   {
-    if (values_vector.at(index) == values_count)
+    if (array.at(index) == value)
     {
       found = true;
       position = index;

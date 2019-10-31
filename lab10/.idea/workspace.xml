@@ -35,9 +35,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e64acfe2-b32b-42f1-be66-7dbf80e0c20c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/search.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../array.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/searching_sorting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/searching_sorting.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +73,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -107,6 +108,8 @@
       <workItem from="1572368295313" duration="803000" />
       <workItem from="1572405736827" duration="4945000" />
       <workItem from="1572412792929" duration="915000" />
+      <workItem from="1572456842443" duration="708000" />
+      <workItem from="1572469800281" duration="9485000" />
     </task>
     <servers />
   </component>

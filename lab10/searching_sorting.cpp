@@ -12,6 +12,12 @@ using namespace std;
 const size_t ARRAY_SIZE = 100;
 
 // function Javadoc and prototypes here
+
+/**
+ * This function is to sort the array
+ * @param values_array get the array that reads from the file
+ * @param value_count get how many 
+ */
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 
 void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>

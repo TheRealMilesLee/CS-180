@@ -16,7 +16,7 @@ const size_t ARRAY_SIZE = 100;
 /**
  * This function is to sort the array
  * @param values_array get the array that reads from the file
- * @param value_count get how many 
+ * @param value_count get how many
  */
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 

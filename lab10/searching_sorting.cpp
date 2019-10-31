@@ -17,9 +17,9 @@ void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
 &values_vector, unsigned value_count);
 
-size_t linear_search_array(const vector<int> &values_vector, unsigned
-values_count, int &value);
-
+size_t linear_search_array(int &values_array[ARRAY_SIZE], vector<int>
+    &values_vector, unsigned values_count, int &value);
+ 
 size_t binary_search_vector(vector<int> &values_vector, unsigned value);
 
 int main()
@@ -105,12 +105,12 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
   }
 }
 
-size_t linear_search_array(const vector<int> &values_vector, unsigned
-values_count, int &value)
+size_t linear_search_array(int &values_array[ARRAY_SIZE], const vector <int>
+&values_vector, unsigned values_count)
 {
   size_t index = 0;
   size_t size = values_vector.size();
-  size_t position = size;
+  size_t position = values_array;
   bool found = false;
 
   while (index < size && !found)

@@ -2,9 +2,11 @@
 //This Program is for searching and sorting
 //This Program Created by Hengyi Li on 11：36 AM,29 Oct, 2019
 //Copyright @ 2019 Hengyi Li. All rights reserved.
+
 #include <fstream>
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 const size_t ARRAY_SIZE = 100;
@@ -12,13 +14,13 @@ const size_t ARRAY_SIZE = 100;
 // function Javadoc and prototypes here
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 
-void copy_array_to_vector(int values_array[ARRAY_SIZE], const vector<int>
-    &values_vector, unsigned value_count);
+void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
+&values_vector, unsigned value_count);
 
-size_t linear_search_array(int values_array[ARRAY_SIZE],
-    const vector<int> &values_vector, unsigned values_count);
+size_t linear_search_array(const vector<int> &values_vector, unsigned
+values_count, int &value);
 
-size_t binary_search_vector (vector<int> &values_vector, unsigned value);
+size_t binary_search_vector(vector<int> &values_vector, unsigned value);
 
 int main()
 {
@@ -30,7 +32,7 @@ int main()
 
   int value;
   size_t value_count = 0;
-  while(data_file >> value)
+  while (data_file >> value)
   {
     values_array[value_count] = value;
     value_count++;
@@ -48,8 +50,7 @@ int main()
     cin >> value;
     if (value != 0)
     {
-      size_t position = linear_search_array(values_array, value_count,
-          value);
+      size_t position = linear_search_array(values_array, value_count, value);
       if (position == value_count)
       {
         cout << "Value was not found in the array" << endl;
@@ -82,31 +83,30 @@ int main()
 // function definitions here
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
 {
-  size_t size = values_array.size();
-  for (size_t select_indx = 0; select_indx < size - 1; select_indx++)
+  vector<int> array(values_array[ARRAY_SIZE]);
+  for (size_t pass_indx = array.size() - 1; pass_indx > 0; pass_indx--)
   {
-    int smallest_value = values_array.at(select_indx);
-    size_t smallest_indx = select_indx;
-    for (size_t compare_indx = select_indx + 1; compare_indx < size;
-         compare_indx++)
+    for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
-      if (values_array.at(compare_indx) < smallest_value)
+      if (array.at(compare_indx) > array.at(compare_indx + 1))
       {
-        smallest_value = values_array.at(compare_indx);
-        smallest_indx = compare_indx;
+        swap(array.at(compare_indx), array.at(compare_indx + 1));
       }
     }
-    swap(values_array.at(smallest_indx), values_array.at(select_indx));
   }
 }
-void copy_array_to_vector(int values_array[ARRAY_SIZE], const vector<int>
+
+void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
 &values_vector, unsigned value_count)
 {
-
+  for (size_t index = 0; index < value_count; index++)
+  {
+    values_vector.push_back(values_array[ARRAY_SIZE]);
+  }
 }
 
-size_t linear_search_array(int values_array[ARRAY_SIZE], const vector<int>
-    &values_vector, unsigned values_count)
+size_t linear_search_array(const vector<int> &values_vector, unsigned
+values_count, int &value)
 {
   size_t index = 0;
   size_t size = values_vector.size();
@@ -125,7 +125,7 @@ size_t linear_search_array(int values_array[ARRAY_SIZE], const vector<int>
   return position;
 }
 
-size_t binary_search_vector (vector<int> &values_vector, unsigned value)
+size_t binary_search_vector(vector<int> &values_vector, unsigned value)
 {
   size_t first = 0;
   size_t last = values_vector.size() - 1;

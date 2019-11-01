@@ -50,7 +50,7 @@ size_t binary_search_vector(vector<int> values_vector, unsigned value);
 int main()
 {
   ifstream data_file;
-  data_file.open("data.txt");
+  data_file.open("../data.txt");
 
   vector<int> values_vector; // a vector of values
   int values_array[ARRAY_SIZE]; // an array of values

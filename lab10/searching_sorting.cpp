@@ -64,8 +64,16 @@ int main()
   }
   data_file.close();
   cout << "Read " << value_count << " values from data.txt" << endl;
-
+  for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
+  {
+    cout << values_array[looptimes] << endl;
+  }
   sort_array(values_array, value_count);
+      cout << endl;
+  for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
+  {
+    cout << values_array[looptimes] << endl;
+  }
   copy_array_to_vector(values_array, values_vector, value_count);
 
   bool done = false;

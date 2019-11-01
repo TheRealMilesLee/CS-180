@@ -36,7 +36,7 @@ values_vector, unsigned value_count);
  * @param value get the numbers that from the array.
  * @return the search result.
  */
-size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
+size_t linear_search_array(const int values_array[ARRAY_SIZE], unsigned
 values_count, int value);
 
 /**
@@ -64,16 +64,13 @@ int main()
   }
   data_file.close();
   cout << "Read " << value_count << " values from data.txt" << endl;
-  for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
-  {
-    cout << values_array[looptimes] << endl;
-  }
   sort_array(values_array, value_count);
-      cout << endl;
+
   for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
   {
     cout << values_array[looptimes] << endl;
   }
+
   copy_array_to_vector(values_array, values_vector, value_count);
 
   bool done = false;
@@ -84,6 +81,7 @@ int main()
     if (value != 0)
     {
       size_t position = linear_search_array(values_array, value_count, value);
+
       if (position == value_count)
       {
         cout << "Value was not found in the array" << endl;
@@ -94,6 +92,7 @@ int main()
       }
 
       position = binary_search_vector(values_vector, value);
+
       if (position == values_vector.size())
       {
         cout << "Value was not found in the vector" << endl;
@@ -114,14 +113,14 @@ int main()
 // function definitions here
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
 {
-  vector<int> array(values_array[ARRAY_SIZE]);
-  for (size_t pass_indx = array.size(); pass_indx < value_count; pass_indx--)
+  for (size_t pass_indx = sizeof(values_array[value_count]); pass_indx <
+  value_count; pass_indx--)
   {
     for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
-      if (array.at(compare_indx) > array.at(compare_indx + 1))
+      if (values_array[compare_indx] > values_array[compare_indx + 1])
       {
-        swap(array.at(compare_indx), array.at(compare_indx + 1));
+        swap(values_array[compare_indx], values_array[compare_indx + 1]);
       }
     }
   }
@@ -131,22 +130,21 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vect
 {
   for (size_t index = 0; index < value_count; index++)
   {
-    values_vector.push_back(values_array[ARRAY_SIZE]);
+    values_vector.push_back(values_array[value_count]);
   }
 }                                                     
 
-size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
+size_t linear_search_array(const int values_array[ARRAY_SIZE], unsigned
 values_count, int value)
 {
-  vector<int> array(values_array[ARRAY_SIZE]);
-  size_t index = values_count;
-  size_t size = array.size();
+  size_t index = 0;
+  size_t size = sizeof(values_array[values_count]);
   size_t position = size;
 
   bool found = false;
   while (index < size && !found)
   {
-    if (array.at(index) == value)
+    if (values_array[index] == value)
     {
       found = true;
       position = index;

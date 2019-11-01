@@ -36,7 +36,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e64acfe2-b32b-42f1-be66-7dbf80e0c20c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.exe" beforeDir="false" afterPath="$PROJECT_DIR$/search.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab10.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab10.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searching_sorting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/searching_sorting.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +114,7 @@
       <workItem from="1572493431391" duration="5689000" />
       <workItem from="1572536170583" duration="4703000" />
       <workItem from="1572558598024" duration="1328000" />
+      <workItem from="1572570753259" duration="1795000" />
     </task>
     <servers />
   </component>

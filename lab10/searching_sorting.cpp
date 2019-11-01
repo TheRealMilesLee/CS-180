@@ -16,16 +16,35 @@ const size_t ARRAY_SIZE = 100;
 /**
  * This function is to sort the array
  * @param values_array get the array that reads from the file
- * @param value_count get how many
+ * @param value_count get how many numbers that put in the array
  */
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
 
+/**
+ * This function is used to copy aray to the vector
+ * @param values_array get the values that in the array
+ * @param values_vector initialize a vector that can store the array
+ * @param value_count get how many numbers in the array
+ */
 void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
 values_vector, unsigned value_count);
 
+/**
+ * This function is used to do a linear search in the array
+ * @param values_array get the values that from the array
+ * @param values_count get how many numbes that in the array
+ * @param value get the numbers that from the array.
+ * @return the search result.
+ */
 size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
 values_count, int value);
 
+/**
+ * This function is used to do a binary search in the vector.
+ * @param values_vector is the searching place
+ * @param value is the numbers that from the array
+ * @return the searching result
+ */
 size_t binary_search_vector(vector<int> &values_vector, unsigned value);
 
 int main()

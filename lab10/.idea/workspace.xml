@@ -34,11 +34,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e64acfe2-b32b-42f1-be66-7dbf80e0c20c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab10" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab10" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searching_sorting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/searching_sorting.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="e64acfe2-b32b-42f1-be66-7dbf80e0c20c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +110,7 @@
       <workItem from="1572558598024" duration="1328000" />
       <workItem from="1572570753259" duration="1795000" />
       <workItem from="1572619728731" duration="181000" />
-      <workItem from="1572628590804" duration="385000" />
+      <workItem from="1572628590804" duration="494000" />
     </task>
     <servers />
   </component>

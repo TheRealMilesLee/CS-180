@@ -125,7 +125,7 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vect
   {
     values_vector.push_back(values_array[ARRAY_SIZE]);
   }
-}
+}                                                     
 
 size_t linear_search_array(int values_array[ARRAY_SIZE], unsigned
 values_count, int value)

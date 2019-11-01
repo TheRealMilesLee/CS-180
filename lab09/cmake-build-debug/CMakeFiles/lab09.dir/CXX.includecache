@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Truman-CS180-Course/lab09/magic_squares.cpp
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab09/magic_squares.cpp
 iostream
 -
 iomanip

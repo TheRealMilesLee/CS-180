@@ -6,7 +6,7 @@
 using namespace std;
 
 const size_t ARRAY_SIZE = 100;
-void sort_array(int values_array[ARRAY_SIZE], unsigned value_count);
+void sort_array(int values_array[ARRAY_SIZE], size_t value_count);
 int main()
 {
   ifstream data_file;
@@ -24,6 +24,7 @@ int main()
   }
   data_file.close();
   cout << "Read " << value_count << " values from data.txt" << endl;
+  
   sort_array(values_array, value_count);
 
   for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
@@ -34,9 +35,9 @@ int main()
 return 0;
 }
 
-void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
+void sort_array(int values_array[ARRAY_SIZE], size_t value_count)
 {
-  for (size_t pass_indx = sizeof(values_array[value_count]) - 1; pass_indx > 0; pass_indx--)
+  for (size_t pass_indx = sizeof(values_array[value_count] - 1); pass_indx > 0; pass_indx--)
   {
     for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {

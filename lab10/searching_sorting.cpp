@@ -45,12 +45,12 @@ values_count, int value);
  * @param value is the numbers that from the array
  * @return the searching result
  */
-size_t binary_search_vector(vector<int> &values_vector, unsigned value);
+size_t binary_search_vector(vector<int> values_vector, unsigned value);
 
 int main()
 {
   ifstream data_file;
-  data_file.open("../data.txt");
+  data_file.open("data.txt");
 
   vector<int> values_vector; // a vector of values
   int values_array[ARRAY_SIZE]; // an array of values
@@ -100,8 +100,6 @@ int main()
       done = true;
     }
   } // while !done
-
-
   return 0;
 }
 
@@ -109,8 +107,7 @@ int main()
 void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
 {
   vector<int> array(values_array[ARRAY_SIZE]);
-  for (size_t pass_indx = array.size(); pass_indx < value_count;
-  pass_indx--)
+  for (size_t pass_indx = array.size(); pass_indx < value_count; pass_indx--)
   {
     for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
@@ -122,8 +119,7 @@ void sort_array(int values_array[ARRAY_SIZE], unsigned value_count)
   }
 }
 
-void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int>
-values_vector, unsigned value_count)
+void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, unsigned value_count)
 {
   for (size_t index = 0; index < value_count; index++)
   {
@@ -152,7 +148,7 @@ values_count, int value)
   return position;
 }
 
-size_t binary_search_vector(vector<int> &values_vector, unsigned value)
+size_t binary_search_vector(vector<int> values_vector, unsigned value)
 {
   size_t first = 0;
   size_t last = values_vector.size() - 1;

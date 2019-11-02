@@ -6,7 +6,6 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -27,7 +26,8 @@ void sort_array(int values_array[ARRAY_SIZE], size_t value_count);
  * @param values_vector initialize a vector that can store the array
  * @param value_count get how many numbers in the array
  */
-void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t value_count);
+void copy_array_to_vector(int values_array[ARRAY_SIZE], vector<int>
+    &values_vector, unsigned value_count);
 
 /**
  * This function is used to do a linear search in the array
@@ -36,7 +36,8 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vect
  * @param value get the numbers that from the array.
  * @return the search result.
  */
-size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, int value);
+size_t linear_search_array(const int values_array[ARRAY_SIZE], size_t
+values_count, int value);
 
 /**
  * This function is used to do a binary search in the vector.
@@ -44,18 +45,20 @@ size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, i
  * @param value is the numbers that from the array
  * @return the searching result
  */
-size_t binary_search_vector(vector<int> values_vector, int value);
+size_t binary_search_vector(const vector<int>& values_vector, unsigned
+value);
 
 int main()
 {
   ifstream data_file;
-  data_file.open("data.txt");
+  data_file.open("../data.txt");
 
   vector<int> values_vector; // a vector of values
   int values_array[ARRAY_SIZE]; // an array of values
 
   int value;
   size_t value_count = 0;
+
   while (data_file >> value)
   {
     values_array[value_count] = value;
@@ -63,15 +66,10 @@ int main()
   }
 
   data_file.close();
-  
+
   cout << "Read " << value_count << " values from data.txt" << endl;
 
-  sort_array(values_array, value_count); 
- 
-  for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
-  {
-    cout << values_array[looptimes] << endl;
-  }
+  sort_array(values_array, value_count);
 
   copy_array_to_vector(values_array, values_vector, value_count);
 
@@ -82,6 +80,7 @@ int main()
     cin >> value;
     if (value != 0)
     {
+
       size_t position = linear_search_array(values_array, value_count, value);
 
       if (position == value_count)
@@ -115,33 +114,33 @@ int main()
 // function definitions here
 void sort_array(int values_array[ARRAY_SIZE], size_t value_count)
 {
-  int max_element;
-  int index;
-
-  for (max_element = ARRAY_SIZE -1; max_element > 0; max_element--)
+  for (size_t pass_indx = value_count; pass_indx > 0; pass_indx--)
   {
-    for (index = 0; index < max_element; index++)
+    for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
     {
-      if(values_array[value_count] > values_array[index + 1])
+      if (values_array[compare_indx] > values_array[compare_indx + 1])
       {
-        swap (values_array[index], values_array[index + 1]);                                  
+        swap(values_array[compare_indx], values_array[compare_indx + 1]);
       }
     }
   }
 }
 
-void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t value_count)
+void copy_array_to_vector(int values_array[ARRAY_SIZE], vector<int>
+    &values_vector, unsigned value_count)
 {
-  for (size_t index = 0; index < value_count; index++)
+  for (unsigned copytimes = 0; copytimes < value_count; copytimes++)
   {
     values_vector.push_back(values_array[value_count]);
   }
-}                                                     
 
-size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, int value)
+}
+
+size_t linear_search_array(const int values_array[ARRAY_SIZE],
+    size_t values_count, int value)
 {
   size_t index = 0;
-  size_t size = sizeof(values_array[values_count]);
+  size_t size = values_count;
   size_t position = size;
 
   bool found = false;
@@ -150,19 +149,21 @@ size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, i
     if (values_array[index] == value)
     {
       found = true;
-      position = index;
+      position = index - 1;
     }
     index++;
   }
   return position;
 }
 
-size_t binary_search_vector(vector<int> values_vector, int value)
+size_t binary_search_vector(const vector<int> &values_vector, unsigned
+value)
 {
   size_t first = 0;
   size_t last = values_vector.size() - 1;
   size_t position = values_vector.size();
   bool found = false;
+
   while (!found && first <= last && last < values_vector.size())
   {
     size_t middle = (first + last) / 2;

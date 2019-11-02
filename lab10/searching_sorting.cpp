@@ -66,7 +66,7 @@ int main()
   
   cout << "Read " << value_count << " values from data.txt" << endl;
   
-  sort_array(values_array, value_count);
+  sort(values_array, values_array + ARRAY_SIZE);
 
   for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
   {

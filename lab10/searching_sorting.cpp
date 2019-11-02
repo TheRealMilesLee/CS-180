@@ -19,7 +19,7 @@ const size_t ARRAY_SIZE = 100;
  * @param values_array get the array that reads from the file
  * @param value_count get how many numbers that put in the array
  */
-void sort_array(int values_array[ARRAY_SIZE], size_t &value_count);
+void sort_array(int values_array[ARRAY_SIZE], size_t value_count);
 
 /**
  * This function is used to copy aray to the vector
@@ -27,7 +27,7 @@ void sort_array(int values_array[ARRAY_SIZE], size_t &value_count);
  * @param values_vector initialize a vector that can store the array
  * @param value_count get how many numbers in the array
  */
-void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t &value_count);
+void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t value_count);
 
 /**
  * This function is used to do a linear search in the array
@@ -36,7 +36,7 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vect
  * @param value get the numbers that from the array.
  * @return the search result.
  */
-size_t linear_search_array(const int values_array[ARRAY_SIZE], size_t &values_count, int value);
+size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, int value);
 
 /**
  * This function is used to do a binary search in the vector.
@@ -65,9 +65,9 @@ int main()
   data_file.close();
   
   cout << "Read " << value_count << " values from data.txt" << endl;
-  
-  sort(values_array, values_array + ARRAY_SIZE);
 
+  sort_array(values_array, value_count); 
+ 
   for (unsigned looptimes = 0; looptimes < value_count; looptimes++)
   {
     cout << values_array[looptimes] << endl;
@@ -113,22 +113,24 @@ int main()
 }
 
 // function definitions here
-void sort_array(int values_array[ARRAY_SIZE], size_t &value_count)
+void sort_array(int values_array[ARRAY_SIZE], size_t value_count)
 {
-  for (size_t pass_indx = sizeof(values_array[value_count]); pass_indx <
-  value_count; pass_indx--)
+  int max_element;
+  int index;
+
+  for (max_element = ARRAY_SIZE -1; max_element > 0; max_element--)
   {
-    for (size_t compare_indx = 0; compare_indx < pass_indx; compare_indx++)
+    for (index = 0; index < max_element; index++)
     {
-      if (values_array[compare_indx] > values_array[compare_indx + 1])
+      if(values_array[value_count] > values_array[index + 1])
       {
-        swap(values_array[compare_indx], values_array[compare_indx + 1]);
+        swap (values_array[index], values_array[index + 1]);                                  
       }
     }
   }
 }
 
-void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t &value_count)
+void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vector, size_t value_count)
 {
   for (size_t index = 0; index < value_count; index++)
   {
@@ -136,7 +138,7 @@ void copy_array_to_vector(int values_array[ARRAY_SIZE],  vector<int> values_vect
   }
 }                                                     
 
-size_t linear_search_array(const int values_array[ARRAY_SIZE], size_t &values_count, int value)
+size_t linear_search_array( int values_array[ARRAY_SIZE], size_t values_count, int value)
 {
   size_t index = 0;
   size_t size = sizeof(values_array[values_count]);

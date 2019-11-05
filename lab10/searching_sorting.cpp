@@ -46,7 +46,7 @@ values_count, int value);
  * @param value is the numbers that from the array
  * @return the searching result
  */
-size_t binary_search_vector(vector<int> &values_vector, int value);
+size_t binary_search_vector(const vector<int> &values_vector, int value);
 
 int main()
 {
@@ -145,7 +145,7 @@ values_count, int value)
   return position;
 }
 
-size_t binary_search_vector(vector<int> &values_vector, int value)
+size_t binary_search_vector(const vector<int> &values_vector, int value)
 {
   size_t first = 0;
   size_t last = values_vector.size() - 1;

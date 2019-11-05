@@ -36,9 +36,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e64acfe2-b32b-42f1-be66-7dbf80e0c20c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab10.dir/searching_sorting.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab10.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab10.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searching_sorting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/searching_sorting.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

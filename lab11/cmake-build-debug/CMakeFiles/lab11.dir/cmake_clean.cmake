@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab11.dir/main.cpp.obj"
-  "lab11.exe"
-  "lab11.exe.manifest"
+  "CMakeFiles/lab11.dir/dyamic.cpp.o"
+  "lab11"
   "lab11.pdb"
-  "liblab11.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

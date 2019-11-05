@@ -3,4 +3,4 @@ project(lab11)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab11 main.cpp)
+add_executable(lab11 dyamic.cpp)

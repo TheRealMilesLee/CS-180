@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Truman-CS180-Course/lab08/game.cpp
+/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab08/game.cpp
 iostream
 -
 iomanip

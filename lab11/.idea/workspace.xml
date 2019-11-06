@@ -34,10 +34,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="978c749f-bdda-46bc-9717-abb7cedc9dbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyamic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dyamic.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="978c749f-bdda-46bc-9717-abb7cedc9dbb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +99,7 @@
       <workItem from="1572917907678" duration="199000" />
       <workItem from="1572973636815" duration="183000" />
       <workItem from="1573002582803" duration="60000" />
+      <workItem from="1573004279717" duration="502000" />
     </task>
     <servers />
   </component>

@@ -30,8 +30,8 @@ string get_computer_choice();
  * @param computer_move use for computer's move
  * @param result use to decide the result
  */
-void calculate_winner(string human_move, string computer_move, string &
-result);
+void calculate_winner(string human_move, string computer_move, string 
+&result);
 
 /**
  * This function is used to create the report
@@ -144,8 +144,8 @@ string get_computer_choice()
 }
 
 //计算赢家
-void calculate_winner(string human_move, string computer_move, string
-&result)
+void calculate_winner(string human_move, string computer_move, string &
+result)
 {
   if (human_move == computer_move)
   {

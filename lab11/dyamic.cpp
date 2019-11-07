@@ -5,6 +5,7 @@
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <random>
+#include <ctime>
 #include <iostream>
 #include <vector>
 
@@ -20,43 +21,69 @@ using namespace std;
 void sort_array(int values_of_array[], unsigned value_count);
 
 /**
- * this function is to get the random number in range.
- * @param small is the smallest number that the user type in
- * @param biggest is the biggest number that the user type in
- * @return the random value that can puts in the array
+ * This function is to generate the array
+ * @param values_of_array is the array that we generate
+ * @param user_allocated_size is the size of the array.
  */
-unsigned get_rand_in_range(unsigned small, unsigned biggest);
+void generate_the_array(int values_of_array[], unsigned user_allocated_size);
 
 /**
- * This function is to generate the array
- * @param values_of_array
- * @param user_allocated_size
+ * This function is to output the array
+ * @param values_of_array get the array that need to be output
+ * @param user_allocated_size get the number of the value that in the array
  */
- void generate_the_array(int values_of_array[], unsigned
- user_allocated_size);
+void out_put_the_array(int values_of_array[], unsigned user_allocated_size);
 
+/**
+ * This function is to get the median of the array
+ * @param values_of_array is the array that we need to get the median value
+ * @param user_allocated_size get the size of the array
+ */
+void median_of_array(int values_of_array[], unsigned user_allocated_size);
 
- void out_put_the_array(int values_of_array[], unsigned user_allocated_size);
+/**
+ * This function is to get the user input
+ * @param user_allocated_size is to get the size of the array from the user
+ */
+void get_user_input(unsigned &user_allocated_size);
 
+/**
+ * This function is to get the smallest value in the array
+ * @param values_of_array is the array that we need to get the smallest
+ * value in it
+ */
+void small_value_in_array(int values_of_array[]);
 
- void median_of_array(int values_of_array[], unsigned user_allocated_size);
+/**
+ * This function is to get he biggest value of the array
+ * @param values_of_array is the array that we need to find the biggest value
+ * @param user_allocated_sizen is the size of the array
+ */
+void biggest_value_in_array(int values_of_array[], unsigned
+&user_allocated_size);
 
 int main()
 {
   unsigned user_allocated_size;
-  cout <<"Enter the number of values: ";
-  cin >> user_allocated_size;
-  int* values = new int[user_allocated_size];
+  get_user_input(user_allocated_size);
 
+  int *values = new int[user_allocated_size];
 
   generate_the_array(values, user_allocated_size);
   sort_array(values, user_allocated_size);
   out_put_the_array(values, user_allocated_size);
+  small_value_in_array(values);
+  biggest_value_in_array(values, user_allocated_size);
   median_of_array(values, user_allocated_size);
   return 0;
 }
 
-// function definitions here
+void get_user_input(unsigned &user_allocated_size)
+{
+  cout << "Enter the number of values: ";
+  cin >> user_allocated_size;
+}
+
 void sort_array(int values_of_array[], unsigned value_count)
 {
   for (size_t pass_indx = value_count - 1; pass_indx > 0; pass_indx--)
@@ -65,47 +92,68 @@ void sort_array(int values_of_array[], unsigned value_count)
     {
       if (values_of_array[compare_indx] > values_of_array[compare_indx + 1])
       {
-        swap(values_of_array[compare_indx], values_of_array[compare_indx +
-        1]);
+        swap(values_of_array[compare_indx],
+            values_of_array[compare_indx + 1]);
       }
     }
   }
 }
 
-unsigned get_rand_in_range(unsigned small, unsigned biggest)
-{
-  auto seed = static_cast<unsigned int>(time(nullptr));
-  srand(seed);
-  unsigned value = rand() % (biggest - small + 1) + small;
-  return value;
-}
 
-void generate_the_array(int values_of_array[], unsigned
-user_allocated_size)
+void generate_the_array(int values_of_array[], unsigned user_allocated_size)
 {
-  int random;
+  unsigned random;
   unsigned small;
   unsigned biggest;
   cout << "Enter the minimum value: ";
   cin >> small;
-  cout << "Enter the minimum value: ";
+  cout << "Enter the max value: ";
   cin >> biggest;
-   for (unsigned looptimes = 0; looptimes < user_allocated_size; looptimes++)
-   {
-     random = get_rand_in_range(small, biggest);
-     values_of_array[looptimes] = random;
-   }
+  auto seed = static_cast<unsigned int>(time(nullptr));
+  srand(seed);
+  for (unsigned looptimes = 0; looptimes < user_allocated_size; looptimes++)
+  {
+    unsigned value = rand() % (biggest - small + 1) + small;
+    random = value;
+    values_of_array[looptimes] = random;
+  }
 }
 
 void out_put_the_array(int values_of_array[], unsigned user_allocated_size)
 {
   cout << "The values in order: [";
-  for (unsigned looptimes = 0; looptimes <= user_allocated_size; looptimes++)
+  for (size_t position = 0; position < user_allocated_size; position++)
   {
-    for (size_t position = 0; position < user_allocated_size; position++)
+    if (position == user_allocated_size - 1)
     {
-      cout << values_of_array[position] << ",";
+      cout << values_of_array[position];
     }
-    cout << " ";
+    else
+    {
+      cout << values_of_array[position] << ", ";
+    }
   }
+  cout << "]";
+}
+
+void small_value_in_array(int values_of_array[])
+{
+  cout << endl << "The smallest value in the array is " << values_of_array[0]
+       << endl;
+}
+
+void biggest_value_in_array(int values_of_array[], unsigned &
+user_allocated_size)
+{
+  cout << "The largest value in the array is " <<
+       values_of_array[user_allocated_size - 1] << endl;
+}
+
+void median_of_array(int values_of_array[], unsigned user_allocated_size)
+{
+  size_t first = 0;
+  size_t last = user_allocated_size - 1;
+  size_t middle = (first + last) / 2;
+
+  cout << "The median value is " << values_of_array[middle] << endl;
 }

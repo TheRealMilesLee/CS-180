@@ -119,7 +119,7 @@ void generate_the_array(int values_of_array[], unsigned user_allocated_size)
   }
 }
 
-void out_put_the_array(int values_of_array[], unsigned user_allocated_size)
+void out_put_the_array(const int values_of_array[], unsigned user_allocated_size)
 {
   cout << "The values in order: [";
   for (size_t position = 0; position < user_allocated_size; position++)
@@ -136,13 +136,13 @@ void out_put_the_array(int values_of_array[], unsigned user_allocated_size)
   cout << "]";
 }
 
-void small_value_in_array(int values_of_array[])
+void small_value_in_array(const int values_of_array[])
 {
   cout << endl << "The smallest value in the array is " << values_of_array[0]
        << endl;
 }
 
-void biggest_value_in_array(int values_of_array[], unsigned &
+void biggest_value_in_array(const int values_of_array[], unsigned &
 user_allocated_size)
 {
   cout << "The largest value in the array is " <<

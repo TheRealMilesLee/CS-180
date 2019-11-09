@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "d:/truman-cs180-course/hello world/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "D:/Truman-CS180-Course/Hello World/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

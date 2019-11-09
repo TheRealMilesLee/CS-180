@@ -39,7 +39,8 @@ void out_put_the_array(int values_of_array[], unsigned user_allocated_size);
  * @param values_of_array is the array that we need to get the median value
  * @param user_allocated_size get the size of the array
  */
-void median_of_array(int values_of_array[], unsigned user_allocated_size);
+void median_of_array(const int values_of_array[], unsigned
+user_allocated_size, vector<int> &vector_of_values);
 
 /**
  * This function is to get the user input
@@ -65,6 +66,7 @@ void biggest_value_in_array(int values_of_array[], unsigned
 int main()
 {
   unsigned user_allocated_size;
+  vector<int> vector_of_values;
   get_user_input(user_allocated_size);
 
   int *values = new int[user_allocated_size];
@@ -74,7 +76,7 @@ int main()
   out_put_the_array(values, user_allocated_size);
   small_value_in_array(values);
   biggest_value_in_array(values, user_allocated_size);
-  median_of_array(values, user_allocated_size);
+  median_of_array(values, user_allocated_size, vector_of_values);
   return 0;
 }
 
@@ -93,7 +95,7 @@ void sort_array(int values_of_array[], unsigned value_count)
       if (values_of_array[compare_indx] > values_of_array[compare_indx + 1])
       {
         swap(values_of_array[compare_indx],
-            values_of_array[compare_indx + 1]);
+             values_of_array[compare_indx + 1]);
       }
     }
   }
@@ -149,11 +151,24 @@ user_allocated_size)
        values_of_array[user_allocated_size - 1] << endl;
 }
 
-void median_of_array(int values_of_array[], unsigned user_allocated_size)
+void median_of_array(const int values_of_array[], unsigned
+user_allocated_size, vector<int> &vector_of_values)
 {
   size_t first = 0;
   size_t last = user_allocated_size - 1;
-  size_t middle = (first + last) / 2;
-
+  size_t middle;
+  for (unsigned copytimes = 0; copytimes < user_allocated_size; copytimes++)
+  {
+    vector_of_values.push_back(values_of_array[copytimes]);
+  }
+  if (user_allocated_size % 2 == 0)
+  {
+    middle = (first + last) / 2;
+  }
+  else
+  {
+    middle = (vector_of_values.at(user_allocated_size / 2) +
+              vector_of_values.at(user_allocated_size / 2 + 1)) / 2;
+  }
   cout << "The median value is " << values_of_array[middle] << endl;
 }

@@ -63,9 +63,9 @@ int main(int argc, char* argv[])
 
 void split(const char* line, vector<string>& tokens)
 {
-  const char DELIMITER[] {','};
+   char DELIMITER[] {","};
 
-  char* token_end = strstr(line, DELIMITER);
+   const char* token_end = strstr(line, DELIMITER);
   size_t number_of_characters = static_cast<size_t>(token_end - line);
 
   string id;

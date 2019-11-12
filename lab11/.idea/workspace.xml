@@ -35,177 +35,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="978c749f-bdda-46bc-9717-abb7cedc9dbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab11/v16/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab11/v16/Browse.VC.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab11/v16/ipch/AutoPCH/7efa9e957ad289ad/DYAMIC.ipch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab11/v16/ipch/AutoPCH/ffd772f871475709/DYAMIC.ipch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-db9caf6a355715413edf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-a0e2ae854b384fe4801e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-202a9bcdabefaa3f0dbd.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-11-09T08-15-11-0162.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-lab11-Debug-1e063c958daea3b3f999.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.15.19080502-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/dyamic.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/embed.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/intermediate.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/manifest.rc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/manifest.res" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/vc140.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/VSInheritEnvironments.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.ilk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/build/x64-Debug/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/Truman-CS180-Course/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/Truman-CS180-Course/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/Truman-CS180-Course/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/Truman-CS180-Course/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/VSWorkspaceState.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-7b9aff017d2da79ff1ec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-11d25f8b462b9116b989.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-e80afb3a4eae1e587a84.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-01T02-51-00-0583.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/.cmake/api/v1/reply/target-Hello_World-Debug-043a6410a89199df369a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Hello World/out/build/x64-Debug/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-18844317b4a2344b5d9d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-7193136865153d2f0328.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-2fad2a2554ad3d228d98.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-01T02-51-00-0534.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/.cmake/api/v1/reply/target-lab02a-Debug-e1425b479f0abd5c8eb9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02a/out/build/x64-Debug/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-eb0370f80d3e989898a6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-a4bac4a8eba0beaf9c0c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-3b925dff009064b0a692.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-01T02-50-58-0988.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.cmake/api/v1/reply/target-lab02b-Debug-7eea4fd5727b5e600942.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19050301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/lab02b.dir/vc140.idb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/CMakeFiles/lab02b.dir/vc140.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02b/out/build/x64-Debug/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03a/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/lab11/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab11/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/lab11/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab11/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dyamic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dyamic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/dyamic.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/dyamic.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.exe" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +80,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -279,6 +122,9 @@
       <workItem from="1573282535449" duration="57000" />
       <workItem from="1573283801381" duration="378000" />
       <workItem from="1573289711245" duration="101000" />
+      <workItem from="1573333999522" duration="753000" />
+      <workItem from="1573542923580" duration="234000" />
+      <workItem from="1573543285537" duration="73000" />
     </task>
     <servers />
   </component>

@@ -76,6 +76,8 @@ int main()
   small_value_in_array(values);
   biggest_value_in_array(values, user_allocated_size);
   median_of_array(values, user_allocated_size, vector_of_values);
+
+  delete[] values;
   return 0;
 }
 

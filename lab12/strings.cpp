@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     return 2;
   }
 
-  ofstream username_file("usernames.txt");
+  ofstream username_file("../username.txt");
   char line[MAX_INPUT_LINE_LENGTH];
 
   while (data_file.getline(line, MAX_INPUT_LINE_LENGTH))

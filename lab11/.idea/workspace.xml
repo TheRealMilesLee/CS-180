@@ -36,19 +36,6 @@
   <component name="ChangeListManager">
     <list default="true" id="978c749f-bdda-46bc-9717-abb7cedc9dbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/lab11/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab11/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/lab11/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab11/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyamic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dyamic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/dyamic.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/dyamic.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/lab11.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.exe" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/lab11.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/lab11.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +112,7 @@
       <workItem from="1573333999522" duration="753000" />
       <workItem from="1573542923580" duration="234000" />
       <workItem from="1573543285537" duration="73000" />
+      <workItem from="1573543373886" duration="1316000" />
     </task>
     <servers />
   </component>

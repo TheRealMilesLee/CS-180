@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 {
   const unsigned ID_WIDTH = 8;
   const unsigned COMMA_WIDTH = 1;
-  const unsigned NAME_WIDTH = 15;
+  const unsigned NAME_WIDTH = 30;
   const unsigned MAX_INPUT_LINE_LENGTH = ID_WIDTH + 2 * COMMA_WIDTH +
                                          NAME_WIDTH;
   const unsigned PAD_LENGTH = 5;
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     return 2;
   }
 
-  ofstream username_file("usernames.txt");
+  ofstream username_file("../username.txt");
   char line[MAX_INPUT_LINE_LENGTH];
 
   while (data_file.getline(line, MAX_INPUT_LINE_LENGTH))

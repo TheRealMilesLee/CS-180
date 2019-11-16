@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/Float_Calculation.c.o"
+  "CMakeFiles/untitled.dir/Float_Calculation.c.obj"
+  "libuntitled.dll.a"
+  "untitled.exe"
+  "untitled.exe.manifest"
   "untitled.pdb"
-  "untitled"
 )
 
 # Per-language clean rules from dependency scanning.

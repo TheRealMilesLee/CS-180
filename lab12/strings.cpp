@@ -59,13 +59,9 @@ int main(int argc, char* argv[])
     string first_name = fields.at(2);
     string last_name = fields.at(2);
 
-    username_file << left << last_name.substr(1,25) << setw
-    (NAME_WIDTH) << right << first_name.substr(1,1)<< id.at(4) << id.at(5) <<
-    id.at(6)
-    << id.at
-    (7) << endl;
-
-
+    username_file << left << last_name.substr(1, 1) << setw(NAME_WIDTH) <<
+    right << first_name.at(1) << last_name.at(1) << id.at(4) << id.at(5) <<
+    id.at(6) << id.at (7) << endl;
   }
 
   data_file.close();
@@ -78,7 +74,7 @@ void split(const char* line, vector<string>& tokens)
 {
    const char DELIMITER[] {","};
 
-   char* token_end = strstr(line, DELIMITER);
+   const char* token_end = strstr(line, DELIMITER);
    size_t number_of_characters = static_cast<size_t>(token_end - line);
 
   string id;
@@ -88,7 +84,7 @@ void split(const char* line, vector<string>& tokens)
   }
   tokens.push_back(id);
 
-  char* first_name = strstr(token_end, DELIMITER);
+  const char* first_name = strstr(token_end, DELIMITER);
   size_t number_of_characters_word = static_cast<size_t>(first_name - token_end);
 
   string first;
@@ -99,13 +95,14 @@ void split(const char* line, vector<string>& tokens)
   tokens.push_back(first);
 
 
-  char* last_name = strstr(token_end, DELIMITER);
-  size_t number_of_characters_word_last = static_cast<size_t>(last_name -
-      token_end);
+  const char* last_name = strstr(token_end, DELIMITER);
+  size_t number_of_characters_word_last = ('\0');
+
   string last;
-  for (size_t count = 0; count <= number_of_characters_word_last; count++)
+  for (size_t count = 0; count < number_of_characters_word_last; count++)
   {
     last += line[count];
   }
+  
   tokens.push_back(last);
 }

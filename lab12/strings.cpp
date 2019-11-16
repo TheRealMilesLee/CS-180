@@ -1,5 +1,9 @@
-// Your Name Here
-// The program purpose here
+//Hengyi Li
+//This Program is to generate a username for the student’s network and email
+// accounts.
+//This Program Created by Hengyi Li on 11:37 AM, Nov 12, 2019
+//This Program has been done by Hengyi Li on 0：55 AM, Nov 16, 2019.
+//Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <cctype>
 #include <fstream>
@@ -41,18 +45,27 @@ int main(int argc, char* argv[])
     return 2;
   }
 
-  ofstream username_file("../username.txt");
+  ofstream username_file("../usernames.txt");
   char line[MAX_INPUT_LINE_LENGTH];
 
   while (data_file.getline(line, MAX_INPUT_LINE_LENGTH))
   {
     vector<string> fields;
     split(line, fields);
-
     string id = fields.at(0);
-    cout << id << endl;
+    cout<< id << endl;
 
     // the rest of the code for the output here
+    string first_name = fields.at(2);
+    string last_name = fields.at(2);
+
+    username_file << left << last_name.substr(1,25) << setw
+    (NAME_WIDTH) << right << first_name.substr(1,1)<< id.at(4) << id.at(5) <<
+    id.at(6)
+    << id.at
+    (7) << endl;
+
+
   }
 
   data_file.close();
@@ -63,10 +76,10 @@ int main(int argc, char* argv[])
 
 void split(const char* line, vector<string>& tokens)
 {
-  char DELIMITER[] {","};
-  const char* token_end = strstr(line, DELIMITER);
+   const char DELIMITER[] {","};
 
-  size_t number_of_characters = static_cast<size_t>(token_end - line);
+   char* token_end = strstr(line, DELIMITER);
+   size_t number_of_characters = static_cast<size_t>(token_end - line);
 
   string id;
   for (size_t count = 0; count < number_of_characters; count++)
@@ -75,4 +88,24 @@ void split(const char* line, vector<string>& tokens)
   }
   tokens.push_back(id);
 
+  char* first_name = strstr(token_end, DELIMITER);
+  size_t number_of_characters_word = static_cast<size_t>(first_name - token_end);
+
+  string first;
+  for (size_t count = 0; count < number_of_characters_word; count++)
+  {
+    first += line[count];
+  }
+  tokens.push_back(first);
+
+
+  char* last_name = strstr(token_end, DELIMITER);
+  size_t number_of_characters_word_last = static_cast<size_t>(last_name -
+      token_end);
+  string last;
+  for (size_t count = 0; count <= number_of_characters_word_last; count++)
+  {
+    last += line[count];
+  }
+  tokens.push_back(last);
 }

@@ -102,14 +102,6 @@ void split(const char* line, vector<string>& tokens)
   }
   tokens.push_back(first);
 
-  const char* last_name = strstr(first_name + 2, LIMITER);
-  size_t number_of_characters_word_last = static_cast<size_t>
-      (last_name - (first_name - 7));
-
-  string last;
-  for (size_t count = 1; count < number_of_characters_word_last; count++)
-  {
-    last += first_name[count];
-  }
-  tokens.push_back(last);
+  const char* last_name = strstr(first_name + 1, LIMITER);
+  tokens.push_back(last_name);
  }

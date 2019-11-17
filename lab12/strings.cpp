@@ -2,7 +2,7 @@
 //This Program is to generate a username for the student’s network and email
 // accounts.
 //This Program Created by Hengyi Li on 11:37 AM, Nov 12, 2019
-//This Program has been done by Hengyi Li on 0：55 AM, Nov 16, 2019.
+//This Program has been done by Hengyi Li on 4：55 PM, Nov 16, 2019.
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <cctype>
@@ -56,12 +56,17 @@ int main(int argc, char* argv[])
     cout<< id << endl;
 
     // the rest of the code for the output here
-    string first_name = fields.at(2);
+    string first_name = fields.at(1);
     string last_name = fields.at(2);
 
-    username_file << left << last_name.substr(1, 1) << setw(NAME_WIDTH) <<
-    right << first_name.at(1) << last_name.at(1) << id.at(4) << id.at(5) <<
-    id.at(6) << id.at (7) << endl;
+    username_file << left
+                  << last_name
+                  << "," << setw(NAME_WIDTH)
+                  << first_name
+                  << static_cast<char>(tolower(first_name.at(0)))
+                  << static_cast<char>(tolower(last_name.at(0)))
+                  << id.at(4) << id.at(5) << id.at(6) << id.at (7)
+                  << endl;
   }
 
   data_file.close();
@@ -70,10 +75,11 @@ int main(int argc, char* argv[])
   return 0;
 }
 
+
 void split(const char* line, vector<string>& tokens)
 {
    const char DELIMITER[] {","};
-
+   const char LIMITER[] {"\0"};
    const char* token_end = strstr(line, DELIMITER);
    size_t number_of_characters = static_cast<size_t>(token_end - line);
 
@@ -84,25 +90,26 @@ void split(const char* line, vector<string>& tokens)
   }
   tokens.push_back(id);
 
-  const char* first_name = strstr(token_end, DELIMITER);
+
+
+  const char* first_name = strstr(token_end + 1, DELIMITER);
   size_t number_of_characters_word = static_cast<size_t>(first_name - token_end);
 
   string first;
-  for (size_t count = 0; count < number_of_characters_word; count++)
+  for (size_t count = 1; count < number_of_characters_word; count++)
   {
-    first += line[count];
+    first += token_end[count];
   }
   tokens.push_back(first);
 
-
-  const char* last_name = strstr(token_end, DELIMITER);
-  size_t number_of_characters_word_last = ('\0');
+  const char* last_name = strstr(first_name + 2, LIMITER);
+  size_t number_of_characters_word_last = static_cast<size_t>
+      (last_name - (first_name - 7));
 
   string last;
-  for (size_t count = 0; count < number_of_characters_word_last; count++)
+  for (size_t count = 1; count < number_of_characters_word_last; count++)
   {
-    last += line[count];
+    last += first_name[count];
   }
-  
   tokens.push_back(last);
-}
+ }

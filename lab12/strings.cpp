@@ -58,11 +58,11 @@ int main(int argc, char* argv[])
     // the rest of the code for the output here
     string first_name = fields.at(1);
     string last_name = fields.at(2);
+    string names = last_name + "," + first_name;
 
-    username_file << left
-                  << last_name
-                  << "," << setw(NAME_WIDTH)
-                  << first_name
+    username_file  << left
+                  << setw(NAME_WIDTH)
+                  << names
                   << static_cast<char>(tolower(first_name.at(0)))
                   << static_cast<char>(tolower(last_name.at(0)))
                   << id.at(4) << id.at(5) << id.at(6) << id.at (7)

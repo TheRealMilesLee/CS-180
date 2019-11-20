@@ -6,40 +6,41 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 struct Part
 {
-  string description;
-  unsigned current_quantity;
-  unsigned min_quantity;
-  unsigned max_quantity;
+    string description;
+    unsigned current_quantity;
+    unsigned min_quantity;
+    unsigned max_quantity;
 };
 
 /**
  * read the database from disk and populate the inventory
  * @param inventory the inventory of parts
  */
-void setup(vector<Part>& inventory);
+void setup(vector<Part> &inventory);
 
 /**
  * run the main menu, repeatedly prompting for input until the user
  * chooses to shut down the system
  * @param inventory the inventory of parts
  */
-void main_menu(vector<Part>& inventory);
+void main_menu(vector<Part> &inventory);
 
 /**
  * you document this function
  */
-void shutdown(const vector<Part>& inventory);
+void shutdown(const vector<Part> &inventory);
 
 /**
  * if this part's quantity on hand has fallen below the minimum, re-stock
  * the part up to the part's maximum
  * @param part the part
  */
-void restock_if_necessary(Part& part);
+void restock_if_necessary(Part &part);
 
 /**
  * prompt for a numeric value in a range, and accept only values within
@@ -52,10 +53,8 @@ void restock_if_necessary(Part& part);
  * @return a numeric value between min_value and max_value inclusive
  * (except max_value + 1 if the user enters q and q is acceptable)
  */
-size_t get_numeric_value(const string& prompt,
-                         size_t min_value,
-                         size_t max_value,
-                         bool accept_quit);
+size_t get_numeric_value(const string &prompt, size_t min_value, size_t
+max_value, bool accept_quit);
 
 /**
  * break a string into tokens on a character delimiter
@@ -63,7 +62,7 @@ size_t get_numeric_value(const string& prompt,
  * @param delimiter the character on which to split the line
  * @param tokens a vector to contain the tokens after they have been found
  */
-void split(const string& line, char delimiter, vector<string>& tokens);
+void split(const string &line, char delimiter, vector<string> &tokens);
 
 int main()
 {
@@ -74,28 +73,51 @@ int main()
   return 0;
 }
 
-void setup(vector<Part>& inventory)
+void setup(vector<Part> &inventory)
 {
-  // replace the next line with stuff you write to read the database
-  // from disk and populate the in-memory inventory
+  //Declaration and initialization.
+  const unsigned ARRAY_SIZE = 5;
+  string file_from_disk_array[ARRAY_SIZE];
+  string file_from_disk;
+  vector<string> result;
+
+  //read the file
   ifstream in_file;
   in_file.open("../inventory.csv");
-  string file_from_disk;
-  in_file >> file_from_disk;
-  string tokens = inventory;
-  split(file_from_disk, ',', tokens);
-  struct database
+
+  //read the file to the variable
+  unsigned count = 0;
+  while (in_file >> file_from_disk);
+  {
+    file_from_disk = file_from_disk_array[count];
+    count++;
+  }
+
+  //Push the value to the vector
+  for (unsigned looptimes = 0; looptimes < count; looptimes++)
+  {
+    result.push_back(file_from_disk_array[looptimes]);
+  }
+
+  //split the array
+  split(file_from_disk_array[ARRAY_SIZE], ',', result);
+
+  //construct a Database struct and pushes it to the inventory
+  struct Database
   {
       string description;
-      int current_quantity;
-      int min_quantity;
-      int max_quantity;
+      string current_quantity;
+      string min_quantity;
+      string max_quantity;
   };
-
-  inventory.push_back({});
+  Database data {result.at(1), result.at(2), result.at(3), result.at(4)};
+  inventory.push_back({data.description});
+  inventory.push_back({data.current_quantity});
+  inventory.push_back({data.min_quantity});
+  inventory.push_back({data.max_quantity});
 }
 
-void main_menu(vector<Part>& inventory)
+void main_menu(vector<Part> &inventory)
 {
   const unsigned ITEM_WIDTH = 4;
   const unsigned DESCRIPTION_WIDTH = 23;
@@ -106,30 +128,30 @@ void main_menu(vector<Part>& inventory)
   while (!done)
   {
     cout << left << setw(ITEM_WIDTH) << "Item" <<
-      left << setw(PAD_WIDTH) << " " <<
-      left << setw(DESCRIPTION_WIDTH) << "Description" <<
-      right << setw(QTY_WIDTH) << "Current" <<
-      right << setw(QTY_WIDTH) << "Min" <<
-      right << setw(QTY_WIDTH) << "Max" << endl;
+         left << setw(PAD_WIDTH) << " " <<
+         left << setw(DESCRIPTION_WIDTH) << "Description" <<
+         right << setw(QTY_WIDTH) << "Current" <<
+         right << setw(QTY_WIDTH) << "Min" <<
+         right << setw(QTY_WIDTH) << "Max" << endl;
     cout << setfill('-') <<
-      setw(ITEM_WIDTH + PAD_WIDTH + DESCRIPTION_WIDTH + 3 * QTY_WIDTH) <<
-      "-" << setfill(' ') << endl;
+         setw(ITEM_WIDTH + PAD_WIDTH + DESCRIPTION_WIDTH + 3 * QTY_WIDTH) <<
+         "-" << setfill(' ') << endl;
 
     unsigned count = 0;
     for (auto item : inventory)
     {
       cout << right << setw(ITEM_WIDTH) << count <<
-        left << setw(PAD_WIDTH) << " " <<
-        left << setw(DESCRIPTION_WIDTH) << item.description <<
-        right << setw(QTY_WIDTH) << item.current_quantity <<
-        right << setw(QTY_WIDTH) << item.min_quantity <<
-        right << setw(QTY_WIDTH) << item.max_quantity << endl;
+           left << setw(PAD_WIDTH) << " " <<
+           left << setw(DESCRIPTION_WIDTH) << item.description <<
+           right << setw(QTY_WIDTH) << item.current_quantity <<
+           right << setw(QTY_WIDTH) << item.min_quantity <<
+           right << setw(QTY_WIDTH) << item.max_quantity << endl;
       count++;
     }
     cout << endl;
     size_t choice =
-      get_numeric_value("Choose item from inventory, q to quit", 0,
-                        inventory.size() - 1, true);
+        get_numeric_value("Choose item from inventory, q to quit", 0,
+                          inventory.size() - 1, true);
 
     if (choice == inventory.size())
     {
@@ -138,11 +160,11 @@ void main_menu(vector<Part>& inventory)
     else
     {
       unsigned amount =
-        static_cast<unsigned>
-        (get_numeric_value("How many " + inventory.at(choice).description +
-                           "s are you using?",
-                           1,
-                           inventory.at(choice).current_quantity, false));
+          static_cast<unsigned>
+          (get_numeric_value("How many " + inventory.at(choice).description +
+                             "s are you using?",
+                             1,
+                             inventory.at(choice).current_quantity, false));
       inventory.at(choice).current_quantity -= amount;
       restock_if_necessary(inventory.at(choice));
       cout << endl;
@@ -150,27 +172,27 @@ void main_menu(vector<Part>& inventory)
   }
 }
 
-void restock_if_necessary(Part& part)
+void restock_if_necessary(Part &part)
 {
   // replace this line with real code to figure out if the part needs
   // to be restocked, and restock if so
   part.current_quantity++;
 }
 
-void shutdown(const vector<Part>& inventory)
+void shutdown(const vector<Part> &inventory)
 {
   ofstream data_file("../datafile.txt");
   for (auto item : inventory)
   {
     data_file << item.description << ',' <<
-      item.current_quantity << ',' <<
-      item.min_quantity << ',' <<
-      item.max_quantity << endl;
+              item.current_quantity << ',' <<
+              item.min_quantity << ',' <<
+              item.max_quantity << endl;
   }
   data_file.close();
 }
 
-void split(const string& line, char delimiter, vector<string>& tokens)
+void split(const string &line, char delimiter, vector<string> &tokens)
 {
   size_t token_start = 0;
   size_t delim_position = line.find(delimiter);
@@ -178,7 +200,7 @@ void split(const string& line, char delimiter, vector<string>& tokens)
   while (delim_position != string::npos)
   {
     string token =
-      line.substr(token_start, delim_position - token_start);
+        line.substr(token_start, delim_position - token_start);
     tokens.push_back(token);
     delim_position++;
     token_start = delim_position;
@@ -192,10 +214,8 @@ void split(const string& line, char delimiter, vector<string>& tokens)
   }
 }
 
-size_t get_numeric_value(const string& prompt,
-                         size_t min_value,
-                         size_t max_value,
-                         bool accept_quit)
+size_t get_numeric_value(const string &prompt, size_t min_value, size_t
+max_value, bool accept_quit)
 {
   bool done = false;
   size_t value = 0;
@@ -203,7 +223,7 @@ size_t get_numeric_value(const string& prompt,
   do
   {
     cout << prompt << " (" <<
-      min_value << " to " << max_value << "): ";
+         min_value << " to " << max_value << "): ";
     string value_string;
     getline(cin, value_string);
 
@@ -224,7 +244,6 @@ size_t get_numeric_value(const string& prompt,
     {
       cout << "invalid value; please re-enter" << endl;
     }
-  }
-  while (!done);
+  } while (!done);
   return value;
 }

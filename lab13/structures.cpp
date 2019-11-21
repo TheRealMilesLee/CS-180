@@ -76,6 +76,8 @@ int main()
 void setup(vector<Part> &inventory)
 {
   //Declaration and initialization.
+
+
   string file_from_disk;
   vector<string> result;
 
@@ -85,11 +87,12 @@ void setup(vector<Part> &inventory)
 
   //read the file to the variable
   unsigned count = 0;
-  while (getline(in_file , file_from_disk));
+  while (getline(in_file,file_from_disk));
   {
+
     count++;
   }
-
+  cout << file_from_disk<< endl;
   //Push the value to the vector
   for (unsigned looptimes = 0; looptimes < count; looptimes++)
   {

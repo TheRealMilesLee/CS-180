@@ -76,8 +76,6 @@ int main()
 void setup(vector<Part> &inventory)
 {
   //Declaration and initialization.
-  const unsigned ARRAY_SIZE = 5;
-  string file_from_disk_array[ARRAY_SIZE];
   string file_from_disk;
   vector<string> result;
 
@@ -87,20 +85,19 @@ void setup(vector<Part> &inventory)
 
   //read the file to the variable
   unsigned count = 0;
-  while (in_file >> file_from_disk);
+  while (getline(in_file , file_from_disk));
   {
-    file_from_disk = file_from_disk_array[count];
     count++;
   }
 
   //Push the value to the vector
   for (unsigned looptimes = 0; looptimes < count; looptimes++)
   {
-    result.push_back(file_from_disk_array[looptimes]);
+    result.push_back(file_from_disk);
   }
 
   //split the array
-  split(file_from_disk_array[ARRAY_SIZE], ',', result);
+  split(file_from_disk, ',', result);
 
   //construct a Database struct and pushes it to the inventory
   struct Database

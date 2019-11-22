@@ -75,17 +75,8 @@ int main()
 
 void setup(vector<Part> &inventory)
 {
-  //Make a database struct
-  struct Database
-  {
-      string description;
-      string current_quantity;
-      string min_quantity;
-      string max_quantity;
-  };
-
   string file_from_disk;
-  vector<string> token;
+  vector<string> tokens;
 
   //read the file
   ifstream in_file;
@@ -94,27 +85,29 @@ void setup(vector<Part> &inventory)
   //read the file to the variable
   unsigned count = 0;
 
-  while(getline(in_file, file_from_disk))
-  {
-    cout << file_from_disk << endl;
-    count++;
-  }
+   while(getline(in_file, file_from_disk))
+   {
+     cout << file_from_disk << endl;
+     count++;
+   }
 
   //split the array
-  split(file_from_disk, ',', token);
-  //Push the value to the vector
+  split(file_from_disk, ',', tokens);
 
-  for (unsigned looptimes = 0; looptimes < count; looptimes++)
+  //Make a database struct
+  struct Database
   {
-    token.push_back(file_from_disk);
-    cout << file_from_disk << endl;
-  }
-
+      string description;
+      string current_quantity;
+      string min_quantity;
+      string max_quantity;
+  };
   //Push the database to the inventory
-  Database item {token.at(0), token.at(1), token.at(2), token.at(3)};
-  inventory.push_back
-  ({item.description, stoi(item.current_quantity), stoi(item.min_quantity),
-    stoi(item.max_quantity)});
+  Database item {tokens.at(0), tokens.at(1),
+                 tokens.at(2),tokens.at(3)};
+
+  inventory.push_back({item.description, stoi(item.current_quantity),
+    stoi(item.min_quantity),stoi(item.max_quantity)});
 }
 
 void main_menu(vector<Part> &inventory)

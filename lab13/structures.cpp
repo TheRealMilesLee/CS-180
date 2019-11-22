@@ -79,9 +79,9 @@ void setup(vector<Part> &inventory)
   struct Database
   {
       string description;
-      unsigned current_quantity;
-      unsigned min_quantity;
-      unsigned max_quantity;
+      string current_quantity;
+      string min_quantity;
+      string max_quantity;
   };
 
   string file_from_disk;
@@ -103,18 +103,18 @@ void setup(vector<Part> &inventory)
   //split the array
   split(file_from_disk, ',', token);
   //Push the value to the vector
+
   for (unsigned looptimes = 0; looptimes < count; looptimes++)
   {
     token.push_back(file_from_disk);
+    cout << file_from_disk << endl;
   }
 
   //Push the database to the inventory
-
-  Database item {token.at(0), to_string(token.at(1)), to_string(token.at(2)),
-                 to_string(token.at(3))};
-
-  inventory.push_back({item.description, item.current_quantity, item.min_quantity,
-                       item.max_quantity});
+  Database item {token.at(0), token.at(1), token.at(2), token.at(3)};
+  inventory.push_back
+  ({item.description, stoi(item.current_quantity), stoi(item.min_quantity),
+    stoi(item.max_quantity)});
 }
 
 void main_menu(vector<Part> &inventory)
@@ -178,10 +178,13 @@ void restock_if_necessary(Part &part)
   // to be restocked, and restock if so
   if (part.current_quantity < part.min_quantity)
   {
+    unsigned restock_quantity = 0;
     for (unsigned looptimes = 0; looptimes < part.max_quantity; looptimes ++)
     {
       part.current_quantity++;
+      restock_quantity++;
     }
+    cout << "Restocking Inclinometer adding " << restock_quantity << endl;
   }
 }
 

@@ -75,46 +75,46 @@ int main()
 
 void setup(vector<Part> &inventory)
 {
-  //Declaration and initialization.
-
-
-  string file_from_disk;
-  vector<string> result;
-
-  //read the file
-  ifstream in_file;
-  in_file.open("../inventory.csv");
-
-  //read the file to the variable
-  unsigned count = 0;
-  while (getline(in_file,file_from_disk));
-  {
-
-    count++;
-  }
-  cout << file_from_disk<< endl;
-  //Push the value to the vector
-  for (unsigned looptimes = 0; looptimes < count; looptimes++)
-  {
-    result.push_back(file_from_disk);
-  }
-
-  //split the array
-  split(file_from_disk, ',', result);
-
-  //construct a Database struct and pushes it to the inventory
+  //Make a database struct
   struct Database
   {
       string description;
-      string current_quantity;
-      string min_quantity;
-      string max_quantity;
+      unsigned current_quantity;
+      unsigned min_quantity;
+      unsigned max_quantity;
   };
-  Database data {result.at(1), result.at(2), result.at(3), result.at(4)};
-  inventory.push_back({data.description});
-  inventory.push_back({data.current_quantity});
-  inventory.push_back({data.min_quantity});
-  inventory.push_back({data.max_quantity});
+
+  string file_from_disk;
+  vector<string> token;
+
+  //read the file
+  ifstream in_file;
+  in_file.open("../inventory.txt");
+
+  //read the file to the variable
+  unsigned count = 0;
+
+  while(getline(in_file, file_from_disk))
+  {
+    cout << file_from_disk << endl;
+    count++;
+  }
+
+  //split the array
+  split(file_from_disk, ',', token);
+  //Push the value to the vector
+  for (unsigned looptimes = 0; looptimes < count; looptimes++)
+  {
+    token.push_back(file_from_disk);
+  }
+
+  //Push the database to the inventory
+
+  Database item {token.at(0), to_string(token.at(1)), to_string(token.at(2)),
+                 to_string(token.at(3))};
+
+  inventory.push_back({item.description, item.current_quantity, item.min_quantity,
+                       item.max_quantity});
 }
 
 void main_menu(vector<Part> &inventory)
@@ -176,7 +176,13 @@ void restock_if_necessary(Part &part)
 {
   // replace this line with real code to figure out if the part needs
   // to be restocked, and restock if so
-  part.current_quantity++;
+  if (part.current_quantity < part.min_quantity)
+  {
+    for (unsigned looptimes = 0; looptimes < part.max_quantity; looptimes ++)
+    {
+      part.current_quantity++;
+    }
+  }
 }
 
 void shutdown(const vector<Part> &inventory)

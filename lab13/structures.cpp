@@ -1,7 +1,7 @@
 //Hengyi Li
 //This program helps manage manufacturing inventory
 //This Program Created by Hengyi Li on 11:40 AM, Nov 19, 2019
-//This Program has been done by Hengyi Li on 0:23 AM, Nov 23, 2019.
+//This Program has been done by Hengyi Li on 3:40 PM, Nov 23, 2019.
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <fstream>
@@ -79,34 +79,27 @@ int main()
 void setup(vector<Part> &inventory)
 {
   //initialization
-  string file_from_disk;
-  vector<string> tokens;
-  struct Database
-  {
-    string description;
-    string current_quantity;
-    string min_quantity;
-    string max_quantity;
-  };
+  string line;
+
   //open the file
   ifstream in_file;
-  in_file.open("../inventory.txt");
+  in_file.open("inventory.txt");
   //read the file to the variable
-  while(getline(in_file, file_from_disk))
+  while(getline(in_file,line))
   {
-    split(file_from_disk, ',', tokens);
+    vector<string> fields;
+    split(line, ',', fields);
     //push to the database
-    string description = tokens.at(0);
-    string current = tokens.at(1);
-    string min = tokens.at(2);
-    string max = tokens.at(3);
-    Database item{description, current, min, max};
+    string name = fields.at(0);
+    string currents = fields.at(1);
+    string minimum = fields.at(2);
+    string maximum = fields.at(3);
     //casting
-    auto current_quantity = static_cast<unsigned>(stoi(item.current_quantity));
-    auto min_quantity = static_cast<unsigned>(stoi(item.min_quantity));
-    auto max_quantity = static_cast<unsigned>(stoi(item.max_quantity));
+    auto current_quantity = static_cast<unsigned>(stoi(currents));
+    auto min_quantity = static_cast<unsigned>(stoi(minimum));
+    auto max_quantity = static_cast<unsigned>(stoi(maximum));
     //push to inventory
-    inventory.push_back({item.description, current_quantity, min_quantity,
+    inventory.push_back({name, current_quantity, min_quantity,
                          max_quantity});
   }
 }
@@ -177,14 +170,14 @@ void restock_if_necessary(Part &part)
     {
       part.current_quantity++;
     }
-    cout << "Restocking" << part.description << "adding " <<
+    cout << "Restocking " << part.description << " adding " <<
     restock_quantity << endl;
   }
 }
 
 void shutdown(const vector<Part> &inventory)
 {
-  ofstream data_file("../datafile.txt");
+  ofstream data_file("inventory.txt");
   for (auto item : inventory)
   {
     data_file << item.description << ',' <<

@@ -1,7 +1,7 @@
 //Hengyi Li
 //This program helps manage manufacturing inventory
 //This Program Created by Hengyi Li on 11:40 AM, Nov 19, 2019
-//This Program has been done by Hengyi Li on 4：55 PM, Nov 16, 2019.
+//This Program has been done by Hengyi Li on 0:23 AM, Nov 23, 2019.
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <fstream>

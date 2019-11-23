@@ -83,38 +83,32 @@ void setup(vector<Part> &inventory)
   vector<string> tokens;
   struct Database
   {
-      string description;
-      string current_quantity;
-      string min_quantity;
-      string max_quantity;
+    string description;
+    string current_quantity;
+    string min_quantity;
+    string max_quantity;
   };
-
   //open the file
   ifstream in_file;
   in_file.open("../inventory.txt");
-
-  unsigned count = 0;
   //read the file to the variable
   while(getline(in_file, file_from_disk))
   {
-    count++;
-    for (unsigned looptimes = 0; looptimes < count; looptimes++)
-    {
-      split(file_from_disk, ',', tokens);
-    }
-    Database item{tokens.at(0), tokens.at(1),
-                  tokens.at(2), tokens.at(3)};
+    split(file_from_disk, ',', tokens);
+    //push to the database
+    string description = tokens.at(0);
+    string current = tokens.at(1);
+    string min = tokens.at(2);
+    string max = tokens.at(3);
+    Database item{description, current, min, max};
     //casting
-    auto current_quantity = static_cast<unsigned>(stoi(
-        item.current_quantity));
+    auto current_quantity = static_cast<unsigned>(stoi(item.current_quantity));
     auto min_quantity = static_cast<unsigned>(stoi(item.min_quantity));
     auto max_quantity = static_cast<unsigned>(stoi(item.max_quantity));
     //push to inventory
     inventory.push_back({item.description, current_quantity, min_quantity,
                          max_quantity});
   }
-
-
 }
 void main_menu(vector<Part> &inventory)
 {

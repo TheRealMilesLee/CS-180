@@ -1,4 +1,12 @@
-Piezoelectric crystal,4,15,50,0,0,0
-50,0,0,0
-15,0,0,0
-4,0,0,0
+Thermistor,50,10,50
+Thermistor,54,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50
+Thermistor,50,10,50

@@ -93,27 +93,29 @@ void setup(vector<Part> &inventory)
   ifstream in_file;
   in_file.open("../inventory.txt");
 
+  unsigned count = 0;
   //read the file to the variable
   while(getline(in_file, file_from_disk))
   {
-    //split the file
-    split(file_from_disk, ',', tokens);
-    //push to the database
-    Database item {tokens.at(0), tokens.at(1),
-                   tokens.at(2),tokens.at(3)};
+    count++;
+    for (unsigned looptimes = 0; looptimes < count; looptimes++)
+    {
+      split(file_from_disk, ',', tokens);
+    }
+    Database item{tokens.at(0), tokens.at(1),
+                  tokens.at(2), tokens.at(3)};
     //casting
-    auto current_quantity = static_cast<unsigned>(stoi(item.current_quantity));
+    auto current_quantity = static_cast<unsigned>(stoi(
+        item.current_quantity));
     auto min_quantity = static_cast<unsigned>(stoi(item.min_quantity));
     auto max_quantity = static_cast<unsigned>(stoi(item.max_quantity));
     //push to inventory
     inventory.push_back({item.description, current_quantity, min_quantity,
                          max_quantity});
-
-    cout << file_from_disk << endl;
   }
 
-}
 
+}
 void main_menu(vector<Part> &inventory)
 {
   const unsigned ITEM_WIDTH = 4;
@@ -176,12 +178,13 @@ void restock_if_necessary(Part &part)
   if (part.current_quantity < part.min_quantity)
   {
     unsigned restock_quantity = 0;
+    restock_quantity = part.max_quantity - part.current_quantity;
     for (unsigned looptimes = 0; looptimes < part.max_quantity; looptimes ++)
     {
       part.current_quantity++;
-      restock_quantity++;
     }
-    cout << "Restocking Inclinometer adding " << restock_quantity << endl;
+    cout << "Restocking" << part.description << "adding " <<
+    restock_quantity << endl;
   }
 }
 
@@ -205,8 +208,7 @@ void split(const string &line, char delimiter, vector<string> &tokens)
 
   while (delim_position != string::npos)
   {
-    string token =
-        line.substr(token_start, delim_position - token_start);
+    string token = line.substr(token_start, delim_position - token_start);
     tokens.push_back(token);
     delim_position++;
     token_start = delim_position;

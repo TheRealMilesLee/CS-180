@@ -1,5 +1,8 @@
-// Your name here
-// The program's purpose here
+//Hengyi Li
+//This program helps manage manufacturing inventory
+//This Program Created by Hengyi Li on 11:40 AM, Nov 19, 2019
+//This Program has been done by Hengyi Li on 4：55 PM, Nov 16, 2019.
+//Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <fstream>
 #include <iomanip>
@@ -75,26 +78,9 @@ int main()
 
 void setup(vector<Part> &inventory)
 {
+  //initialization
   string file_from_disk;
   vector<string> tokens;
-
-  //read the file
-  ifstream in_file;
-  in_file.open("../inventory.txt");
-
-  //read the file to the variable
-  unsigned count = 0;
-
-   while(getline(in_file, file_from_disk))
-   {
-     cout << file_from_disk << endl;
-     count++;
-   }
-
-  //split the array
-  split(file_from_disk, ',', tokens);
-
-  //Make a database struct
   struct Database
   {
       string description;
@@ -102,12 +88,30 @@ void setup(vector<Part> &inventory)
       string min_quantity;
       string max_quantity;
   };
-  //Push the database to the inventory
-  Database item {tokens.at(0), tokens.at(1),
-                 tokens.at(2),tokens.at(3)};
 
-  inventory.push_back({item.description, stoi(item.current_quantity),
-    stoi(item.min_quantity),stoi(item.max_quantity)});
+  //open the file
+  ifstream in_file;
+  in_file.open("../inventory.txt");
+
+  //read the file to the variable
+  while(getline(in_file, file_from_disk))
+  {
+    //split the file
+    split(file_from_disk, ',', tokens);
+    //push to the database
+    Database item {tokens.at(0), tokens.at(1),
+                   tokens.at(2),tokens.at(3)};
+    //casting
+    auto current_quantity = static_cast<unsigned>(stoi(item.current_quantity));
+    auto min_quantity = static_cast<unsigned>(stoi(item.min_quantity));
+    auto max_quantity = static_cast<unsigned>(stoi(item.max_quantity));
+    //push to inventory
+    inventory.push_back({item.description, current_quantity, min_quantity,
+                         max_quantity});
+
+    cout << file_from_disk << endl;
+  }
+
 }
 
 void main_menu(vector<Part> &inventory)

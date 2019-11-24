@@ -83,7 +83,7 @@ void setup(vector<Part> &inventory)
 
   //open the file
   ifstream in_file;
-  in_file.open("inventory.txt");
+  in_file.open("../inventory.txt");
   //read the file to the variable
   while(getline(in_file,line))
   {

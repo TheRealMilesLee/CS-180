@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/strings.cpp" "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/cmake-build-debug/CMakeFiles/lab12.dir/strings.cpp.o"
+  "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp" "/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/cmake-build-debug/CMakeFiles/lab12.dir/string.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

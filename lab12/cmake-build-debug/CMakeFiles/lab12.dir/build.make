@@ -57,27 +57,27 @@ include CMakeFiles/lab12.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab12.dir/flags.make
 
-CMakeFiles/lab12.dir/strings.cpp.o: CMakeFiles/lab12.dir/flags.make
-CMakeFiles/lab12.dir/strings.cpp.o: ../strings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab12.dir/strings.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab12.dir/strings.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/strings.cpp
+CMakeFiles/lab12.dir/string.cpp.o: CMakeFiles/lab12.dir/flags.make
+CMakeFiles/lab12.dir/string.cpp.o: ../string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab12.dir/string.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab12.dir/string.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp
 
-CMakeFiles/lab12.dir/strings.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab12.dir/strings.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/strings.cpp > CMakeFiles/lab12.dir/strings.cpp.i
+CMakeFiles/lab12.dir/string.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab12.dir/string.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp > CMakeFiles/lab12.dir/string.cpp.i
 
-CMakeFiles/lab12.dir/strings.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab12.dir/strings.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/strings.cpp -o CMakeFiles/lab12.dir/strings.cpp.s
+CMakeFiles/lab12.dir/string.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab12.dir/string.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp -o CMakeFiles/lab12.dir/string.cpp.s
 
 # Object files for target lab12
 lab12_OBJECTS = \
-"CMakeFiles/lab12.dir/strings.cpp.o"
+"CMakeFiles/lab12.dir/string.cpp.o"
 
 # External object files for target lab12
 lab12_EXTERNAL_OBJECTS =
 
-lab12: CMakeFiles/lab12.dir/strings.cpp.o
+lab12: CMakeFiles/lab12.dir/string.cpp.o
 lab12: CMakeFiles/lab12.dir/build.make
 lab12: CMakeFiles/lab12.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab12"

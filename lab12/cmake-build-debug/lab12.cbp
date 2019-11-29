@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/strings.cpp">
+		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/string.cpp">
 			<Option target="lab12"/>
 		</Unit>
 		<Unit filename="/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab12/CMakeLists.txt">

@@ -123,32 +123,32 @@ lab12/fast:
 	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/build
 .PHONY : lab12/fast
 
-strings.o: strings.cpp.o
+string.o: string.cpp.o
 
-.PHONY : strings.o
+.PHONY : string.o
 
 # target to build an object file
-strings.cpp.o:
-	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/strings.cpp.o
-.PHONY : strings.cpp.o
+string.cpp.o:
+	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/string.cpp.o
+.PHONY : string.cpp.o
 
-strings.i: strings.cpp.i
+string.i: string.cpp.i
 
-.PHONY : strings.i
+.PHONY : string.i
 
 # target to preprocess a source file
-strings.cpp.i:
-	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/strings.cpp.i
-.PHONY : strings.cpp.i
+string.cpp.i:
+	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/string.cpp.i
+.PHONY : string.cpp.i
 
-strings.s: strings.cpp.s
+string.s: string.cpp.s
 
-.PHONY : strings.s
+.PHONY : string.s
 
 # target to generate assembly for a file
-strings.cpp.s:
-	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/strings.cpp.s
-.PHONY : strings.cpp.s
+string.cpp.s:
+	$(MAKE) -f CMakeFiles/lab12.dir/build.make CMakeFiles/lab12.dir/string.cpp.s
+.PHONY : string.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab12"
-	@echo "... strings.o"
-	@echo "... strings.i"
-	@echo "... strings.s"
+	@echo "... string.o"
+	@echo "... string.i"
+	@echo "... string.s"
 .PHONY : help
 
 

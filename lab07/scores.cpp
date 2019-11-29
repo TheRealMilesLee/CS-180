@@ -1,5 +1,5 @@
 //Hengyi Li
-//This Program is to decide the phone plan
+//This Program is to get the grade report
 //This Program finished by Hengyi Li on 11：20 AM, 5 Oct, 2019
 //Copyright @ 2019 Hengyi Li. All rights reserved.
 

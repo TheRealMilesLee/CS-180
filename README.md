@@ -28,3 +28,16 @@
 [string](https://github.com/TheRealMilesLee/Truman-CS180-Course/tree/master/lab12) This is lab13, this lab is to generate a username for the student’s network and email accounts.
 
 [structures](https://github.com/TheRealMilesLee/Truman-CS180-Course/tree/master/lab13) This is lab14, this lab helps manage manufacturing inventory
+
+# External Link
+
+You can access the course using [Dr.Beck's website](http://borax.truman.edu/180/)
+
+About Dr.Beck: (http://borax.truman.edu/)
+
+contact me: hl3265@truman.edu
+
+About the [Truman State University](https://www.truman.edu/)
+
+# Disclaimer
+This repository is just a collection of my work on the CS180 course, the code is not the perfect, and it may have a lot errors, and some of them were given by the instructor, so the code style may looks so different, and pleas ignore that issue.

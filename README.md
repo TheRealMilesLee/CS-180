@@ -1,6 +1,5 @@
 # Truman CS180 Course
- Truman State University CS180 Course Code
- This Repository is contain the full lab code from Dr.beck's CS180 couse.
+This Repository is contain all my work from Dr.beck's CS180 couse.
 
 # Index
 [fahrenheit_to_celsius](https://github.com/TheRealMilesLee/Truman-CS180-Course/tree/master/lab02a) This is lab2, this lab is to compute the Celsius equivalents of two Fahrenheit

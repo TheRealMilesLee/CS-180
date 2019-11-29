@@ -8,6 +8,9 @@
 
 This Repository is contain all my work from Dr.beck's CS180 couse.
 
+Requirement: C++11, clang, g++11
+
+Recommend IDE: CLion
 # Index
 [fahrenheit_to_celsius](https://github.com/TheRealMilesLee/Truman-CS180-Course/tree/master/lab02a) This is lab2, this lab is to compute the Celsius equivalents of two Fahrenheit
 

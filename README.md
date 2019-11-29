@@ -31,13 +31,13 @@
 
 # External Link
 
-You can access the course using [Dr.Beck's website](http://borax.truman.edu/180/)
+You can access the course using Dr.Beck's website: http://borax.truman.edu/180/
 
-About Dr.Beck: (http://borax.truman.edu/)
+About Dr.Beck: http://borax.truman.edu/
 
 contact me: hl3265@truman.edu
 
-About the [Truman State University](https://www.truman.edu/)
+About the Truman State University: https://www.truman.edu/
 
 # Disclaimer
 This repository is just a collection of my work on the CS180 course, the code is not the perfect, and it may have a lot errors, and some of them were given by the instructor, so the code style may looks so different, and pleas ignore that issue.

@@ -4,7 +4,7 @@
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg"></a> 
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/C++-Learing-red.svg"></a>
 <a href="https://img.shields.io"><img src="https://img.shields.io/badge/Creative-Design%26Build-blue.svg"></a>
-<a href="https://img.shields.io"><img src="https://img.shields.io/badge/LeeMorales-Computer%20Science-brightgreen.svg"></a>
+<a href="https://img.shields.io"><img src="https://img.shields.io/badge/MilesLee-Computer%20Science-brightgreen.svg"></a>
 
 This Repository is contain all my work from Dr.beck's CS180 couse.
 

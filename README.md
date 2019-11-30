@@ -48,6 +48,8 @@ contact me: hl3265@truman.edu
 
 About the Truman State University: https://www.truman.edu/
 
+Following Documents: https://github.com/TheRealMilesLee/Truman-CS180-Documents
+
 # Disclaimer
 This repository is just a collection of my work on the CS180 course, the code is not the perfect, and it may have a lot errors, and some of them were given by the instructor, so the code style may looks so different, and pleas ignore that issue.
 

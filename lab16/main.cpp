@@ -22,6 +22,7 @@ struct Part
  * @return a string representation of the part
  */
 // to_string prototype here
+string to_string(Part &part);
 
 /**
  * prompt for a numeric value in a range, and accept only values within
@@ -34,14 +35,16 @@ struct Part
  * @return a numeric value between min_value and max_value inclusive
  * (except max_value + 1 if the user enters q and q is acceptable)
  */
-unsigned get_numeric_value(const string& prompt, unsigned min_value,
-                           unsigned max_value, bool accept_quit);
+unsigned get_numeric_value(const string& prompt,
+                           unsigned min_value,
+                           unsigned max_value,
+                           bool accept_quit);
 
 int main()
 {
   const unsigned NUMBER_OF_PARTS = 12;
   fstream file;
-  file.open("inventory.dat", ios::in | ios::out | ios::binary);
+  file.open("../inventory.inv", ios::in | ios::out | ios::binary);
   if (file.fail())
   {
     cerr << "Error opening inventory database" << endl;
@@ -74,10 +77,8 @@ int main()
   return 0;
 }
 
-unsigned get_numeric_value(const string& prompt,
-                           unsigned min_value,
-                           unsigned max_value,
-                           bool accept_quit)
+unsigned get_numeric_value(const string& prompt, unsigned min_value,
+                           unsigned max_value, bool accept_quit)
 {
   bool done = false;
   unsigned value = 0;
@@ -112,4 +113,11 @@ unsigned get_numeric_value(const string& prompt,
   }
   while (!done);
   return value;
+}
+
+string to_string(Part &part)
+{
+  string string_cast_description = static_cast<string>(part.description);
+  string string_cast_current_quantity = static_cast<string>(reinterpret_cast<const char *>(part.current_quantity));
+  string string_cast_max_quantity = static_cast<string>(reinterpret_cast<const char *>(part.max_quantity));
 }

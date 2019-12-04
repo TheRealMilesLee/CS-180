@@ -21,7 +21,6 @@ struct Part
  * @param part the part to represent
  * @return a string representation of the part
  */
-// to_string prototype here
 string to_string(Part &part);
 
 /**
@@ -35,10 +34,8 @@ string to_string(Part &part);
  * @return a numeric value between min_value and max_value inclusive
  * (except max_value + 1 if the user enters q and q is acceptable)
  */
-unsigned get_numeric_value(const string& prompt,
-                           unsigned min_value,
-                           unsigned max_value,
-                           bool accept_quit);
+unsigned get_numeric_value(const string& prompt, unsigned min_value,
+                           unsigned max_value, bool accept_quit);
 
 int main()
 {
@@ -54,8 +51,7 @@ int main()
   bool done = false;
   while (!done)
   {
-    unsigned choice =
-        get_numeric_value("Choose part number or q to quit", 0,
+    unsigned choice = get_numeric_value("Choose part number or q to quit", 0,
                           NUMBER_OF_PARTS - 1, true);
 
     if (choice == NUMBER_OF_PARTS)

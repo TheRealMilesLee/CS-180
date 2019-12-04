@@ -3,4 +3,4 @@ project(lab16)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(lab16 main.cpp)
+add_executable(lab16 binary_files.cpp)

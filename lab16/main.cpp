@@ -61,10 +61,9 @@ int main()
     else
     {
       Part part;
-      file.seekg(static_cast<long>(choice * sizeof part));
-      file.read(reinterpret_cast<char*>(&part), sizeof part);
+      file.seekg(static_cast<long>(choice * sizeof &part));
+      file.read(reinterpret_cast<char*>(&part), sizeof &part);
       cout << choice << ' ' << to_string(part) << endl;
-
       cout << endl;
     }
   }
@@ -114,6 +113,8 @@ unsigned get_numeric_value(const string& prompt, unsigned min_value,
 string to_string(Part &part)
 {
   string string_cast_description = static_cast<string>(part.description);
-  string string_cast_current_quantity = static_cast<string>(reinterpret_cast<const char *>(part.current_quantity));
-  string string_cast_max_quantity = static_cast<string>(reinterpret_cast<const char *>(part.max_quantity));
+  string string_cast_current_quantity = static_cast<string>
+      (reinterpret_cast<const char* >(part.current_quantity));
+  string string_cast_max_quantity = static_cast<string>
+      (reinterpret_cast<const char* >(part.max_quantity));
 }

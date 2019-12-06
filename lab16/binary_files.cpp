@@ -35,7 +35,13 @@ string to_string(Part &part);
  * (except max_value + 1 if the user enters q and q is acceptable)
  */
 unsigned get_numeric_value(const string& prompt, unsigned min_value,
-                           unsigned max_value, bool accept_quit);
+                           unsigned max_value,bool accept_quit);
+/**
+ * if this part's quantity on hand has fallen below the minimum, re-stock
+ * the part up to the part's maximum
+ * @param part the part
+ */
+unsigned restock(Part &part);
 
 int main()
 {
@@ -53,7 +59,6 @@ int main()
   {
     unsigned choice = get_numeric_value("Choose part number or q to quit", 0,
                           NUMBER_OF_PARTS - 1, true);
-
     if (choice == NUMBER_OF_PARTS)
     {
       done = true;
@@ -61,19 +66,31 @@ int main()
     else
     {
       Part part;
-      file.seekg(static_cast<long>(choice * sizeof &part));
-      file.read(reinterpret_cast<char*>(&part), sizeof &part);
+      file.seekg(static_cast<long>(choice * sizeof part));
+      file.read(reinterpret_cast<char*>(&part), sizeof part);
       cout << choice << ' ' << to_string(part) << endl;
       cout << endl;
+      string user_choice;
+      cout << "Restock? (Y/N) ";
+      cin >> user_choice;
+      if (user_choice == "Y" || user_choice == "y")
+      {
+        restock (part);
+      }
+      else if (user_choice == "N" || user_choice == "n")
+      {
+        done = true;
+      }
+      file.write(reinterpret_cast<char*>(&part), sizeof part);
     }
-  }
 
+  }
   file.close();
   return 0;
 }
 
 unsigned get_numeric_value(const string& prompt, unsigned min_value,
-                           unsigned max_value, bool accept_quit)
+    unsigned max_value, bool accept_quit)
 {
   bool done = false;
   unsigned value = 0;
@@ -93,9 +110,8 @@ unsigned get_numeric_value(const string& prompt, unsigned min_value,
         done = true;
       }
     }
-    else if (accept_quit &&
-             value_string.size() > 0 &&
-             tolower(value_string.at(0)) == 'q')
+    else if (accept_quit && value_string.size() > 0 && tolower(value_string
+    .at(0)) == 'q')
     {
       done = true;
       value = max_value + 1;
@@ -111,10 +127,18 @@ unsigned get_numeric_value(const string& prompt, unsigned min_value,
 }
 
 string to_string(Part &part)
+  {
+    string description = static_cast<string>(part.description);
+    string current_quantity = static_cast<string>(reinterpret_cast<const
+    char * >(part.current_quantity));
+    string max_quantity = static_cast<string>(reinterpret_cast<const char * >
+    (part.max_quantity));
+    string to_string_result = description + current_quantity + max_quantity;
+    return to_string_result;
+  }
+unsigned restock(Part &part)
 {
-  string string_cast_description = static_cast<string>(part.description);
-  string string_cast_current_quantity = static_cast<string>
-      (reinterpret_cast<const char* >(part.current_quantity));
-  string string_cast_max_quantity = static_cast<string>
-      (reinterpret_cast<const char* >(part.max_quantity));
+  unsigned restock_quantity = part.max_quantity - part.current_quantity;
+  cout << "Restocking " << part.description << " adding " <<
+       restock_quantity << endl;
 }

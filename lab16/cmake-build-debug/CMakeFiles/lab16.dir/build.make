@@ -57,27 +57,27 @@ include CMakeFiles/lab16.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab16.dir/flags.make
 
-CMakeFiles/lab16.dir/main.cpp.o: CMakeFiles/lab16.dir/flags.make
-CMakeFiles/lab16.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab16.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab16.dir/main.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/main.cpp
+CMakeFiles/lab16.dir/binary_files.cpp.o: CMakeFiles/lab16.dir/flags.make
+CMakeFiles/lab16.dir/binary_files.cpp.o: ../binary_files.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab16.dir/binary_files.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab16.dir/binary_files.cpp.o -c /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/binary_files.cpp
 
-CMakeFiles/lab16.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab16.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/main.cpp > CMakeFiles/lab16.dir/main.cpp.i
+CMakeFiles/lab16.dir/binary_files.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab16.dir/binary_files.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/binary_files.cpp > CMakeFiles/lab16.dir/binary_files.cpp.i
 
-CMakeFiles/lab16.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab16.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/main.cpp -o CMakeFiles/lab16.dir/main.cpp.s
+CMakeFiles/lab16.dir/binary_files.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab16.dir/binary_files.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/binary_files.cpp -o CMakeFiles/lab16.dir/binary_files.cpp.s
 
 # Object files for target lab16
 lab16_OBJECTS = \
-"CMakeFiles/lab16.dir/main.cpp.o"
+"CMakeFiles/lab16.dir/binary_files.cpp.o"
 
 # External object files for target lab16
 lab16_EXTERNAL_OBJECTS =
 
-lab16: CMakeFiles/lab16.dir/main.cpp.o
+lab16: CMakeFiles/lab16.dir/binary_files.cpp.o
 lab16: CMakeFiles/lab16.dir/build.make
 lab16: CMakeFiles/lab16.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leemiles/Developer/Truman_CS180/Truman-CS180-Course/lab16/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab16"

@@ -1,17 +1,22 @@
-// Your name here
-// Program purpose here
+//Hengyi Li
+//This program helps manage manufacturing inventory
+//This Program Created by Hengyi Li on 11:40 AM, Dec 1, 2019
+//This Program has been done by Hengyi Li on 10:27 PM, Dec 6, 2019.
+//Copyright @ 2019 Hengyi Li. All rights reserved.
 
 #include <cstdint>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 const unsigned MAX_DESCRIPTION_WIDTH = 25;
 
 struct Part
 {
-    char description [MAX_DESCRIPTION_WIDTH];
+    char description[MAX_DESCRIPTION_WIDTH];
     uint16_t current_quantity;
     uint16_t max_quantity;
 };
@@ -34,21 +39,21 @@ string to_string(Part &part);
  * @return a numeric value between min_value and max_value inclusive
  * (except max_value + 1 if the user enters q and q is acceptable)
  */
-unsigned get_numeric_value(const string& prompt, unsigned min_value,
-                           unsigned max_value,bool accept_quit);
+unsigned get_numeric_value(const string &prompt, unsigned min_value,
+                           unsigned max_value, bool accept_quit);
+
 /**
  * if this part's quantity on hand has fallen below the minimum, re-stock
  * the part up to the part's maximum
  * @param part the part
  */
-unsigned restock(Part &part);
 
 int main()
 {
   const unsigned NUMBER_OF_PARTS = 12;
   fstream file;
-  file.open("../inventory.inv", ios::in | ios::out | ios::binary);
-  if (file.fail())
+  file.open ("inventory.inv", ios::in | ios::out | ios::binary);
+  if (file.fail ())
   {
     cerr << "Error opening inventory database" << endl;
     return 1;
@@ -57,40 +62,51 @@ int main()
   bool done = false;
   while (!done)
   {
-    unsigned choice = get_numeric_value("Choose part number or q to quit", 0,
-                          NUMBER_OF_PARTS - 1, true);
+    Part part;
+    unsigned choice =
+      get_numeric_value ("Choose part number or q to quit", 0,
+        NUMBER_OF_PARTS - 1, true);
     if (choice == NUMBER_OF_PARTS)
     {
       done = true;
     }
     else
     {
-      Part part;
-      file.seekg(static_cast<long>(choice * sizeof part));
-      file.read(reinterpret_cast<char*>(&part), sizeof part);
-      cout << choice << ' ' << to_string(part) << endl;
-      cout << endl;
-      string user_choice;
-      cout << "Restock? (Y/N) ";
-      cin >> user_choice;
-      if (user_choice == "Y" || user_choice == "y")
+      file.seekg (static_cast<long>(choice * sizeof part));
+      file.read (reinterpret_cast<char *>(&part), sizeof part);
+      cout << choice << ' ' << to_string (part) << endl;
+      if (part.current_quantity == part.max_quantity)
       {
-        restock (part);
+        cout << "Already at maximum quantity" << endl;
+        cout << endl;
       }
-      else if (user_choice == "N" || user_choice == "n")
+      else
       {
-        done = true;
+        string user_choice;
+        cout << "Restock? (Y/N) ";
+        getline (cin, user_choice);
+        if (user_choice == "Y" || user_choice == "y")
+        {
+          unsigned restock_quantity =
+            part.max_quantity - part.current_quantity;
+          part.current_quantity = part.max_quantity;
+          cout << "Restocking " << part.description << " adding "
+               << restock_quantity << endl;
+          cout << choice << " " << part.description << " "
+               << part.current_quantity << " " << part.max_quantity << endl;
+          cout << endl;
+          file.seekg (static_cast<long>(choice * sizeof part));
+          file.write (reinterpret_cast<char *>(&part), sizeof part);
+        }
       }
-      file.write(reinterpret_cast<char*>(&part), sizeof part);
     }
-
   }
-  file.close();
+  file.close ();
   return 0;
 }
 
-unsigned get_numeric_value(const string& prompt, unsigned min_value,
-    unsigned max_value, bool accept_quit)
+unsigned get_numeric_value(const string &prompt, unsigned min_value,
+                           unsigned max_value, bool accept_quit)
 {
   bool done = false;
   unsigned value = 0;
@@ -100,18 +116,18 @@ unsigned get_numeric_value(const string& prompt, unsigned min_value,
     cout << prompt << " (" <<
          min_value << " to " << max_value << "): ";
     string value_string;
-    getline(cin, value_string);
+    getline (cin, value_string);
 
-    if (value_string.size() > 0 && isdigit(value_string.at(0)))
+    if (value_string.size () > 0 && isdigit (value_string.at (0)))
     {
-      value = static_cast<unsigned>(stoul(value_string));
+      value = static_cast<unsigned>(stoul (value_string));
       if (value >= min_value && value <= max_value)
       {
         done = true;
       }
     }
-    else if (accept_quit && value_string.size() > 0 && tolower(value_string
-    .at(0)) == 'q')
+    else if (accept_quit && value_string.size () > 0
+             && tolower (value_string.at (0)) =='q')
     {
       done = true;
       value = max_value + 1;
@@ -121,24 +137,16 @@ unsigned get_numeric_value(const string& prompt, unsigned min_value,
     {
       cout << "invalid value; please re-enter" << endl;
     }
-  }
-  while (!done);
+  } while (!done);
   return value;
 }
 
 string to_string(Part &part)
-  {
-    string description = static_cast<string>(part.description);
-    string current_quantity = static_cast<string>(reinterpret_cast<const
-    char * >(part.current_quantity));
-    string max_quantity = static_cast<string>(reinterpret_cast<const char * >
-    (part.max_quantity));
-    string to_string_result = description + current_quantity + max_quantity;
-    return to_string_result;
-  }
-unsigned restock(Part &part)
 {
-  unsigned restock_quantity = part.max_quantity - part.current_quantity;
-  cout << "Restocking " << part.description << " adding " <<
-       restock_quantity << endl;
+  string description = part.description;
+  string current_quantity = to_string (part.current_quantity);
+  string max_quantity = to_string (part.max_quantity);
+  string to_string_result = description + " " + current_quantity + " " + 
+    max_quantity;
+  return to_string_result;
 }

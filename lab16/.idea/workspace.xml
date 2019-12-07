@@ -12,22 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2797ef16-5930-414f-af32-19fc00aab82b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binary_files.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/binary_files.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/binary_files.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab16.dir/binary_files.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab16" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab16" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab16.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab16.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory.inv" beforeDir="false" afterPath="$PROJECT_DIR$/inventory.inv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +88,10 @@
       <workItem from="1575397015500" duration="329000" />
       <workItem from="1575480635945" duration="3274000" />
       <workItem from="1575601628671" duration="4551000" />
+      <workItem from="1575656282333" duration="290000" />
+      <workItem from="1575686025655" duration="1224000" />
+      <workItem from="1575687346957" duration="1057000" />
+      <workItem from="1575688474093" duration="4097000" />
     </task>
     <servers />
   </component>
@@ -109,33 +102,45 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="189" key="#Notifications" timestamp="1575688103953">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="189" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1575688103953" />
     <state x="613" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575482455386">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="613" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1575482455386" />
-    <state width="1628" height="281" key="GridCell.Tab.0.bottom" timestamp="1575606589704">
+    <state x="528" y="262" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575688431834">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="528" y="262" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1575688431834" />
+    <state width="1628" height="281" key="GridCell.Tab.0.bottom" timestamp="1575693077657">
       <screen x="0" y="23" width="1680" height="996" />
     </state>
-    <state width="1628" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1575606579311" />
-    <state width="1628" height="281" key="GridCell.Tab.0.bottom/0.23.1680.996@0.23.1680.996" timestamp="1575606589704" />
-    <state width="1628" height="281" key="GridCell.Tab.0.center" timestamp="1575606589704">
+    <state width="1628" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1575692661267" />
+    <state width="1628" height="281" key="GridCell.Tab.0.bottom/0.23.1680.996@0.23.1680.996" timestamp="1575693077657" />
+    <state width="1628" height="281" key="GridCell.Tab.0.center" timestamp="1575693077657">
       <screen x="0" y="23" width="1680" height="996" />
     </state>
-    <state width="1628" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1575606579310" />
-    <state width="1628" height="281" key="GridCell.Tab.0.center/0.23.1680.996@0.23.1680.996" timestamp="1575606589704" />
-    <state width="1628" height="281" key="GridCell.Tab.0.left" timestamp="1575606589703">
+    <state width="1628" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1575692661266" />
+    <state width="1628" height="281" key="GridCell.Tab.0.center/0.23.1680.996@0.23.1680.996" timestamp="1575693077657" />
+    <state width="1628" height="281" key="GridCell.Tab.0.left" timestamp="1575693077656">
       <screen x="0" y="23" width="1680" height="996" />
     </state>
-    <state width="1628" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1575606579309" />
-    <state width="1628" height="281" key="GridCell.Tab.0.left/0.23.1680.996@0.23.1680.996" timestamp="1575606589703" />
-    <state width="1628" height="281" key="GridCell.Tab.0.right" timestamp="1575606589704">
+    <state width="1628" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1575692661265" />
+    <state width="1628" height="281" key="GridCell.Tab.0.left/0.23.1680.996@0.23.1680.996" timestamp="1575693077656" />
+    <state width="1628" height="281" key="GridCell.Tab.0.right" timestamp="1575693077657">
       <screen x="0" y="23" width="1680" height="996" />
     </state>
-    <state width="1628" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1575606579311" />
-    <state width="1628" height="281" key="GridCell.Tab.0.right/0.23.1680.996@0.23.1680.996" timestamp="1575606589704" />
+    <state width="1628" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1575692661267" />
+    <state width="1628" height="281" key="GridCell.Tab.0.right/0.23.1680.996@0.23.1680.996" timestamp="1575693077657" />
     <state x="364" y="171" key="SettingsEditor" timestamp="1575603658381">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="364" y="171" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1575603658381" />
+    <state x="574" y="152" key="refactoring.ChangeSignatureDialog" timestamp="1575686444478">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="574" y="152" key="refactoring.ChangeSignatureDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1575686444478" />
   </component>
 </project>

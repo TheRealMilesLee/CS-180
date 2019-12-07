@@ -58,7 +58,6 @@ int main()
     cerr << "Error opening inventory database" << endl;
     return 1;
   }
-
   bool done = false;
   while (!done)
   {
@@ -90,10 +89,11 @@ int main()
           unsigned restock_quantity =
             part.max_quantity - part.current_quantity;
           part.current_quantity = part.max_quantity;
-          cout << "Restocking " << part.description << " adding "
-               << restock_quantity << endl;
-          cout << choice << " " << part.description << " "
-               << part.current_quantity << " " << part.max_quantity << endl;
+          cout << "Restocking " << part.description
+               << " adding " << restock_quantity << endl;
+          cout << choice << " " << part.description
+               << " " << part.current_quantity << " " << part.max_quantity
+               << endl;
           cout << endl;
           file.seekg (static_cast<long>(choice * sizeof part));
           file.write (reinterpret_cast<char *>(&part), sizeof part);
@@ -104,20 +104,17 @@ int main()
   file.close ();
   return 0;
 }
-
 unsigned get_numeric_value(const string &prompt, unsigned min_value,
                            unsigned max_value, bool accept_quit)
 {
   bool done = false;
   unsigned value = 0;
-
   do
   {
     cout << prompt << " (" <<
          min_value << " to " << max_value << "): ";
     string value_string;
     getline (cin, value_string);
-
     if (value_string.size () > 0 && isdigit (value_string.at (0)))
     {
       value = static_cast<unsigned>(stoul (value_string));
@@ -132,7 +129,6 @@ unsigned get_numeric_value(const string &prompt, unsigned min_value,
       done = true;
       value = max_value + 1;
     }
-
     if (!done)
     {
       cout << "invalid value; please re-enter" << endl;
@@ -140,7 +136,6 @@ unsigned get_numeric_value(const string &prompt, unsigned min_value,
   } while (!done);
   return value;
 }
-
 string to_string(Part &part)
 {
   string description = part.description;
@@ -150,3 +145,4 @@ string to_string(Part &part)
     max_quantity;
   return to_string_result;
 }
+

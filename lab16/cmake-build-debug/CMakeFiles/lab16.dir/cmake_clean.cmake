@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab16.dir/binary_files.cpp.obj"
-  "lab16.exe"
-  "lab16.exe.manifest"
+  "CMakeFiles/lab16.dir/binary_files.cpp.o"
+  "lab16"
   "lab16.pdb"
-  "liblab16.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

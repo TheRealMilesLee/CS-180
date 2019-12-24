@@ -52,7 +52,7 @@ int main()
 {
   const unsigned NUMBER_OF_PARTS = 12;
   fstream file;
-  file.open ("inventory.inv", ios::in | ios::out | ios::binary);
+  file.open ("../inventory.inv", ios::in | ios::out | ios::binary);
   if (file.fail ())
   {
     cerr << "Error opening inventory database" << endl;

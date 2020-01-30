@@ -33,10 +33,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\JetBrains\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\grand\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\JetBrains\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = C:\Users\grand\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,15 +59,15 @@ include CMakeFiles/lab16.dir/flags.make
 CMakeFiles/lab16.dir/binary_files.cpp.obj: CMakeFiles/lab16.dir/flags.make
 CMakeFiles/lab16.dir/binary_files.cpp.obj: ../binary_files.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Truman-CS180-Course\lab16\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab16.dir/binary_files.cpp.obj"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab16.dir\binary_files.cpp.obj -c D:\Truman-CS180-Course\lab16\binary_files.cpp
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab16.dir\binary_files.cpp.obj -c D:\Truman-CS180-Course\lab16\binary_files.cpp
 
 CMakeFiles/lab16.dir/binary_files.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab16.dir/binary_files.cpp.i"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab16\binary_files.cpp > CMakeFiles\lab16.dir\binary_files.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Truman-CS180-Course\lab16\binary_files.cpp > CMakeFiles\lab16.dir\binary_files.cpp.i
 
 CMakeFiles/lab16.dir/binary_files.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab16.dir/binary_files.cpp.s"
-	C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab16\binary_files.cpp -o CMakeFiles\lab16.dir\binary_files.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Truman-CS180-Course\lab16\binary_files.cpp -o CMakeFiles\lab16.dir\binary_files.cpp.s
 
 # Object files for target lab16
 lab16_OBJECTS = \

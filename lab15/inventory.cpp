@@ -42,8 +42,10 @@ int main()
   {
     file.write(reinterpret_cast<char*>(&part), sizeof part);
   }
+   
 
   file.close();
   cout << parts.size() << " records written" << endl;
   return 0;
+    
 }

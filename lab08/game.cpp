@@ -87,6 +87,7 @@ int main()
     }while(play_again());
   create_report(total, human_won, draw);
   return 0;
+    
 }
 
 //获取输入选择
@@ -232,4 +233,7 @@ unsigned get_rand_in_range(unsigned low, unsigned high)
   unsigned value = rand() % (high - low + 1) + low;
   return value;
 }
-
+class miles
+{
+    
+}

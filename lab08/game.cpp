@@ -233,7 +233,3 @@ unsigned get_rand_in_range(unsigned low, unsigned high)
   unsigned value = rand() % (high - low + 1) + low;
   return value;
 }
-class miles
-{
-    
-}

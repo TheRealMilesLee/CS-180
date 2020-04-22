@@ -65,9 +65,7 @@ int main() {
 
   unsigned seed = static_cast<unsigned int>(time(nullptr));
   srand(seed);
-  double bonus_discount
-       = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1)
-       + MIN_VALUE);
+  double bonus_discount = static_cast<double>(rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE);
   cout << "Bonus Discount" << setw(LABEL_WIDTH_COLOM)
        << bonus_discount << endl;
   cout << "Grand Total   " << setw(LABEL_WIDTH_COLOM)

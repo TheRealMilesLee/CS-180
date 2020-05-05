@@ -33,7 +33,7 @@ size_t binary_search(const vector<int> &array, size_t values)
         }
         else
         {
-            first = middle + 1;
+            first = middle + 1
         }    
     }
     return -1;

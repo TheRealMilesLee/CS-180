@@ -1,18 +1,18 @@
-C:\Users\grand\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Truman-CS180-Course\lab16
+D:\JetBrains\apps\CLion\ch-0\202.6397.106\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_C_COMPILER=C:/Program Files/mingw64/bin/gcc.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files/mingw64/bin/g++.exe" -G "CodeBlocks - MinGW Makefiles" "D:\CS Related\Truman-CS180-Course\lab16"
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
--- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe
--- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe -- works
+-- Check for working C compiler: C:/Program Files/mingw64/bin/gcc.exe
+-- Check for working C compiler: C:/Program Files/mingw64/bin/gcc.exe - works
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Check for working CXX compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe
--- Check for working CXX compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe -- works
+-- Check for working CXX compiler: C:/Program Files/mingw64/bin/g++.exe
+-- Check for working CXX compiler: C:/Program Files/mingw64/bin/g++.exe - works
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/Truman-CS180-Course/lab16/cmake-build-debug
+-- Build files have been written to: D:/CS Related/Truman-CS180-Course/lab16/cmake-build-debug

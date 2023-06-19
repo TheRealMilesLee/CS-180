@@ -141,7 +141,7 @@ string to_string(Part &part)
   string description = part.description;
   string current_quantity = to_string (part.current_quantity);
   string max_quantity = to_string (part.max_quantity);
-  string to_string_result = description + " " + current_quantity + " " + 
+  string to_string_result = description + " " + current_quantity + " " +
     max_quantity;
   return to_string_result;
 }
